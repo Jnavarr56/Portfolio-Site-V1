@@ -3,7 +3,11 @@
     .row {
         @include flex-config('row', 'center', 'center');
         .about-content {
-            font-size: 125% !important;
+            font-size: 150% !important;
+            font-weight: bolder;
+            filter: blur(10px);
+            opacity: 0;
+            transform: scale(.75, .75);
             a {
                 color: white !important;
                 text-decoration: underline !important;
@@ -22,9 +26,9 @@
             
         }
         [data-scroll="out"] {
-            transform: scale(.75, .75);
-            filter: blur(10px);
-            opacity: 0;
+            //transform: scale(.75, .75);
+            //filter: blur(10px);
+            //opacity: 0;
             
         }
     }

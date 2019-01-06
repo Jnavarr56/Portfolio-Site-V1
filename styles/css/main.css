@@ -1042,32 +1042,31 @@ button {
             align-items: "center"; }
     /* line 5, ../scss/_about.scss */
     #about .row .about-content {
-      font-size: 125% !important; }
-      /* line 7, ../scss/_about.scss */
+      font-size: 150% !important;
+      font-weight: bolder;
+      -webkit-filter: blur(10px);
+              filter: blur(10px);
+      opacity: 0;
+      -webkit-transform: scale(0.75, 0.75);
+              transform: scale(0.75, 0.75); }
+      /* line 11, ../scss/_about.scss */
       #about .row .about-content a {
         color: white !important;
         text-decoration: underline !important; }
-        /* line 10, ../scss/_about.scss */
+        /* line 14, ../scss/_about.scss */
         #about .row .about-content a:hover {
           color: blue !important; }
-    /* line 15, ../scss/_about.scss */
+    /* line 19, ../scss/_about.scss */
     #about .row [data-scroll] {
       -webkit-transition: all 1.5s ease;
       transition: all 1.5s ease; }
-    /* line 18, ../scss/_about.scss */
+    /* line 22, ../scss/_about.scss */
     #about .row [data-scroll="in"] {
       -webkit-transform: scale(1, 1);
               transform: scale(1, 1);
       -webkit-filter: blur(0px);
               filter: blur(0px);
       opacity: 1; }
-    /* line 24, ../scss/_about.scss */
-    #about .row [data-scroll="out"] {
-      -webkit-transform: scale(0.75, 0.75);
-              transform: scale(0.75, 0.75);
-      -webkit-filter: blur(10px);
-              filter: blur(10px);
-      opacity: 0; }
 
 /* line 15, ../scss/main.scss */
 .fade-out-old-language {

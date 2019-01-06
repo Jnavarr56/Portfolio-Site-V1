@@ -1,5 +1,7 @@
 //@koala-prepend '../helpers/helpers.js'
 
+
+
 if (window.location.href.match("#")) {
     
     window.location.href = window.location.href.slice(0, window.location.href.indexOf('#'));
@@ -13,6 +15,7 @@ $(document).ready(function() {
         {   
             elID: 'about-bio',
             english: `
+            <span>
             Data junkie turned developer with a passion for problem solving.
             ${HTMLMap.chars('break')(2)}
             I'm a 23 year old NYC based bilingual Full-Stack developer with an Economics degree
@@ -24,9 +27,10 @@ $(document).ready(function() {
             Think I could be your next great hire? Feel free to contact me for this or anything 
             at all. 
             ${HTMLMap.chars('break')(2)}
-            You can download my resume <a href="resume.pdf" download>here</a>. 
+            You can download my resume</span><a href="resume.pdf" download>here</a>. 
             ${HTMLMap.chars('break')(2)}
-            This site runs entirely on Bootstrap/jQuery.`,
+            <span>
+            This site runs entirely on Bootstrap/jQuery.</span>`,
             spanish: `
             Soy un adicto a los datos que se convirtió en un desarrollador con una pasión por resolver problemas.
             ${HTMLMap.chars('break')(2)}
@@ -38,7 +42,7 @@ $(document).ready(function() {
             ${HTMLMap.chars('break')(2)}
             Creo que podría ser tu próximo gran ¿alquiler? No dude en ponerse en contacto conmigo para esto o cualquier cosa en absoluto. 
             ${HTMLMap.chars('break')(2)}
-            PD tú puedes descargar mi curriculum vitae <a href="resume.pdf" download>aqui</a>. 
+            PD tú puedes descargar mi curriculum vitae<a href="resume.pdf" download>aqui</a>. 
             ${HTMLMap.chars('break')(2)}
             Este sitio se ejecuta completamente en Bootstrap / jQuery.`
         }
@@ -135,7 +139,7 @@ $(document).ready(function() {
 
     // Retrieve Github data to display in desktop menu.
     getGithubData('jnavarr56', 'latest-commit', true);
-
+    
     // Behaviors related to scrolling go here------------------------|
     $('body').scroll(function() {
 
@@ -163,6 +167,15 @@ $(document).ready(function() {
             ]
         );
 
+
+        if($('#about-bio').attr('data-scroll')==='in' && !testingScrollEff) {
+
+            testingScrollEff = true;
+
+            scrambleEff($('#about-bio'));
+
+        }
+
     });
 
     // Set section title falling animation.
@@ -175,6 +188,7 @@ $(document).ready(function() {
     $(window).resize(function() {
 
         ensureMenuClosure();
+
 
     });
 

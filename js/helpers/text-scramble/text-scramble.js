@@ -1,4 +1,6 @@
 class TextScramble {
+
+
   constructor(el) {
     this.el = el
     this.chars = '!<>-_\\/[]{}—=+*^?#________'
@@ -42,6 +44,7 @@ class TextScramble {
     this.el.innerHTML = output
     if (complete === this.queue.length) {
       this.resolve()
+      testingScrollEff = false;
     } else {
       this.frameRequest = requestAnimationFrame(this.update)
       this.frame++
@@ -54,17 +57,8 @@ class TextScramble {
 
 const scrambleEff = el => {
 
-  //let scram = new TextScramble(el[0]);
-  
-  if (el.children()) {
+  (new TextScramble(el[0])).setText(el.attr('data-eng'));
 
-    children()
-
-
-    (new TextScramble($(this)[0])).setText($(this).html());
-
-
-  }
 
 }
   
