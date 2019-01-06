@@ -5,9 +5,9 @@
         .about-content {
             font-size: 150% !important;
             font-weight: bolder;
+            transform: scale(.75, .75);
             filter: blur(10px);
             opacity: 0;
-            transform: scale(.75, .75);
             a {
                 color: white !important;
                 text-decoration: underline !important;

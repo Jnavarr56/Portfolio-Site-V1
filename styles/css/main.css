@@ -1044,11 +1044,11 @@ button {
     #about .row .about-content {
       font-size: 150% !important;
       font-weight: bolder;
+      -webkit-transform: scale(0.75, 0.75);
+              transform: scale(0.75, 0.75);
       -webkit-filter: blur(10px);
               filter: blur(10px);
-      opacity: 0;
-      -webkit-transform: scale(0.75, 0.75);
-              transform: scale(0.75, 0.75); }
+      opacity: 0; }
       /* line 11, ../scss/_about.scss */
       #about .row .about-content a {
         color: white !important;
