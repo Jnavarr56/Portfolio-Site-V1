@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment-with-locales.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data.min.js"></script>
+  <script src='https://unpkg.com/splitting/dist/splitting.js'></script>
+  <script src='https://unpkg.com/scroll-out/dist/scroll-out.min.js'></script>
+
+
+  <link rel="stylesheet" href="styles/main.min.css">
+  <script src="js/script.min.js"></script>
+
+  <link rel="shortcut icon" href="./styles/images/fav-icon/fav-icon.ico" type="image/x-icon">
+  <link rel="icon" href="./styles/images/fav-icon/fav-icon.ico" type="image/x-icon">
+  <title>Navarro</title>
+</head>
+
+<body class="page">
+
+
+  <!----------------------Desktop Nav------------------------->
+  <div class="desktop-nav landing-fade-in">
+    <a href="#" id="desktop-nav-trigger" class="desktop-nav-trigger">
+      <div id="desktop-bars" class="desktop-bars"></div>
+    </a>
+      <div class="desktop-nav-content">
+        <nav class="desktop-nav-list">
+          <ul>
+            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Home" data-sp="Inicio" href="#home">Home</a></li>
+            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="About" data-sp="Sobre Mi" href="#about">About</a></li>
+            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Skills" data-sp="Habilidades" href="#skills">Skills</a></li>
+            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Full-Stack Portfolio" data-sp="Portfolio Full-Stack" href="#work">Full-Stack Portfolio</a></li>
+            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Articles" data-sp="Artículos" href="#articles">Articles</a></li>
+            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Contact" data-sp="Contactame" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+    </div>    
+  </div>
+  <!---------------------/Desktop Nav------------------------->
+
+
+  <!----------------------Mobile Nav-------------------------->
+  <div class="mobile-menu-container landing-fade-in">
+    <a href="#" class="change-color-response mobile-menu" id="mobile-toggle">
+      <i id="mobile-menu-icon" class="mobile-i fa fa-bars" aria-hidden="true"></i>
+    </a>
+    <div class="mobile-overlay" id="mobile-overlay">
+      <nav class="mobile-overlay-menu">
+        <ul>
+          <li><a class="has-alt-text mobile-nav-item" data-eng="Home" data-sp="Inicio" href="#home">Home</a></li>
+          <li><a class="has-alt-text mobile-nav-item" data-eng="About" data-sp="Sobre Mi" href="#about">About</a></li>
+          <li><a class="has-alt-text mobile-nav-item" data-eng="Skills" data-sp="Habilidades" href="#skills">Skills</a></li>
+          <li><a class="has-alt-text mobile-nav-item" data-eng="<span class='hide-fullstack'>Full-Stack</span> Portfolio" data-sp="Portfolio <span class='hide-fullstack'>Full-Stack</span>" href="#work"><span class='hide-fullstack'>Full-Stack</span> Portfolio</a></li>
+          <li><a class="has-alt-text mobile-nav-item" data-eng="Articles" data-sp="Artículos" href="#articles">Articles</a></li>
+          <li><a class="has-alt-text mobile-nav-item" data-eng="Contact" data-sp="Contactame" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div> 
+  </div>
+  <!---------------------/Mobile Nav-------------------------->
+
+
+  <!---------------------Selector Container------------------->
+  <div id="language-selector" class="landing-fade-in">
+    <div id="language-selector-body" class="change-color-response toggle-body">
+      <div class="toggle-btn"></div>
+      <p id="other-language">eng</p>
+    </div>
+  </div>
+  <!--------------------/Selector Container------------------->
+
+
+  <!--------------------------Home---------------------------->
+  <section id="home" class="container-fluid">
+    <div id="logo-container">
+      <div class="home-logo landing-fade-in" data-link="https://codepen.io/collection/DQvVZN/"></div>
+      <div class="home-logo landing-fade-in" data-link="https://github.com/Jnavarr56"></div>
+      <div class="home-logo landing-fade-in" data-link="https://angel.co/jorge-navarro"></div>
+      <div class="home-logo landing-fade-in" data-link="https://www.linkedin.com/in/jnavarr5/"></div>
+    </div>
+    <div class="row">
+      <div class="column col-12">
+        <div id="load-holder" class="e-loadholder loader">
+          <div id="particle-canvas"></div>
+          <h1 id="count-up-text"></h1>
+        </div>
+        <div class="home-text-wrapper">
+          <h1 id="home-primary-text" class="landing-fade-in">
+            Jorge <br class="home-primary-text-br">Andrés<br class="home-primary-text-br"> Navarro
+          </h1>
+          <h1 
+            id="home-sub-text" 
+            class="landing-fade-in has-alt-text hide-second-row" 
+            data-sp="DESARROLLADOR <br class='home-sub-text-spanish-br2'>FULLSTACK + <br class='home-sub-text-spanish-br'>INSTRUCTOR DE <br class='home-sub-text-spanish-br2'>PROGRAMACIÓN" 
+            data-eng="FULLSTACK <br class='home-primary-text-br'>DEVELOPER + <br class='home-primary-text-br'>CODING <br class='home-primary-text-br'>EDUCATOR">
+            FULLSTACK <br class='home-primary-text-br'>DEVELOPER + <br class='home-primary-text-br'>CODING <br class='home-primary-text-br'>EDUCATOR
+          </h1>
+          <button class="landing-fade-in has-alt-text" data-eng="View Latest Git Commit" data-sp="Ver Git Commit Más Nuevo" id="view-latest-commit-trigger">View Latest Git Commit</button>
+        </div>
+      </div>
+    </div> 
+  </section>
+  <!-------------------------/Home---------------------------->
+
+
+
+  <!--About + Resume Link-->
+  <section id="about" class="container-fluid">
+    <h1 
+      class="has-alt-text section-header text text--enter" 
+      data-scroll="out" 
+      data-splitting="" 
+      data-header-id="about" 
+      data-eng="About" 
+      data-sp="Sobre Mi">
+        About
+    </h1>
+
+    <div class="row">
+        <div class="column col-12 col-md-8">
+          <p id="about-bio" class="has-alt-text about-content word" data-scroll></p>
+        </div>
+    </div>
+
+  </section>
+  <!--/About + Resume Link-->
+
+
+  <!--Skills-->
+  <section id="skills">
+    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="skills" data-eng="Skills" data-sp="Habilidades">Skills</h1>
+  </section>
+  <!--/Skills-->
+
+
+  <!--Work-->
+  <section id="work">
+    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="work" data-eng="Full-Stack<br>Portfolio" data-sp="Portfolio<br>Full-Stack"">Full-Stack<br>Portfolio</h1>
+  </section>
+  <!--/Work-->
+
+
+  <!--Articles-->
+  <section id="articles">
+    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="articles" data-eng="Articles" data-sp="Artículos">Articles</h1>
+  </section>
+  <!--/Articles-->
+
+  <!--Contact-->
+  <section id="contact">
+    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="contact" data-eng="Contact" data-sp="Contactame">Contact</h1>
+  </section>
+  <!--/Contact-->
+
+  <div id="splitting-clones"></div>
+
+
+</body>
+</html>

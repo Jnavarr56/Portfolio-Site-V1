@@ -1,0 +1,80 @@
+
+
+#language-selector {
+  position: fixed;
+  top: 3.5%;
+  z-index: 1050;
+  right: 15%;
+}
+.background--on {
+  background: white;
+  transition: 1.5s $language-selector-toggle-easing;
+}
+.toggle-body {
+  box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  width: $toggle-body-width;
+  height: $toggle-body-height;
+  background: red;
+  border-radius: 2rem;
+  transform: rotate(0deg);
+  transition: transform $language-selector-toggle-time $language-selector-toggle-easing, background-color $language-selector-color-change-time $language-selector-color-change-easing;
+}
+.toggle-body--on {
+  transform: rotate(180deg);
+  transition: $language-selector-toggle-time $language-selector-toggle-easing;
+}
+.toggle-btn {
+  width: $toggle-btn-dimension;
+  height: $toggle-btn-dimension;
+  position: absolute;
+  top: calc(50% - #{$toggle-btn-dimension} / 2);
+  left: calc(27% - #{$toggle-btn-dimension} / 2);
+  background-image: url($english-flag-icon-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transform-origin: 130% 115%;
+  transition: $language-selector-toggle-time $language-selector-toggle-easing;
+}
+.toggle-btn--on {
+  transition: $language-selector-toggle-time $language-selector-toggle-easing;
+  transform: rotate(-360deg);
+  background: white;
+  transform-origin: 130% 150%;
+  background-image: url($spanish-flag-icon-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.toggle-btn--on {
+  transition: $language-selector-toggle-time $language-selector-toggle-easing;
+  transform: rotate(-360deg);
+  background: white;
+  transform-origin: 130% 150%;
+  background-image: url($spanish-flag-icon-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 767.98px) {
+  #language-selector {
+    transform: scale(.80, .80);
+  }
+  right: 10%;
+}
+#other-language {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  color: rgba(white, 1);
+  font-family: $other-language-primary-font;
+  transition: color $language-selector-color-change-time $language-selector-color-change-easing;
+}
+.odd-section-language-selector-colors {
+  background-color: white;
+  #other-language {
+    color: rgba(red, 1);
+  }
+}

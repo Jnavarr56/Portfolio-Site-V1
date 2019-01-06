@@ -1,0 +1,56 @@
+$loading-color:	red;
+$loading-count-up-color: black;
+$loading-background-color:white;
+$loading-fade-time: .5s;
+$loader-border-radius: 100%;
+
+.e-loadholder {
+	width: 50vw;
+	height: 50vh;
+	//border: 1px solid rgba($loading-color, .75);
+	border-radius: $loader-border-radius;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#particle-canvas{
+	width: 50vw;
+	height: 50vh;
+	opacity:1;
+	canvas {
+		border-radius: $loader-border-radius;
+	}
+}
+#count-up-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $loading-count-up-color;
+	font-size: 250%;
+	//background-color: rgba(white, .85);
+	border-radius: 100%;
+	font-family: 'Raleway', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+.fade-out-loader {
+	animation: FadeOutLoader $loading-fade-time ease-in-out 0s forwards;
+}
+@keyframes FadeOutLoader {
+	100% { opacity: 0; filter: blur(10px); }
+}
+.fade-in-home-text {
+	animation: FadeInHomeText $loading-fade-time ease-in-out 0s forwards;
+}
+@keyframes FadeInHomeText {
+	100% { opacity: 1; filter: blur(0px); }
+}
+@media (max-width: 767.98px) {
+	.e-loadholder, #particle-canvas{
+		width: 300px;
+		height: 300px;
+	}
+}

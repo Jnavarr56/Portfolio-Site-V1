@@ -1,0 +1,186 @@
+// Colors
+$primary-desktop-nav-text-color: white;
+$primary-desktop-nav-text-color-ultradark: mix(black, $primary-desktop-nav-text-color, 80%);
+$primary-desktop-nav-black: black;
+$primary-desktop-nav-font: 'Raleway', sans-serif;
+
+$primary-desktop-nav-ease-in-out-cubic: cubic-bezier(0.645,  0.045, 0.355, 1.000);
+$primary-desktop-nav-cubic-transition: 0.55s $primary-desktop-nav-ease-in-out-cubic;
+
+$desktop-bar-length: 28px;
+$desktop-bar-thickness: 4px;
+$desktop-nav-item-delay: 0.05s;
+$desktop-nav-width: 3.75rem;
+
+.desktop-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $desktop-nav-width;
+    background-color: black;
+    transition: 1s $primary-desktop-nav-ease-in-out-cubic;
+    will-change: width;
+    z-index: 99;
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;    
+    }
+    &.desktop-is-active {
+        width: 100%;
+    }
+    a {
+        color: $primary-desktop-nav-black;
+        text-decoration: none;
+    }
+    cursor: pointer;
+}
+.desktop-nav-trigger {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    margin-top: -(($desktop-bar-thickness*5) / 2);
+    padding: $desktop-bar-thickness*2 0;
+    transition: 0.2s ease-in-out;
+    z-index: 10;
+    .desktop-bars {
+        position: relative;
+        &,
+        &:before,
+        &:after {
+            width: $desktop-bar-length;
+            height: $desktop-bar-thickness;
+            background-color: red;
+            border-radius: $desktop-bar-thickness;
+            transition: transform 0.2s ease-in-out, background-color $language-selector-color-change-time $language-selector-color-change-easing ;
+        }
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            will-change: transform;
+        }
+        &:before {
+            transform: translateY(-($desktop-bar-thickness*2));
+        }   
+        &:after {
+            transform: translateY(($desktop-bar-thickness*2));
+        }
+    }
+    &.desktop-is-active {
+        transform: rotate(-45deg);
+        .desktop-bars {            
+            &:before,
+            &:after {
+                transform: translateX(0) rotate(-90deg);
+            }
+        } 
+    }
+}
+.desktop-nav-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem $desktop-nav-width 1rem ($desktop-nav-width - 1rem);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: 0s linear 0.25s;
+    &.desktop-is-active {
+        visibility: visible;
+        opacity: 1;
+        transition: 0s linear;      
+        .desktop-nav-item {
+            a {
+                opacity: 1;
+                transform: translateY(0);
+                transition: {
+                    property: transform, opacity, color;
+                    duration: 0.55s, 0.55s, 0.3s;
+                    timing-function: $primary-desktop-nav-ease-in-out-cubic, ease-in-out, ease-in-out;            
+                }
+            }
+        }
+        .desktop-nav-list {
+            .desktop-nav-item {
+                @for $num from 1 through 9 {
+                    &:nth-of-type(#{$num}) {
+                        a {
+                            transition-delay: $desktop-nav-item-delay * ($num - 1), $desktop-nav-item-delay * ($num - 1), 0s;
+                        }
+                    }            
+                }
+            }
+        }
+    }
+}
+.desktop-nav-list {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+.desktop-nav-item {
+    overflow: hidden;
+    //text-align: center;
+    a {
+        display: inline-block;
+        padding: 1rem;
+        color: $primary-desktop-nav-text-color;
+        text-decoration: none;
+        font-size: 450%;
+        font-weight: 300;
+        font-family: $primary-desktop-nav-font;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: 0.5s $primary-desktop-nav-ease-in-out-cubic;
+        will-change: transform, opacity;
+        &:hover {
+            color: red;
+        }
+    }
+}
+@media (max-height: 900px) {
+    .desktop-nav-item {
+        a {
+            font-size: 400%;
+        }
+    }
+
+}
+@media (max-height: 750px) {
+    .desktop-nav-item {
+        a {
+            font-size: 350%;
+        }
+    }
+}
+@media (max-height: 650px) {
+    .desktop-nav-item {
+        a {
+            font-size: 300%;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .desktop-nav  {
+        display: none;
+    }
+}
+.desktop-bars-alt-style {
+    &,
+    &:before,
+    &:after {
+        background-color: white !important;
+
+    }
+}
+    

@@ -1,0 +1,19 @@
+#view-latest-commit-trigger {
+    width: 100%;
+    height: 2.5%;
+}
+#latest-commit {
+    font-size: 150%;
+    font-family: 'Share Tech Mono', sans-serif;
+    color: red;
+    a {
+        color: red;
+        text-decoration: underline;
+    }
+}
+#commit-modal-close {
+    svg { path { fill: red !important; } }
+}
+.commit-modal {
+    background-color: black !important;
+}

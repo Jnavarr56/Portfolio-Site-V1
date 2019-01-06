@@ -1,0 +1,126 @@
+#logo-container {
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    height: 65px;
+    width: 325px;
+    @include flex-config('row', 'space-evenly', 'center');
+    div {
+        height: 100%;
+        width: 20%;
+    }
+    .home-logo {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all .15s ease;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            top: 5px;
+            transform: scale(1.10, 1.10);
+        }
+        &:nth-of-type(1) {
+            background-image: url('../styles/images/home-logos/black/codepenlogo.png');
+            &:hover {
+                background-image: url('../styles/images/home-logos/red/codepenlogo.png');
+            }
+        }
+        &:nth-of-type(2) {
+            background-image: url('../styles/images/home-logos/black/githublogo.png');
+            &:hover {
+                background-image: url('../styles/images/home-logos/red/githublogo.png');
+            }
+        }
+        &:nth-of-type(3) {
+            transform: scale(1.15, 1.15);
+            background-image: url('../styles/images/home-logos/black/angellistlogo.png');
+            &:hover {
+                transform: scale(1.25, 1.25);
+                background-image: url('../styles/images/home-logos/red/angellistlogo.png');
+            }
+            
+        }
+        &:nth-of-type(4) {
+            background-image: url('../styles/images/home-logos/black/linkedinlogo.png');
+            &:hover {
+                background-image: url('../styles/images/home-logos/red/linkedinlogo.png');
+            }
+        }
+    }
+}
+@media (max-width: 570px) {
+    #logo-container {
+        height: calc( 65px / 1.15);
+        width: calc( 325px / 1.15);
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 470px) {
+    #logo-container {
+        height: calc( 65px / 1.25 );
+        width: calc( 325px / 1.25 );
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 432px) {
+    #logo-container {
+        height: calc( 65px / 1.45 );
+        width: calc( 325px / 1.45 );
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 392px) {
+    #logo-container {
+        height: calc( 65px / 1.65 );
+        width: calc( 325px / 1.65 );
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 356px) {
+    #logo-container {
+        height: calc( 65px / 1.75 );
+        width: calc( 325px / 1.75 );
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 340px) {
+    #logo-container {
+        height: calc( 65px / 1.85 );
+        width: calc( 325px / 1.85 );
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 328px) {
+    #logo-container {
+        height: calc( 65px / 2.00 );
+        width: calc( 325px / 2.00 );
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 310px) {
+    #logo-container {
+        display: none;
+    }
+}
+
+
+
+//<div class="home-logo" src="./styles/images/home-logos/black/codepenlogo.png">
+//<div class="home-logo" src="./styles/images/home-logos/black/githublogo.png">
+//<div class="home-logo" src="./styles/images/home-logos/black/angellistlogo.png">
+//<div class="home-logo" src="./styles/images/home-logos/black/linkedinlogo.png">

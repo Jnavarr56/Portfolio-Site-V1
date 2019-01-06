@@ -1,0 +1,100 @@
+$home-primary-font-family: 'Raleway', sans-serif;
+$home-primary-font-color: red;
+$home-primary-font-size: 700%;
+$home-sub-font-family: 'Raleway', sans-serif;
+$home-sub-font-color: black;
+
+#home {
+    @include flex-config("column", "center", "center");
+    .row {
+        height: auto;
+        width: 100%;
+        @include flex-config("row", "center", "center");
+        
+    }
+    .column {
+        @include flex-config("row", "center", "center");
+    }
+    //z-index: 100;
+}
+#home-primary-text {
+    color: $home-primary-font-color;
+    font-family: $home-primary-font-family;
+    font-size: $home-primary-font-size;
+    margin: 0;
+}
+#home-sub-text {
+    color: $home-sub-font-family;
+    font-family: $home-sub-font-family;
+    letter-spacing: 5px;
+    font-size: 250%;
+    word-break: break-word;
+    margin-top: 2%;
+}
+.landing-fade-in {
+    opacity: 0;
+    filter: blur(0px);
+}
+.home-sub-text-spanish-br, .home-sub-text-spanish-br2, .home-primary-text-br, .home-sub-text-br {
+    display: none;
+}
+.hide-second-row {
+    display: none !important;
+}
+.home-text-wrapper {
+    @include flex-config("column", "space-evenly", "center");
+    //margin-left: 5%;
+    transform: scale(.90, .90);
+}
+// * Force Home Primary Text Word Breaks
+@media (max-width: 1579.98px) {
+    .home-sub-text-spanish-br {
+        display: initial;
+    }
+    .home-text-wrapper {
+        margin-left: 5%;
+    }
+}
+@media (max-width: 1231px) {
+    .home-primary-text-br {
+        display: initial;
+    }
+    .home-sub-text-spanish-br2 {
+        display: initial;
+    }
+    .home-text-wrapper {
+        align-items: flex-start; 
+    }
+    #home-primary-text {
+        font-size: 600%;
+    }
+}
+@media (max-width: 890px) {
+    #home-primary-text {
+        font-size: 500%;
+    }
+    #home-sub-text {
+        font-size: 200%;
+    }
+    .home-text-wrapper {
+        margin-left: 0;
+    }
+}
+@media (max-width: 430px) {
+    #home-primary-text {
+        font-size: 400%;
+    }
+    #home-sub-text {
+        font-size: 150%;
+    }
+    .home-sub-text-br {
+        display: initial;
+    }
+}
+
+
+
+//<div class="home-logo" src="./styles/images/home-logos/black/codepenlogo.png">
+//<div class="home-logo" src="./styles/images/home-logos/black/githublogo.png">
+//<div class="home-logo" src="./styles/images/home-logos/black/angellistlogo.png">
+//<div class="home-logo" src="./styles/images/home-logos/black/linkedinlogo.png">

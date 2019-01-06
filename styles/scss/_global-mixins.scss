@@ -1,0 +1,30 @@
+$language-selector-toggle-time: 1.5s;
+$language-selector-toggle-easing: cubic-bezier(0.68, -0.15, 0.265, 1.35);
+$toggle-body-width: 5rem;
+$toggle-body-height: 2.5rem;
+$toggle-btn-dimension: 2rem;
+$spanish-flag-icon-url: './images/flag-icons/esp-icon.png';
+$english-flag-icon-url: './images/flag-icons/eng-icon.png'; 
+$other-language-primary-font: 'Raleway', sans-serif;
+$language-selector-color-change-time: .25s;
+$language-selector-color-change-easing: ease;
+
+@mixin flex-config($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin simple-fade-animation($name, $direction) {
+    @keyframes #{$name} {
+        @if $direction == 'out' {
+            0% { opacity: 1; filter: blur(0px); }
+            100% { opacity: 0; filter: blur(10px); }
+        }
+        @if $direction == 'in' {
+            0% { opacity: 0; filter: blur(10px); }
+            100% { opacity: 1; filter: blur(0px); }
+        }          
+    }
+}

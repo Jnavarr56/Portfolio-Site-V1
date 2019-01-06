@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway:200|Share+Tech+Mono');
+
+
+// BE CAREFUL WITH THIS IMPORT ORDER TO AVOID CANCELING OUT STYLES.
+@import 'global-mixins';
+@import 'language-selector';
+@import 'mobile-nav';
+@import 'desktop-nav';
+@import './modals/modal-global';
+@import 'landing-loader';
+@import 'home';
+@import 'home-logo';
+@import 'about';
+
+.fade-out-old-language { animation: FadeOutOldLanguage .5s ease-in-out 0s 1 forwards; }
+.fade-in-new-language { animation: FadeInNewLanguage .5s ease-in-out 0s 1 forwards; }
+@include simple-fade-animation(FadeOutOldLanguage, 'out');
+@include simple-fade-animation(FadeInNewLanguage, 'in');
+
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    min-width: 300px;
+    overflow: hidden;
+}
+section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: auto;
+    background: white;
+    .section-header { 
+        font-family: 'Raleway', sans-serif;
+        margin: 0;
+        color: red; 
+        position: absolute;
+        top: 4%;
+        left: 8%;
+        font-size: 500%;
+        p {
+            color: red;
+        }
+    }
+    &:nth-of-type(even) { 
+        background: red;
+        .section-header {
+            color: white;
+        }
+        p {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Raleway', sans-serif;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .section-header {
+        left: 15% !important;
+        transform: translateX(0) !important;
+    }
+}
+.text--enter .char {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.text--enter [data-scroll='out'] .char {
+    opacity: 0;
+    transform: translate(0, -150%);
+}
+.text .char {
+    display: inline-block;
+    animation-delay: calc(0.25s + var(--char-index) * 0.25s);
+    transition: all 0.25s calc(0.25s + var(--char-index) * 0.1s);
+}
+
+.splitting-clones {
+    display: none;
+}
+@media (max-width: 700px) {
+    .section-header {
+        font-size: 150% !important;
+        left: 5% !important;
+    }
+}
+.blinking-cursor-red {
+    animation: BlinkCursorRed 1s step-end infinite;
+}
+@keyframes BlinkCursorRed {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: red;
+    }
+}
