@@ -8,7 +8,8 @@ background.initializr = function () {
   //option
   $this.id = "background_css3";
   $this.style = {bubbles_color:"#FF0000",stroke_width:0, stroke_color :"black"};
-  $this.bubbles_number = 75;
+  $this.bubbles_number = $(window).innerWidth() < 768 ? 10 : 50;
+
   $this.speed = [1500,5000]; //milliseconds
   $this.max_bubbles_height = $this.height;
   $this.shape = 2 // 1 : circle | 2 : triangle | 3 : rect | false :random
