@@ -22,6 +22,7 @@ $home-sub-font-color: black;
     font-family: $home-primary-font-family;
     font-size: $home-primary-font-size;
     margin: 0;
+    
 }
 #home-sub-text {
     color: $home-sub-font-family;
@@ -30,6 +31,8 @@ $home-sub-font-color: black;
     font-size: 250%;
     word-break: break-word;
     margin-top: 2%;
+    font-weight: bolder;
+
 }
 .landing-fade-in {
     opacity: 0;
@@ -69,7 +72,7 @@ $home-sub-font-color: black;
         font-size: 600%;
     }
 }
-@media (max-width: 890px) {
+@media (max-width: 900px) {
     #home-primary-text {
         font-size: 500%;
     }
@@ -78,6 +81,8 @@ $home-sub-font-color: black;
     }
     .home-text-wrapper {
         margin-left: 0;
+        position: relative;
+        bottom: 50px;
     }
 }
 @media (max-width: 430px) {
@@ -92,6 +97,10 @@ $home-sub-font-color: black;
     }
 }
 
+#background_css3 {
+    //height: 100% !important;
+    //width: 100% !important;
+}
 
 
 //<div class="home-logo" src="./styles/images/home-logos/black/codepenlogo.png">

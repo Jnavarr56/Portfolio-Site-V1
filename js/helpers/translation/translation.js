@@ -19,6 +19,8 @@ const configureLanguageSelector = options => {
 
         $('.' + options.toggleBody).toggleClass(options.toggleBodyOn);
 
+        $('.' + options.toggleBody).toggleClass('change-box-shadow');
+
         $('.' + options.toggleBtn).toggleClass(options.toggleBtnOn);
 
         $('.' + options.toggleBtn).toggleClass(options.toggleBtnScale);
@@ -49,6 +51,8 @@ const configureLanguageSelector = options => {
                     ['transform', `rotate(${degree}deg) translateY(${offset}%)`]
                 ]
             );
+
+            $('.' + options.toggleBody).css('change-box-shadow', $('.' + options.toggleBody).css('change-box-shadow') === 'rgba(0, 0, 0, 0.2) 0px 10px 20px 0px' ? 'rgba(0, 0, 0, 0.2) 0px -10px 20px 0px' : 'rgba(0, 0, 0, 0.2) 0px 10px 20px 0px');
 
         }, options.toggleDuration - options.fadingDuration);
 

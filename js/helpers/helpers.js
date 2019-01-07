@@ -8,6 +8,7 @@
 //@koala-prepend './modals/modals.js'
 //@koala-prepend './home-logo/home-logo.js'
 //@koala-prepend './text-scramble/text-scramble.js'
+//@koala-prepend './home-particles/home-particles.js'
 
 
 // INCLUDE ALL HELPERS IN THE 'js/helpers' DIRECTORY JS FILES ABOVE
