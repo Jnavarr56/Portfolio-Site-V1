@@ -8,11 +8,23 @@ const enableMobileNav = options => {
 
     function toggleMobNav(event) {
 
+        if ($('#mobile-menu').hasClass('odd-section-mobile-menu-colors2')) {
+
+            $('#language-selector-body').removeClass('odd-section-language-selector-colors');
+
+        }
+
+        else {
+
+            $('#language-selector-body').addClass('odd-section-language-selector-colors');
+
+        }
+
         $('#' + options.mobileOverlayID).toggleClass('mobile-open');
     
         $('.' + options.mobileContainerClass).toggleClass('mobile-full-menu');
     
-        $('.' + options.mobileIconClass).toggleClass('fa-bars');
+        $('.' + options.mobileIconClass).toggleClass('fa-plus');
     
         $('.' + options.mobileIconClass).toggleClass('fa-times');
     

@@ -78,11 +78,25 @@ const setColorScrollResponseMult = arr => arr.forEach(options => setColorScrollR
 
 // After clicking an item of a certain class scroll to that item's href.
 
-const fromItemClickScrollTo = options => {
+const fromItemClickScrollTo = (options) => {
 
     $('.' + options.navItemsClass).each(function() {
 
         $(this).click(function(e) {
+
+            let changeSelector = $('#mobile-menu').css('display') !== 'none';
+
+            console.log(changeSelector);
+
+            if (changeSelector) {
+
+                setTimeout(() => {
+
+                    $('#language-selector-body').removeClass('odd-section-language-selector-colors');
+
+                }, 500);
+
+            }
 
             e.preventDefault();
     

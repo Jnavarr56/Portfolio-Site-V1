@@ -2,22 +2,22 @@
 
 #language-selector {
   position: fixed;
-  top: 3.5%;
   z-index: 1050;
-  right: 15%;
+  right: 60px;
+  top: 4%;
 }
 .background--on {
   background: white;
   transition: 1.5s $language-selector-toggle-easing;
 }
 .toggle-body {
-  box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,.20);
   width: $toggle-body-width;
   height: $toggle-body-height;
   background: red;
   border-radius: 2rem;
   transform: rotate(0deg);
-  transition: transform $language-selector-toggle-time $language-selector-toggle-easing, background-color $language-selector-color-change-time $language-selector-color-change-easing;
+  transition: transform $language-selector-toggle-time $language-selector-toggle-easing, background-color $language-selector-color-change-time $language-selector-color-change-easing, box-shadow $language-selector-color-change-time $language-selector-color-change-easing 0s;
 }
 .toggle-body--on {
   transform: rotate(180deg);
@@ -60,7 +60,7 @@
   #language-selector {
     transform: scale(.80, .80);
   }
-  right: 10%;
+  //right: 10%;
 }
 #other-language {
   display: inline-block;
@@ -76,5 +76,18 @@
   background-color: white;
   #other-language {
     color: rgba(red, 1);
+  }
+}
+.change-box-shadow {
+  box-shadow: none;
+}
+@media (max-width: 700px) {
+  #language-selector {
+    right: 35px;
+  }
+}
+@media (max-width: 650px) {
+  #language-selector {
+    right: 25px;
   }
 }

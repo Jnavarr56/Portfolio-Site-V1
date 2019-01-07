@@ -49,75 +49,56 @@
         }
     }
 }
-@media (max-width: 570px) {
+@media (max-width: 1231px) {
     #logo-container {
         height: calc( 65px / 1.15);
-        width: calc( 325px / 1.15);
+        width: calc( 326px / 1.15);
+        left: 11%;
         div {
             width: 20%;
         }
     }
 }
-@media (max-width: 470px) {
+@media (max-width: 1150) {
+    #logo-container {
+        height: calc( 65px / 1.15 );
+        width: calc( 326px / 1.15 );
+        left: 12%;
+        div {
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 1050px) {
     #logo-container {
         height: calc( 65px / 1.25 );
-        width: calc( 325px / 1.25 );
+        width: calc( 326px / 1.25 );
+        left: 13%;
         div {
             width: 20%;
         }
     }
 }
-@media (max-width: 432px) {
+@media (max-width: 950px) {
     #logo-container {
-        height: calc( 65px / 1.45 );
-        width: calc( 325px / 1.45 );
+        height: calc( 65px / 1.40 );
+        width: calc( 326px / 1.40 );
+        left: 15%;
         div {
             width: 20%;
         }
     }
 }
-@media (max-width: 392px) {
+@media (max-width: 900px) {
     #logo-container {
-        height: calc( 65px / 1.65 );
-        width: calc( 325px / 1.65 );
-        div {
-            width: 20%;
-        }
+        left: 10%;
     }
 }
-@media (max-width: 356px) {
-    #logo-container {
-        height: calc( 65px / 1.75 );
-        width: calc( 325px / 1.75 );
-        div {
-            width: 20%;
-        }
-    }
-}
-@media (max-width: 340px) {
-    #logo-container {
-        height: calc( 65px / 1.85 );
-        width: calc( 325px / 1.85 );
-        div {
-            width: 20%;
-        }
-    }
-}
-@media (max-width: 328px) {
-    #logo-container {
-        height: calc( 65px / 2.00 );
-        width: calc( 325px / 2.00 );
-        div {
-            width: 20%;
-        }
-    }
-}
-@media (max-width: 310px) {
+@media (max-width: 550px) {
     #logo-container {
         display: none;
     }
 }
-
 
 
 //<div class="home-logo" src="./styles/images/home-logos/black/codepenlogo.png">

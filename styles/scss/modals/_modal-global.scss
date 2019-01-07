@@ -6,20 +6,19 @@ $speed: 0.6s;
 $delay: ($speed * .5);
 $easing: cubic-bezier(.55,0,.1,1);
  
-    button {
-        background-color: $button-bg;
-        position: relative;
-        color: #fff;
-        border: none;
-        padding: 1.25em 2em;
-        font-size: 0.75em;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        cursor: pointer;
-        box-shadow: 0 10px 20px rgba(0,0,0,.1);
-        transition: background 0.25s $easing;
-
+button {
+    background-color: $button-bg;
+    position: relative;
+    color: #fff;
+    border: none;
+    padding: 1.25em 2em;
+    font-size: 0.75em;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12);
+    transition: background 0.25s $easing;
     &:hover {
         background: darken($button-bg, 3%);
     }

@@ -161,18 +161,15 @@ $(document).ready(function() {
                     sectionTag: 'section',
                     triggerColor: 'rgb(255, 0, 0)',
                     altStyleClass: 'desktop-bars-alt-style',
+                },
+                {
+                    elID: 'mobile-menu',
+                    sectionTag: 'section',
+                    triggerColor: 'rgb(255, 0, 0)',
+                    altStyleClass: 'odd-section-mobile-menu-colors2',
                 }
             ]
         );
-
-
-        if($('#about-bio').attr('data-scroll')==='in' && !testingScrollEff) {
-
-            testingScrollEff = true;
-
-            scrambleEff($('#about-bio'));
-
-        }
 
     });
 
@@ -187,6 +184,8 @@ $(document).ready(function() {
 
         ensureMenuClosure();
 
+        $('style').remove();
+        background.initializr();
 
     });
 
