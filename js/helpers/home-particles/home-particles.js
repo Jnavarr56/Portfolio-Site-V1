@@ -8,6 +8,15 @@ background.initializr = function () {
   //option
   $this.id = "background_css3";
   $this.style = {bubbles_color:"#FF0000",stroke_width:0, stroke_color :"black"};
+  if ($(window).innerWidth() >= 768) {
+    $this.bubbles_number = 50;
+  }
+  else if ($(window).innerWidth() >= 450) {
+    $this.bubbles_number = 30;
+  }
+  else {
+    $this.bubbles_number = 5;
+  }
   $this.bubbles_number = $(window).innerWidth() < 768 ? 10 : 50;
 
   $this.speed = [1500,5000]; //milliseconds
