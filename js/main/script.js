@@ -184,8 +184,7 @@ $(document).ready(function() {
 
         ensureMenuClosure();
 
-        $('style').remove();
-        background.initializr();
+ 
 
     });
 

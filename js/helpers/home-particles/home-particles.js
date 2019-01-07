@@ -1,13 +1,14 @@
 
 var background = {}
   
-background.initializr = function () {
+background.initializr = function (justone) {
   
   let $this = this;
  
   //option
   $this.id = "background_css3";
   $this.style = {bubbles_color:"#FF0000",stroke_width:0, stroke_color :"black"};
+
   if ($(window).innerWidth() >= 768) {
     $this.bubbles_number = 50;
   }
@@ -17,7 +18,9 @@ background.initializr = function () {
   else {
     $this.bubbles_number = 5;
   }
-  $this.bubbles_number = $(window).innerWidth() < 768 ? 10 : 50;
+
+  console.log($this.bubbles_number);
+  
 
   $this.speed = [1500,5000]; //milliseconds
   $this.max_bubbles_height = $this.height;
@@ -44,9 +47,12 @@ background.initializr = function () {
   
   $("head").prepend("<style>.shape_background {transform-origin:center; width:80px; height:80px; background: "+ $this.style.bubbles_color + "; position: absolute}</style>");
 
+  if (justone) {
+    return;
+  }
   for (i = 0; i < $this.bubbles_number; i++) {
 
-      $this.generate_bubbles();
+      $this.generate_bubbles(true);
 
   }
   
@@ -90,7 +96,7 @@ background.generate_bubbles = function() {
 
         $(this).remove();
 
-        $this.generate_bubbles();
+        $this.generate_bubbles(true);
 
     })
      

@@ -49,7 +49,7 @@ const configureParticleAnim = options => {
 
             enableScrolling(0);
 
-            background.initializr();  
+            //background.initializr();  
 
           }, options.switchToHomeDelay);
           
