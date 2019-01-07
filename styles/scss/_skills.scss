@@ -1,0 +1,42 @@
+#skills {
+    @include flex-config("row", "center", "center");
+    .row {
+        @include flex-config("row", "center", "center");
+        height: 40%;
+        width: 100%;
+    }
+    table {
+        width: 80%;
+        transform: scale(.50, .50);
+        filter: blur(10px);
+        opacity: 0;
+    }
+    thead {
+        background-color: rgba(red, 1);
+        th {
+            color: white;
+        }
+    }
+    th {
+        font-weight: bolder;  
+    }
+    th, td {
+        font-family: 'Raleway', sans-serif;
+    }
+    tr:nth-child(odd) {
+        background-color: rgba(red, .10);
+    }
+    [data-scroll] {
+        transition: all .5s ease;
+    }
+    [data-scroll="in"] {
+        transform: scale(1, 1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+    [data-scroll="out"] {
+        //transform: scale(.75, .75);
+        //filter: blur(10px);
+        //opacity: 0;     
+    }
+}

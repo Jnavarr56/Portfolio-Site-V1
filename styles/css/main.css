@@ -1095,8 +1095,8 @@ button {
     #about .row .about-content {
       font-size: 150% !important;
       font-weight: bolder;
-      -webkit-transform: scale(0.75, 0.75);
-              transform: scale(0.75, 0.75);
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
       -webkit-filter: blur(10px);
               filter: blur(10px);
       opacity: 0; }
@@ -1119,12 +1119,79 @@ button {
               filter: blur(0px);
       opacity: 1; }
 
-/* line 15, ../scss/main.scss */
+/* line 1, ../scss/_skills.scss */
+#skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "row";
+          flex-direction: "row";
+  -webkit-box-pack: "center";
+      -ms-flex-pack: "center";
+          justify-content: "center";
+  -webkit-box-align: "center";
+      -ms-flex-align: "center";
+          align-items: "center"; }
+  /* line 3, ../scss/_skills.scss */
+  #skills .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: "row";
+            flex-direction: "row";
+    -webkit-box-pack: "center";
+        -ms-flex-pack: "center";
+            justify-content: "center";
+    -webkit-box-align: "center";
+        -ms-flex-align: "center";
+            align-items: "center";
+    height: 40%;
+    width: 100%; }
+  /* line 8, ../scss/_skills.scss */
+  #skills table {
+    width: 80%;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    opacity: 0; }
+  /* line 14, ../scss/_skills.scss */
+  #skills thead {
+    background-color: red; }
+    /* line 16, ../scss/_skills.scss */
+    #skills thead th {
+      color: white; }
+  /* line 20, ../scss/_skills.scss */
+  #skills th {
+    font-weight: bolder; }
+  /* line 23, ../scss/_skills.scss */
+  #skills th, #skills td {
+    font-family: 'Raleway', sans-serif; }
+  /* line 26, ../scss/_skills.scss */
+  #skills tr:nth-child(odd) {
+    background-color: rgba(255, 0, 0, 0.1); }
+  /* line 29, ../scss/_skills.scss */
+  #skills [data-scroll] {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
+  /* line 32, ../scss/_skills.scss */
+  #skills [data-scroll="in"] {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1; }
+
+/* line 16, ../scss/main.scss */
 .fade-out-old-language {
   -webkit-animation: FadeOutOldLanguage .5s ease-in-out 0s 1 forwards;
           animation: FadeOutOldLanguage .5s ease-in-out 0s 1 forwards; }
 
-/* line 16, ../scss/main.scss */
+/* line 17, ../scss/main.scss */
 .fade-in-new-language {
   -webkit-animation: FadeInNewLanguage .5s ease-in-out 0s 1 forwards;
           animation: FadeInNewLanguage .5s ease-in-out 0s 1 forwards; }
@@ -1166,7 +1233,7 @@ button {
     opacity: 1;
     -webkit-filter: blur(0px);
             filter: blur(0px); } }
-/* line 20, ../scss/main.scss */
+/* line 21, ../scss/main.scss */
 html, body {
   position: relative;
   margin: 0;
@@ -1176,14 +1243,14 @@ html, body {
   min-width: 300px;
   overflow: hidden; }
 
-/* line 29, ../scss/main.scss */
+/* line 30, ../scss/main.scss */
 section {
   position: relative;
   height: 100vh;
   overflow: hidden;
   z-index: auto;
   background: white; }
-  /* line 35, ../scss/main.scss */
+  /* line 36, ../scss/main.scss */
   section .section-header {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -1192,40 +1259,40 @@ section {
     top: 4%;
     left: 8%;
     font-size: 500%; }
-    /* line 43, ../scss/main.scss */
+    /* line 44, ../scss/main.scss */
     section .section-header p {
       color: red; }
-  /* line 47, ../scss/main.scss */
+  /* line 48, ../scss/main.scss */
   section:nth-of-type(even) {
     background: red; }
-    /* line 49, ../scss/main.scss */
+    /* line 50, ../scss/main.scss */
     section:nth-of-type(even) .section-header {
       color: white; }
-    /* line 52, ../scss/main.scss */
+    /* line 53, ../scss/main.scss */
     section:nth-of-type(even) p {
       color: white;
       font-family: 'Poppins', sans-serif;
       font-family: 'Raleway', sans-serif; }
 
 @media (max-width: 900px) {
-  /* line 60, ../scss/main.scss */
+  /* line 61, ../scss/main.scss */
   .section-header {
     left: 15% !important;
     -webkit-transform: translateX(0) !important;
             transform: translateX(0) !important; } }
-/* line 65, ../scss/main.scss */
+/* line 66, ../scss/main.scss */
 .text--enter .char {
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0); }
 
-/* line 69, ../scss/main.scss */
+/* line 70, ../scss/main.scss */
 .text--enter [data-scroll='out'] .char {
   opacity: 0;
   -webkit-transform: translate(0, -150%);
           transform: translate(0, -150%); }
 
-/* line 73, ../scss/main.scss */
+/* line 74, ../scss/main.scss */
 .text .char {
   display: inline-block;
   -webkit-animation-delay: calc(0.25s + var(--char-index) * 0.25s);
@@ -1233,16 +1300,16 @@ section {
   -webkit-transition: all 0.25s calc(0.25s + var(--char-index) * 0.1s);
   transition: all 0.25s calc(0.25s + var(--char-index) * 0.1s); }
 
-/* line 79, ../scss/main.scss */
+/* line 80, ../scss/main.scss */
 .splitting-clones {
   display: none; }
 
 @media (max-width: 700px) {
-  /* line 83, ../scss/main.scss */
+  /* line 84, ../scss/main.scss */
   .section-header {
     font-size: 150% !important;
     left: 5% !important; } }
-/* line 88, ../scss/main.scss */
+/* line 89, ../scss/main.scss */
 .blinking-cursor-red {
   -webkit-animation: BlinkCursorRed 1s step-end infinite;
           animation: BlinkCursorRed 1s step-end infinite; }
@@ -1258,4 +1325,5 @@ section {
     color: transparent; }
   50% {
     color: red; } }
+
 /*# sourceMappingURL=main.css.map */
