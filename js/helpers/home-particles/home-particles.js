@@ -8,7 +8,7 @@ background.initializr = function () {
   //option
   $this.id = "background_css3";
   $this.style = {bubbles_color:"#FF0000",stroke_width:0, stroke_color :"black"};
-  $this.bubbles_number = 50;
+  $this.bubbles_number = 75;
   $this.speed = [1500,5000]; //milliseconds
   $this.max_bubbles_height = $this.height;
   $this.shape = 2 // 1 : circle | 2 : triangle | 3 : rect | false :random
@@ -19,8 +19,14 @@ background.initializr = function () {
 
   }
 
-  $this.object = $("<div style='z-inde:-1;margin:0;padding:0;overflow:hidden;position:absolute;bottom:0' id='"+$this.id+"'> </div>'").appendTo("#home");
-  
+  $this.object = $("<div style='z-index:auto;margin:0;padding:0;overflow:hidden;position:absolute;bottom:0' id='"+$this.id+"'> </div>'");
+
+  $('#home').prepend($this.object);
+
+  $this.object = $('#'+$this.id);
+
+  //$this.object = $("#home").prepend($("<div style='z-index:-1;margin:0;padding:0;overflow:hidden;position:absolute;bottom:0' id='"+$this.id+"'> </div>'"));
+
   $this.ww = $(window).width();
   $this.wh = $(window).height();
   $this.width = $this.object.width($this.ww);

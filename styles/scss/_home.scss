@@ -15,6 +15,9 @@ $home-sub-font-color: black;
     .column {
         @include flex-config("row", "center", "center");
     }
+    button {
+        z-index: 1000;  
+    }
     //z-index: 100;
 }
 #home-primary-text {
@@ -100,6 +103,8 @@ $home-sub-font-color: black;
 #background_css3 {
     //height: 100% !important;
     //width: 100% !important;
+    //z-index: 5;  
+    //display: none;
 }
 
 

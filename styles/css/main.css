@@ -730,8 +730,8 @@ button {
     right: 20px !important; } }
 /* line 7, ../scss/_landing-loader.scss */
 .e-loadholder {
-  width: 50vw;
-  height: 50vh;
+  width: 75vw;
+  height: 75vh;
   border-radius: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -743,8 +743,8 @@ button {
 
 /* line 18, ../scss/_landing-loader.scss */
 #particle-canvas {
-  width: 50vw;
-  height: 50vh;
+  width: 100%;
+  height: 100%;
   opacity: 1; }
   /* line 22, ../scss/_landing-loader.scss */
   #particle-canvas canvas {
@@ -848,15 +848,18 @@ button {
     -webkit-box-align: "center";
         -ms-flex-align: "center";
             align-items: "center"; }
+  /* line 18, ../scss/_home.scss */
+  #home button {
+    z-index: 1000; }
 
-/* line 20, ../scss/_home.scss */
+/* line 23, ../scss/_home.scss */
 #home-primary-text {
   color: red;
   font-family: "Raleway", sans-serif;
   font-size: 700%;
   margin: 0; }
 
-/* line 27, ../scss/_home.scss */
+/* line 30, ../scss/_home.scss */
 #home-sub-text {
   color: "Raleway", sans-serif;
   font-family: "Raleway", sans-serif;
@@ -866,21 +869,21 @@ button {
   margin-top: 2%;
   font-weight: bolder; }
 
-/* line 37, ../scss/_home.scss */
+/* line 40, ../scss/_home.scss */
 .landing-fade-in {
   opacity: 0;
   -webkit-filter: blur(0px);
           filter: blur(0px); }
 
-/* line 41, ../scss/_home.scss */
+/* line 44, ../scss/_home.scss */
 .home-sub-text-spanish-br, .home-sub-text-spanish-br2, .home-primary-text-br, .home-sub-text-br {
   display: none; }
 
-/* line 44, ../scss/_home.scss */
+/* line 47, ../scss/_home.scss */
 .hide-second-row {
   display: none !important; }
 
-/* line 47, ../scss/_home.scss */
+/* line 50, ../scss/_home.scss */
 .home-text-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -899,55 +902,55 @@ button {
           transform: scale(0.9, 0.9); }
 
 @media (max-width: 1579.98px) {
-  /* line 54, ../scss/_home.scss */
+  /* line 57, ../scss/_home.scss */
   .home-sub-text-spanish-br {
     display: initial; }
 
-  /* line 57, ../scss/_home.scss */
+  /* line 60, ../scss/_home.scss */
   .home-text-wrapper {
     margin-left: 5%; } }
 @media (max-width: 1231px) {
-  /* line 62, ../scss/_home.scss */
+  /* line 65, ../scss/_home.scss */
   .home-primary-text-br {
     display: initial; }
 
-  /* line 65, ../scss/_home.scss */
+  /* line 68, ../scss/_home.scss */
   .home-sub-text-spanish-br2 {
     display: initial; }
 
-  /* line 68, ../scss/_home.scss */
+  /* line 71, ../scss/_home.scss */
   .home-text-wrapper {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
 
-  /* line 71, ../scss/_home.scss */
+  /* line 74, ../scss/_home.scss */
   #home-primary-text {
     font-size: 600%; } }
 @media (max-width: 900px) {
-  /* line 76, ../scss/_home.scss */
+  /* line 79, ../scss/_home.scss */
   #home-primary-text {
     font-size: 500%; }
 
-  /* line 79, ../scss/_home.scss */
+  /* line 82, ../scss/_home.scss */
   #home-sub-text {
     font-size: 200%; }
 
-  /* line 82, ../scss/_home.scss */
+  /* line 85, ../scss/_home.scss */
   .home-text-wrapper {
     margin-left: 0;
     position: relative;
     bottom: 50px; } }
 @media (max-width: 430px) {
-  /* line 89, ../scss/_home.scss */
+  /* line 92, ../scss/_home.scss */
   #home-primary-text {
     font-size: 400%; }
 
-  /* line 92, ../scss/_home.scss */
+  /* line 95, ../scss/_home.scss */
   #home-sub-text {
     font-size: 150%; }
 
-  /* line 95, ../scss/_home.scss */
+  /* line 98, ../scss/_home.scss */
   .home-sub-text-br {
     display: initial; } }
 /* line 1, ../scss/_home-logo.scss */
