@@ -91,7 +91,6 @@ const configureLanguageSelector = options => {
 
                         window.ScrollingMain = ScrollOut({
                             targets: ['.word', '.about-content'],
-                            scrollingElement: '.page',
                             threshold: .9
                         });
 

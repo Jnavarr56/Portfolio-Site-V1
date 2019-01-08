@@ -2,13 +2,24 @@
 
 
 
-if (window.location.href.match("#")) {
-    
-    window.location.href = window.location.href.slice(0, window.location.href.indexOf('#'));
 
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+
+    if (window.location.href.match("#")) {
+    
+        window.location.href = window.location.href.slice(0, window.location.href.indexOf('#'));
+    
+    }
 }
 
+
+
+
 $(document).ready(function() {
+
+    
 
     //------------------CREATE-CONTENT----------------------------
     HTMLMap.createMultiple([
@@ -69,7 +80,7 @@ $(document).ready(function() {
 
     // Set up the Particle/Intro Animation.
     configureParticleAnim({
-        countInterval: 30,
+        countInterval: 40,
         startDelay: 100,
         homeSectionID: 'home',
         particleCanvasID: 'particle-canvas',
@@ -139,7 +150,7 @@ $(document).ready(function() {
     getGithubData('jnavarr56', 'latest-commit', true);
     
     // Behaviors related to scrolling go here------------------------|
-    $('body').scroll(function() {
+    $(window).scroll(function() {
 
         // Make nav elements + language selector change color based on current background.
         setColorScrollResponseMult(        
@@ -171,6 +182,18 @@ $(document).ready(function() {
             ]
         );
 
+        if ($('#mobile-table').css('display') === 'none') {
+
+            $('#mobile-table').attr('data-scroll', $('#main-skills-table').attr('data-scroll'));
+
+        }
+
+        if ($('#main-skills-table').css('display') === 'none') {
+
+            $('#main-skills-table').attr('data-scroll', $('#mobile-table').attr('data-scroll'));
+
+        }
+
     });
 
     // Set section title falling animation.
@@ -184,7 +207,47 @@ $(document).ready(function() {
 
         ensureMenuClosure();
 
- 
+    });
+
+    $('.mobile-table-content').click(function() {
+
+        let currentlyClicked = $(this);
+
+        currentlyClicked.next().click(() => currentlyClicked.click());
+
+        if (currentlyClicked.hasClass('open-mobile-table')) {
+
+            $('.mobile-table-content').removeClass('non-select-mobile-table-above');
+
+            $('.mobile-table-content').removeClass('non-select-mobile-table-below');
+
+            currentlyClicked.removeClass('open-mobile-table');
+
+            return;
+            
+        }
+
+        $('.mobile-table-content').each(function() {
+
+            if (currentlyClicked[0] === $(this)[0]) {
+
+                $(this).addClass('open-mobile-table');
+
+                $(this).removeClass('non-select-mobile-table-above');
+
+                $(this).removeClass('non-select-mobile-table-below');
+
+            }
+
+            else {
+
+                $(this).removeClass('open-mobile-table');
+                
+                $(this).addClass(`non-select-mobile-table-${$(this).index() < currentlyClicked.index() ? 'above' : 'below'}`);
+
+            }
+
+        });
 
     });
 

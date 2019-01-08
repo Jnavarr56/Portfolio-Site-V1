@@ -84,9 +84,9 @@ const fromItemClickScrollTo = (options) => {
 
         $(this).click(function(e) {
 
-            let changeSelector = $('#mobile-menu').css('display') !== 'none';
+            e.preventDefault();
 
-            console.log(changeSelector);
+            let changeSelector = $('#mobile-menu').css('display') !== 'none';
 
             if (changeSelector) {
 
@@ -97,8 +97,6 @@ const fromItemClickScrollTo = (options) => {
                 }, 500);
 
             }
-
-            e.preventDefault();
     
             let item = $(this);
 
@@ -106,7 +104,7 @@ const fromItemClickScrollTo = (options) => {
 
             setTimeout(() => {
     
-                $('body')[0].scrollBy({
+                $(window)[0].scroll({
 
                     top: $(item.attr('href')).offset().top,
 
@@ -195,8 +193,7 @@ const setFallingTitles = () => {
     });
         
     window.ScrollingMain = ScrollOut({
-        targets: ['.word', '.about-content'],
-        scrollingElement: '.page',
+        targets: '.word',
         threshold: .9
     });
     

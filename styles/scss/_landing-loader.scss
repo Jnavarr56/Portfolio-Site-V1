@@ -2,11 +2,11 @@ $loading-color:	red;
 $loading-count-up-color: black;
 $loading-background-color:white;
 $loading-fade-time: .5s;
-$loader-border-radius: 100%;
+$loader-border-radius: 0%;
 
 .e-loadholder {
-	width: 75vw;
-	height: 75vh;
+	width: 100vw;
+	height: 100vh;
 	//border: 1px solid rgba($loading-color, .75);
 	border-radius: $loader-border-radius;
 	box-sizing: border-box;
@@ -16,8 +16,8 @@ $loader-border-radius: 100%;
 	transform: translate(-50%, -50%);
 }
 #particle-canvas{
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	opacity:1;
 	canvas {
 		border-radius: $loader-border-radius;
@@ -29,7 +29,7 @@ $loader-border-radius: 100%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: $loading-count-up-color;
-	font-size: 250%;
+	font-size: 300%;
 	//background-color: rgba(white, .85);
 	border-radius: 100%;
 	font-family: 'Raleway', sans-serif;

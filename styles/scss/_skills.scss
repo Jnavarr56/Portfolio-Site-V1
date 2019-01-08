@@ -1,3 +1,4 @@
+
 #skills {
     @include flex-config("row", "center", "center");
     .row {
@@ -7,9 +8,11 @@
     }
     table {
         width: 80%;
+        margin-left: 2%;
         transform: scale(.50, .50);
         filter: blur(10px);
         opacity: 0;
+        position: relative;
     }
     thead {
         background-color: rgba(red, 1);
@@ -22,12 +25,13 @@
     }
     th, td {
         font-family: 'Raleway', sans-serif;
+        font-size: 25px !important;
     }
     tr:nth-child(odd) {
         background-color: rgba(red, .10);
     }
     [data-scroll] {
-        transition: all .5s ease;
+        transition: all .5s linear 0s;
     }
     [data-scroll="in"] {
         transform: scale(1, 1);
@@ -40,3 +44,148 @@
         //opacity: 0;     
     }
 }
+#mobile-table {
+    height: auto;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 12%;
+    width: 84%;
+    padding-top: 10px;
+    transform: scale(.50, .50);
+    filter: blur(10px);
+    opacity: 0;
+    h1 {
+        font-family: 'Raleway', sans-serif;
+        color: red;
+        padding: 20px 15px; 
+        margin: 0 !important;
+        font-size: 20px;
+        transition: all ease .5s;
+        span {
+            transition: all ease .5s;
+            position: absolute;
+            right: 12px;
+        }
+    }
+    ul {
+        transition: all ease .5s;
+        max-height: 0;
+        overflow: hidden;
+        margin-bottom: 6px;
+        width: 100%;
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            color: red;
+            font-family: 'Raleway', sans-serif;
+            width: 100%;
+            font-weight: bolder;
+            padding: 5px 30px;
+            font-size: 35px;
+            text-align: center;
+            &:nth-child(odd) {
+                background-color: rgba(red, .10);
+            }
+        }
+    }
+}
+.mobile-table-content {
+    width: 100%;
+}
+.open-mobile-table {
+    span {
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+}
+.open-mobile-table + ul {
+    max-height: 300px !important;
+}
+.non-select-mobile-table-above {
+    padding: 7px 15px !important; 
+}
+.non-select-mobile-table-below {
+    padding: 3px 15px !important; 
+}
+#mobile-table {
+    [data-scroll] {
+        transition: all .5s linear 0s;
+    }
+    [data-scroll="in"] {
+        transform: scale(1, 1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+    [data-scroll="out"] {
+        //transform: scale(.75, .75);
+        //filter: blur(10px);
+        //opacity: 0;     
+    }
+}
+
+@media (max-width: 1280px) {
+    #skills {
+        .table {
+            position: relative !important;
+            top: 5% !important;
+            margin-left: 4% !important;
+            th, td {
+                font-size: 22px !important;
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    #skills {
+        .table {
+            position: relative !important;
+            top: 5% !important;
+            margin-left: 6.5% !important;
+            th, td {
+                font-size: 17px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #skills {
+        .table {
+            display: none !important;
+        }
+        #mobile-table {
+            @include flex-config('column', 'flex-start', 'flex-start');
+        }
+    }
+}
+@media (max-width: 760px) {
+    #skills {
+        #mobile-table {
+            li {
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media (max-width: 650px) {
+    #skills {
+        #mobile-table {
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    #skills {
+        #mobile-table {
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
