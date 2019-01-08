@@ -12,6 +12,7 @@
 @import 'home-logo';
 @import 'skills';
 @import 'about';
+@import 'work';
 
 
 .fade-out-old-language { animation: FadeOutOldLanguage .5s ease-in-out 0s 1 forwards; }
@@ -66,7 +67,8 @@ section {
 }
 @media (max-width: 900px) {
     .section-header {
-        left: 15% !important;
+        left: 5% !important;
+        font-size: 250%;
         transform: translateX(0) !important;
     }
 }
@@ -90,7 +92,6 @@ section {
 @media (max-width: 700px) {
     .section-header {
         font-size: 150% !important;
-        left: 5% !important;
     }
 }
 .blinking-cursor-red {

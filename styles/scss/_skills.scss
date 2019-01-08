@@ -25,7 +25,8 @@
     }
     th, td {
         font-family: 'Raleway', sans-serif;
-        font-size: 25px !important;
+        font-size: 20px !important;
+        padding: .65%;
     }
     tr:nth-child(odd) {
         background-color: rgba(red, .10);
@@ -60,7 +61,7 @@
         color: red;
         padding: 20px 15px; 
         margin: 0 !important;
-        font-size: 20px;
+        font-size: 30px;
         transition: all ease .5s;
         span {
             transition: all ease .5s;
@@ -75,14 +76,14 @@
         margin-bottom: 6px;
         width: 100%;
         padding-left: 0;
+        font-weight: bolder;
         li {
             list-style-type: none;
             color: red;
             font-family: 'Raleway', sans-serif;
             width: 100%;
-            font-weight: bolder;
             padding: 5px 30px;
-            font-size: 35px;
+            font-size: 20px;
             text-align: center;
             &:nth-child(odd) {
                 background-color: rgba(red, .10);
@@ -124,29 +125,55 @@
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1265px) {
     #skills {
         .table {
             position: relative !important;
-            top: 5% !important;
-            margin-left: 4% !important;
             th, td {
-                font-size: 22px !important;
+                font-size: 18px !important;
+            }
+        }
+        
+    }
+}
+@media (max-width: 1188px) {
+    #skills {
+        .table {
+            position: relative !important;
+            th, td {
+                font-size: 16px !important;
             }
         }
     }
 }
-@media (max-width: 960px) {
+@media (max-width: 500px) {
     #skills {
-        .table {
-            position: relative !important;
-            top: 5% !important;
-            margin-left: 6.5% !important;
-            th, td {
-                font-size: 17px !important;
-            }
+        h1 {
+            font-size: 27.5px;
         }
     }
+}
+@media (max-width: 400px) {
+    #skills {
+        h1 {
+            font-size: 22.5px;
+        }
+        li {
+            font-size: 15px;
+        }
+    }
+
+}
+@media (max-width: 350px) {
+    #skills {
+        h1 {
+            font-size: 19px;
+        }
+        li {
+            font-size: 13px;
+        }
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -160,32 +187,5 @@
     }
 }
 @media (max-width: 760px) {
-    #skills {
-        #mobile-table {
-            li {
-                font-size: 25px;
-            }
-        }
-    }
 }
-@media (max-width: 650px) {
-    #skills {
-        #mobile-table {
-            li {
-                font-size: 18px;
-            }
-        }
-    }
-}
-@media (max-width: 600px) {
-    #skills {
-        #mobile-table {
-            li {
-                font-size: 16px;
-            }
-        }
-    }
-}
-
-
 

@@ -1,0 +1,11 @@
+#work {
+    @include flex-config('row', 'center', 'center');
+    .row {
+        height: 60%;
+        width: 80%;
+    }
+    .column {
+        background-color: white;
+        margin: 8%;
+    }
+}

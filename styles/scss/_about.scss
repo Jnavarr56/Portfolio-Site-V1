@@ -3,7 +3,7 @@
     .row {
         @include flex-config('row', 'center', 'center');
         .about-content {
-            font-size: 175%;
+            font-size: 145%;
             font-weight: bolder;
             padding: 0;
             transform: scale(.50, .50);
@@ -35,44 +35,50 @@
 }
 @media (max-width: 1400px) {
     .about-content {
-        font-size: 150% !important;
+        font-size: 135% !important;
     }
 }
 @media (max-width: 1000px) {
     .about-content {
-        font-size: 135% !important;
+        font-size: 125% !important;
     }
 }
 @media (max-width: 800px) {
     .about-content {
-        font-size: 125% !important;
+        font-size: 130% !important;
     }
  
 }
 @media (max-width: 769px) {
     .about-content {
-        font-size: 115% !important;
+        font-size: 120% !important;
         padding: 0 40px !important;
     }
  
 }
 @media (max-width: 701px) {
     .about-content {
-        font-size: 105% !important;
+        font-size: 115% !important;
         padding: 0 40px !important;
     }
 }
 @media (max-width: 650px) {
     .about-content {
-        font-size: 95% !important;
+        font-size: 92.5% !important;
     }
 }
 @media (max-width: 575px) {
     .about-content {
-        font-size: 85% !important;
+        font-size: 88% !important;
     }
 }
 @media (max-width: 500px) {
+    .about-content {
+        font-size: 82.5% !important;
+    }
+ 
+}
+@media (max-width: 370px) {
     .about-content {
         font-size: 75% !important;
     }
@@ -80,7 +86,7 @@
 }
 @media (max-width: 350px) {
     .about-content {
-        font-size: 60% !important;
+        font-size: 65% !important;
     }
  
 }
