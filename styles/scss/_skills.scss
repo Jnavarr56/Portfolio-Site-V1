@@ -32,7 +32,7 @@
         background-color: rgba(red, .10);
     }
     [data-scroll] {
-        transition: all .5s linear 0s;
+        transition: all .5s ease;
     }
     [data-scroll="in"] {
         transform: scale(1, 1);
@@ -158,19 +158,22 @@
         h1 {
             font-size: 22.5px;
         }
-        li {
-            font-size: 15px;
+        ul {
+            li {
+                font-size: 15px;
+            }
         }
     }
-
 }
 @media (max-width: 350px) {
     #skills {
         h1 {
             font-size: 19px;
         }
-        li {
-            font-size: 13px;
+        ul {
+            li {
+                font-size: 13px;
+            }
         }
     }
 

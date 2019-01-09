@@ -9,6 +9,8 @@
 //@koala-prepend './home-logo/home-logo.js'
 //@koala-prepend './text-scramble/text-scramble.js'
 //@koala-prepend './home-particles/home-particles.js'
+//@koala-prepend './desktop-tile-selector/desktop-tile-selector.js'
+//@koala-prepend './mobile-table-interactive/mobile-table-interactive.js'
 
 
 // INCLUDE ALL HELPERS IN THE 'js/helpers' DIRECTORY JS FILES ABOVE

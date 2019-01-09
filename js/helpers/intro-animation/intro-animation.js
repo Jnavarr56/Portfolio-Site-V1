@@ -1,23 +1,23 @@
 let test = {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 5,
       "density": {
         "enable": true,
-        "value_area": 1000.0472365193136
+        "value_area": 800
       }
     },
     "color": {
-      "value": "#FF0000"
+      "value": "#ff0000"
     },
     "shape": {
-      "type": "triangle",
+      "type": "edge",
       "stroke": {
         "width": 0,
         "color": "#000"
       },
       "polygon": {
-        "nb_sides": 3
+        "nb_sides": 6
       },
       "image": {
         "src": "img/github.svg",
@@ -26,57 +26,57 @@ let test = {
       }
     },
     "opacity": {
-      "value": 0.2,
-      "random": false,
+      "value": 0.3,
+      "random": true,
       "anim": {
         "enable": false,
         "speed": 1,
         "opacity_min": 0.1,
-        "sync": true
+        "sync": false
       }
     },
     "size": {
-      "value": 200,
-      "random": true,
+      "value": 114.42640803667955,
+      "random": false,
       "anim": {
-        "enable": false,
+        "enable": true,
         "speed": 10,
-        "size_min": 50,
-        "sync": true
+        "size_min": 40,
+        "sync": false
       }
     },
     "line_linked": {
-      "enable": false ,
-      "distance": 500,
-      "color": "#b91e1e",
+      "enable": false,
+      "distance": 200,
+      "color": "#ffffff",
       "opacity": 1,
-      "width": 2.886141709557941
+      "width": 2
     },
     "move": {
       "enable": true,
-      "speed": 5,
-      "direction": "top-left",
-      "random": false,
-      "straight": true,
+      "speed": 8,
+      "direction": "none",
+      "random": true,
+      "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": true,
-        "rotateX": 5130.918594769673,
-        "rotateY": 5130.918594769673
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
       }
     }
   },
   "interactivity": {
-    "detect_on": "window",
+    "detect_on": "canvas",
     "events": {
       "onhover": {
         "enable": false,
         "mode": "grab"
       },
       "onclick": {
-        "enable": true,
-        "mode": "bubble"
+        "enable": false,
+        "mode": "push"
       },
       "resize": true
     },
@@ -88,14 +88,14 @@ let test = {
         }
       },
       "bubble": {
-        "distance": 587.4125874125874,
-        "size": 59.940059940059946,
+        "distance": 400,
+        "size": 40,
         "duration": 2,
-        "opacity": 0.11369080972218831,
+        "opacity": 8,
         "speed": 3
       },
       "repulse": {
-        "distance": 560.3332764879281,
+        "distance": 200,
         "duration": 0.4
       },
       "push": {
@@ -107,7 +107,7 @@ let test = {
     }
   },
   "retina_detect": false
-}
+};
 // 1) Enables scrolling after a set delay in milliseconds.
 const enableScrolling = delay => setTimeout(() => $('html').css('overflow', 'scroll'), delay);
 
@@ -138,9 +138,11 @@ const configureParticleAnim = options => {
           clearInterval(countUp);
 
           window.pJSDom[0].pJS.particles.move.speed = 0;
+
+          particlesJS('background-home', test);
           
           setTimeout(() => {
-
+            
             $('#' + options.particleHolderID).addClass(options.disappearClass);
 
             setTimeout(() => {

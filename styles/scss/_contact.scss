@@ -1,0 +1,56 @@
+#contact {
+    @include flex-config('center', 'center', 'center');
+    .row {
+        @include flex-config('center', 'center', 'center');
+        ul {
+            transform: scale(.50, .50);
+            filter: blur(10px);
+            opacity: 0;
+            .contact-list-item {
+                font-size: 300%;
+                margin: 20px 0;
+                list-style-type: none;
+                font-weight: bolder;
+                color: white !important;
+                font-family: 'Raleway', sans-serif;
+                a {
+                    color: white !important;
+                    text-decoration: underline;
+                    &:hover {
+                        color: blue !important;
+                    }
+                }
+                .phone-icon {
+                    padding: 0 5px;
+                }
+            }
+            &[data-scroll] {
+                transition: all .5s ease;
+                transform: scale(.50, .50);
+                filter: blur(10px);
+                opacity: 0;
+            }
+            &[data-scroll="in"] {
+                transform: scale(1, 1);
+                filter: blur(0px);
+                opacity: 1;
+            }
+            &[data-scroll="out"] {
+                //transform: scale(.75, .75);
+                //filter: blur(10px);
+                //opacity: 0;     
+            }
+        }
+
+    }
+}
+@media (max-width: 767px) {
+    .contact-list-item {
+        font-size: 200% !important;
+    }
+}
+@media (max-width: 420px) {
+    .contact-list-item {
+        font-size: 125% !important;
+    }
+}

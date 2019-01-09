@@ -39,7 +39,7 @@ $bg-height: 50px;
     font-size: 250%;
     word-break: break-word;
     margin-top: 2%;
-    font-weight: bolder;
+    //font-weight: bolder;
 
 }
 .landing-fade-in {
@@ -112,6 +112,13 @@ $bg-height: 50px;
     //display: none;
 }
 
+#background-home {
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 //<div class="home-logo" src="./styles/images/home-logos/black/codepenlogo.png">
 //<div class="home-logo" src="./styles/images/home-logos/black/githublogo.png">

@@ -41,7 +41,7 @@
             <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Home" data-sp="Inicio" href="#home">Home</a></li>
             <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="About" data-sp="Sobre Mi" href="#about">About</a></li>
             <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Skills" data-sp="Habilidades" href="#skills">Skills</a></li>
-            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Full-Stack Portfolio" data-sp="Portfolio Full-Stack" href="#work">Full-Stack Portfolio</a></li>
+            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Portfolio" data-sp="Portfolio" href="#work">Portfolio</a></li>
             <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Articles" data-sp="Artículos" href="#articles">Articles</a></li>
             <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Contact" data-sp="Contactame" href="#contact">Contact</a></li>
           </ul>
@@ -60,7 +60,7 @@
           <li><a class="has-alt-text mobile-nav-item" data-eng="Home" data-sp="Inicio" href="#home">Home</a></li>
           <li><a class="has-alt-text mobile-nav-item" data-eng="About" data-sp="Sobre Mi" href="#about">About</a></li>
           <li><a class="has-alt-text mobile-nav-item" data-eng="Skills" data-sp="Habilidades" href="#skills">Skills</a></li>
-          <li><a class="has-alt-text mobile-nav-item" data-eng="<span class='hide-fullstack'>Full-Stack</span> Portfolio" data-sp="Portfolio <span class='hide-fullstack'>Full-Stack</span>" href="#work"><span class='hide-fullstack'>Full-Stack</span> Portfolio</a></li>
+          <li><a class="has-alt-text mobile-nav-item" data-eng="Portfolio" data-sp="Portfolio" href="#work">Portfolio</a></li>
           <li><a class="has-alt-text mobile-nav-item" data-eng="Articles" data-sp="Artículos" href="#articles">Articles</a></li>
           <li><a class="has-alt-text mobile-nav-item" data-eng="Contact" data-sp="Contactame" href="#contact">Contact</a></li>
         </ul>
@@ -104,7 +104,8 @@
           <button class="landing-fade-in has-alt-text" data-eng="View Latest Git Commit" data-sp="Ver Git Commit Más Nuevo" id="view-latest-commit-trigger">View Latest Git Commit</button>
         </div>
       </div>
-    </div> 
+    </div>
+    <div id="background-home" class="landing-fade-in"></div>
   </section>
   <!-------------------------/Home---------------------------->
   <!--About + Resume Link-->
@@ -140,11 +141,11 @@
     <table id="main-skills-table" class="table word" data-scroll>
       <thead>
         <tr>
-          <th scope="col">Cloud</th>
+          <th scope="col" class="has-alt-text" data-eng="Cloud" data-sp="Nube">Cloud</th>
           <th scope="col">Build Tools</th>
-          <th scope="col">Databases</th>
-          <th scope="col">Libraries/Frameworks</th>
-          <th scope="col">Languages</th>
+          <th scope="col" class="has-alt-text" data-eng="Databases" data-sp="Base de Datos">Databases</th>
+          <th scope="col" class="has-alt-text" data-sp="Bibliotecas/Framework" data-eng="Libraries/Frameworks">Libraries/Frameworks</th>
+          <th scope="col" class="has-alt-text" data-sp="Lenguajes" data-eng="Languages">Languages</th>
           <th scope="col">General</th>
         </tr>
       </thead>
@@ -203,20 +204,12 @@
             <td class="databases-row"></td>
             <td class="frameworks-row">Bootstrap</td>
             <td class="languages-row"></td>
-            <td class="general"></td>          
-          </tr>
-          <tr>
-            <td class="cloud-row"></td>
-            <td class="buildtools-row"></td>
-            <td class="databases-row"></td>
-            <td class="general">Mobile Responsive Design</td>
-            <td class="languages-row"></td>
-            <td class="general"></td>
+            <td class="general">Mobile Responsive Design</td>          
           </tr>
       </tbody>
     </table>
     <div id="mobile-table" class="word" data-scroll>
-        <h1 class="mobile-table-content">Cloud <span>&#9654;</span></h1>
+        <h1 class="mobile-table-content has-alt-text" data-eng="Cloud <span>&#9654;</span>" data-sp="Nube <span>&#9654;</span>">Cloud <span>&#9654;</span></h1>
         <ul>
           <li>Amazon Web Services</li>
           <li>Google Cloud</li>
@@ -232,11 +225,11 @@
           <li>Webpack</li>
           <li>Rake</li>
         </ul>
-        <h1 class="mobile-table-content">Databases <span>&#9654;</span></h1>
+        <h1 class="mobile-table-content has-alt-text" data-eng="Databases <span>&#9654;</span>" data-sp="Base de Datos <span>&#9654;</span>">Databases <span>&#9654;</span></h1>
         <ul>
           <li>PostgreSQL</li>
         </ul>
-        <h1 class="mobile-table-content">Libraries/Frameworks <span>&#9654;</span></h1>
+        <h1 class="mobile-table-content has-alt-text" data-sp="Biblioteca/Framework <span>&#9654;</span>" data-eng="Libraries/Frameworks <span>&#9654;</span>">Libraries/Frameworks <span>&#9654;</span></h1>
         <ul>
           <li>React</li>
           <li>Redux</li>
@@ -246,7 +239,7 @@
           <li>jQuery</li>
           <li>Bootstrap</li>
         </ul>
-        <h1 class="mobile-table-content">Languages <span>&#9654;</span></h1>
+        <h1 class="mobile-table-content has-alt-text" data-sp="Lenguajes <span>&#9654;</span>" data-eng="Languages <span>&#9654;</span>">Languages <span>&#9654;</span></h1>
         <ul>
           <li>Ruby</li>
           <li>JavaScript, ES6</li>
@@ -273,28 +266,164 @@
 
   <!--Work-->
   <section id="work" class="container-fluid">
-    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="work" data-eng="Full-Stack<br>Portfolio" data-sp="Portfolio<br>Full-Stack"">Full-Stack<br>Portfolio</h1>
-    <div class="row">
-      <div class="column col-4"></div>
-      <div class="column col-4"></div>
-      <div class="column col-4"></div>
-      <div class="column col-4"></div>
-      <div class="column col-4"></div>
-      <div class="column col-4"></div>
+    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="work" data-eng="Portfolio" data-sp="Portfolio"">Portfolio</h1>
+    <div id="work-row-selector"></div>
+    <div id="desktop-tile-grid" class="row word" data-scroll>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #1</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #2</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #3</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #4</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #5</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #6</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #7</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #8</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #9</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #10</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #11</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #12</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #13</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header">Project #14</h1>
+        <h5 class="desktop-tile-header">Coming Soon</h5>
+        <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
+        <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        <div class="inner"></div>
+      </div>
     </div>
+
+    
   </section>
   <!--/Work-->
 
 
   <!--Articles-->
-  <section id="articles">
+  <section id="articles" class="container-fluid">
     <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="articles" data-eng="Articles" data-sp="Artículos">Articles</h1>
+    <div class="row">
+      <ol class="word" data-scroll>
+        <li class="article-list-item"><a href="#" target="_blank">Coming Soon</a></li>
+        <li class="article-list-item"><a href="#" target="_blank">Coming Soon</a></li>
+        <li class="article-list-item"><a href="#" target="_blank">Coming Soon</a></li>
+      </ol>
+    </div>
   </section>
   <!--/Articles-->
 
   <!--Contact-->
-  <section id="contact">
+  <section id="contact" class="container-fluid">
     <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="contact" data-eng="Contact" data-sp="Contactame">Contact</h1>
+    <div class="row">
+      <ul class="word" data-scroll>
+        <li class="contact-list-item"><a href="https://github.com/Jnavarr56">Github</a></li>
+        <li class="contact-list-item"><a href="https://codepen.io/collection/DQvVZN/">CodePen</a></li>
+        <li class="contact-list-item"><a href="https://www.linkedin.com/in/jnavarr5/">Linkedin</a></li>
+        <li class="contact-list-item"><a href="https://angel.co/jorge-navarro">AngelList</a></li>
+        <li class="contact-list-item">
+          <i class="fas fa-envelope"></i>
+          &nbsp;
+          <a href="mailto:jnavarr56@gmail.com?Subject=Hey%20Jorge">
+            jnavarr56@gmail.com
+          </a>
+        </li>
+        <li class="contact-list-item">
+          <i class="fas fa-mobile-alt phone-icon"></i>
+          &nbsp;
+          917.683.0901
+        </li>
+        </ul>
+    </div>
   </section>
   <!--/Contact-->
 

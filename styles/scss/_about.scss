@@ -33,6 +33,9 @@
     }
 
 }
+#latest-commit {
+    padding: 0 !important;
+}
 @media (max-width: 1400px) {
     .about-content {
         font-size: 135% !important;
@@ -40,12 +43,12 @@
 }
 @media (max-width: 1000px) {
     .about-content {
-        font-size: 125% !important;
+        font-size: 130% !important;
     }
 }
 @media (max-width: 800px) {
     .about-content {
-        font-size: 130% !important;
+        font-size: 125% !important;
     }
  
 }
