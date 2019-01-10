@@ -1,7 +1,7 @@
 let test = {
   "particles": {
     "number": {
-      "value": 5,
+      "value": 10,
       "density": {
         "enable": true,
         "value_area": 800
@@ -17,7 +17,7 @@ let test = {
         "color": "#000"
       },
       "polygon": {
-        "nb_sides": 6
+        "nb_sides": 3
       },
       "image": {
         "src": "img/github.svg",
@@ -139,7 +139,7 @@ const configureParticleAnim = options => {
 
           window.pJSDom[0].pJS.particles.move.speed = 0;
 
-          //particlesJS('background-home', test);
+          particlesJS('background-home', test);
           
           setTimeout(() => {
             
@@ -162,7 +162,7 @@ const configureParticleAnim = options => {
 
             //enableScrolling(0);
 
-            background.initializr();  
+            //background.initializr();  
 
           }, options.switchToHomeDelay);
           
