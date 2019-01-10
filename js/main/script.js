@@ -314,6 +314,42 @@ $(document).ready(function() {
 
     });
 
+    for (let i = 0; i < Math.ceil($('.gallery-moduleSlide').length); i++) {
+
+        let bubble = $('<div class="banner-ball"></div>');
+
+        bubble.click(function() {
+
+            $('.gallery-moduleSlide').each(function(x) {
+
+                $(this)[0].className.split(' ').forEach(e => {
+
+                    if (e.includes('mobile-tile-shift-')) {
+
+                        $(this).removeClass(e);
+
+                    }
+
+                });
+
+            });
+
+            $('.banner-ball').removeClass('selected-banner-ball');
+
+            bubble.addClass('selected-banner-ball');
+
+            $('.gallery-moduleSlide').each(function() {
+
+                $(this).addClass(`mobile-tile-shift-${i}`);
+
+            });
+
+        });
+
+        $('#banner-tracking').append(bubble);
+
+    }
+
     $('#right-work').click();
     $('#left-work').click();
 
@@ -373,48 +409,20 @@ $(document).ready(function() {
 
             });
 
-            $('.gallery-moduleSlide').addClass(workMobileShiftClasses[mobileShiftCount])
-             
+            $('.gallery-moduleSlide').addClass(workMobileShiftClasses[mobileShiftCount]);
+
+            $('.banner-ball').removeClass('selected-banner-ball');
+
+            $('.banner-ball').eq(workMobileShiftClasses[mobileShiftCount].match(/[0-9]+/)[0]).addClass('selected-banner-ball');
+     
         });
 
     });
 
+    $('.banner-ball').eq(0).addClass('selected-banner-ball');
 
-    for (let i = 0; i < Math.ceil($('.gallery-moduleSlide').length); i++) {
 
-        let bubble = $('<div class="banner-ball"></div>');
-
-        bubble.click(function() {
-
-            $('.gallery-moduleSlide').each(function(x) {
-
-                $(this)[0].className.split(' ').forEach(e => {
-
-                    if (e.includes('mobile-tile-shift-')) {
-
-                        $(this).removeClass(e);
-
-                    }
-
-                });
-
-            });
-
-            $('.banner-ball').removeClass('selected-banner-ball');
-
-            bubble.addClass('selected-banner-ball');
-
-            $('.gallery-moduleSlide').each(function() {
-
-                $(this).addClass(`mobile-tile-shift-${i}`);
-
-            });
-
-        });
-
-        $('#banner-tracking').append(bubble);
-
-    }
+    
 
 });
 

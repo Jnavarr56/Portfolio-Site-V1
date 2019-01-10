@@ -1829,10 +1829,7 @@ button {
     position: relative;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    border-radius: 2.5rem h1, h5;
-      border-radius-color: red;
-      border-radius-font-family: 'Raleway', sans-serif;
-      border-radius-font-size: 125%;
+    border-radius: 2.5rem;
     background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1847,35 +1844,38 @@ button {
     -webkit-box-align: "center";
         -ms-flex-align: "center";
             align-items: "center"; }
-    /* line 206, ../scss/_work.scss */
+    /* line 200, ../scss/_work.scss */
     .gallery-moduleWrapper .gallery-moduleSlide .mobile-tile-header, .gallery-moduleWrapper .gallery-moduleSlide .mobile-header-desc {
-      z-index: 400; }
-    /* line 210, ../scss/_work.scss */
+      z-index: 400;
+      color: red;
+      font-family: 'Raleway', sans-serif;
+      font-size: 125%; }
+    /* line 207, ../scss/_work.scss */
     .gallery-moduleWrapper .gallery-moduleSlide img {
       height: 40px;
       width: 40px; }
-    /* line 215, ../scss/_work.scss */
+    /* line 212, ../scss/_work.scss */
     .gallery-moduleWrapper .gallery-moduleSlide .inner {
       position: absolute;
       z-index: 1; }
 
 @media (max-width: 900px) {
-  /* line 223, ../scss/_work.scss */
+  /* line 220, ../scss/_work.scss */
   #work-row-selector, #desktop-tile-grid {
     display: none !important; } }
 @media (max-width: 536px) {
-  /* line 229, ../scss/_work.scss */
+  /* line 226, ../scss/_work.scss */
   .mobile-tile-header-desc, .mobile-header-desc {
     font-size: 100% !important; } }
 @media (max-width: 462px) {
-  /* line 236, ../scss/_work.scss */
+  /* line 233, ../scss/_work.scss */
   .mobile-tile-header-desc, .mobile-header-desc {
     font-size: 75% !important; } }
 @media (max-width: 350px) {
-  /* line 244, ../scss/_work.scss */
+  /* line 241, ../scss/_work.scss */
   .mobile-tile-header-desc, .mobile-header-desc {
     font-size: 65% !important; } }
-/* line 251, ../scss/_work.scss */
+/* line 248, ../scss/_work.scss */
 #banner-tracking {
   position: absolute;
   top: -5%;
@@ -1897,13 +1897,13 @@ button {
   -webkit-box-align: "center";
       -ms-flex-align: "center";
           align-items: "center"; }
-  /* line 260, ../scss/_work.scss */
+  /* line 257, ../scss/_work.scss */
   #banner-tracking .banner-ball {
     height: calc( 100px / 7 );
     width: calc( 100px / 7 );
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.35); }
-    /* line 265, ../scss/_work.scss */
+    /* line 262, ../scss/_work.scss */
     #banner-tracking .banner-ball.selected-banner-ball {
       background-color: rgba(255, 255, 255, 0.85); }
 

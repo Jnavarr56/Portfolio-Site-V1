@@ -193,18 +193,15 @@ $delay: $speed/3;
         border: solid red 20px;
         position: relative;
         flex-shrink: 0;
-        border-radius: 2.5rem
-        h1, h5 {
-            color: red;
-            font-family: 'Raleway', sans-serif;
-            font-size: 125%;
-        }
-
+        border-radius: 2.5rem;
         background-color: rgba(white, 1);
 
         @include flex-config('column', 'space-evenly', 'center');
         .mobile-tile-header, .mobile-header-desc {
             z-index: 400;
+            color: red;
+            font-family: 'Raleway', sans-serif;
+            font-size: 125%;
         }
 
         img {
