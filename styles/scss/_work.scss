@@ -5,12 +5,12 @@ $ease2: cubic-bezier(.5, 0, 1, 1);
 $delay: $speed/3;
 #work {
     @include flex-config('row', 'center', 'center');
-    .row {
+    .row:nth-of-type(1) {
         height: 60%;
         overflow: hidden;
         width: 80%;
         &[data-scroll] {
-            transition: all .5s ease;
+            transition: all .75s ease;
             transform: scale(.50, .50);
             filter: blur(10px);
             opacity: 0;
@@ -34,7 +34,7 @@ $delay: $speed/3;
         @include flex-config('column', 'center', 'center');
         transition: all .6s;
         transform-style: preserve-3d;
-        background-image: url("https://media.giphy.com/media/11JTxkrmq4bGE0/giphy.gif"); 
+        background-image: url("https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif"); 
         background-position: center; 
         background-repeat: no-repeat; 
         background-size: cover; 
@@ -44,15 +44,20 @@ $delay: $speed/3;
             color: rgba(red, 1);
             z-index: 10;
             font-size: 150%;
+            transition: .2s linear .1s;  
         }
         .desktop-tile-header-github { 
-            display: none; 
+            //display: none;
+            opacity: 0;
+            animation: appearTileEls .1s linear .1s; 
             color: red; 
             height: 60px;
             width: 60px;
         }
         .desktop-tile-header-desc { 
-            display: none; 
+            //display: none; 
+            opacity: 0;
+            animation: appearTileEls .3s linear .3s; 
             color: red; 
             font-family: 'Raleway', sans-serif;
         }
@@ -66,15 +71,17 @@ $delay: $speed/3;
         .desktop-tile-header:nth-child(2) {
             font-size: 175%;
         }
-        &:hover {
-            background-image: none; 
-            background-color: rgba(white, 1);
-            transform: rotateY(180deg);
-            .desktop-tile-header { display: none; }
-            .desktop-tile-header-github { display: initial; }
-            .desktop-tile-header-desc { display: initial; }
-        }
     }
+}
+.hover-work-tile {
+    background-image: none; 
+    background-color: rgba(white, 1);
+    transform: rotateY(180deg);
+    .desktop-tile-header { 
+        display: none !important;
+    }
+    .desktop-tile-header-github { /*display: initial !important;*/  opacity: 1 !important;}
+    .desktop-tile-header-desc { /*display: initial !important;*/  opacity: 1 !important;}
 }
 #work-row-selector {
     position: absolute;
@@ -104,6 +111,7 @@ $delay: $speed/3;
     float: left;
     perspective: 1200px;
     overflow: hidden;
+    border-radius: 2.5rem;
 }
 .inner {
     height: 150%;
@@ -118,10 +126,145 @@ $delay: $speed/3;
     //border-radius: 6rem !important;
 }
 #desktop-tile-grid {
-
+    @include flex-config('row', 'center', 'center');
+    height: 60%;
+    width: 70%;
+    overflow: hidden;
 }
-@for $num from 0 through 10 {
+#test {
+    display: none;
+}
+@for $num from 0 through 20 {
     .desktop-tile-shift-#{$num} {
         top: -#{$num * 50}#{"%"} !important;
-    }    
+    }
+    .mobile-tile-shift-#{$num} {
+        left: -#{$num * 100}#{"%"} !important;
+    }        
+}
+
+@keyframes appearTileEls {
+    100% { opacity: 1; }
+}
+@keyframes disappearTileEls {
+    100% { display: none; }
+}
+
+#banner-gallery {
+    display: none;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+    width: 100%;
+}
+@media (max-width: 900px) {
+    #banner-gallery {
+        display: initial;
+    }
+}
+
+.gallery-moduleWrapper {
+    @include flex-config('row', 'flex-start', 'center');
+    #arrows-direction {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        width: 75%;
+        @include flex-config('row', 'space-between', 'center');
+        z-index: 4000;
+        color: red;
+        font-size: 60px;
+
+        opacity: 0;
+        
+    }
+    height: 100%;
+    width: 100%;
+    overflow: hidden;;
+
+    .gallery-moduleSlide {
+        transition: all .6s ease;
+        height: 100%;
+        width:  100%;
+        border: solid red 20px;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 2.5rem
+        h1, h5 {
+            color: red;
+            font-family: 'Raleway', sans-serif;
+            font-size: 125%;
+        }
+
+        background-color: rgba(white, 1);
+
+        @include flex-config('column', 'space-evenly', 'center');
+        .mobile-tile-header, .mobile-header-desc {
+            z-index: 400;
+        }
+
+        img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .inner {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #work-row-selector, #desktop-tile-grid {
+        display: none !important;
+    }
+}
+
+@media (max-width: 536px) {
+    .mobile-tile-header-desc, .mobile-header-desc {
+
+        font-size: 100% !important;
+
+    }
+}
+@media (max-width: 462px) {
+    .mobile-tile-header-desc, .mobile-header-desc {
+
+        font-size: 75% !important;
+
+    }
+}
+
+@media (max-width: 350px) {
+    .mobile-tile-header-desc, .mobile-header-desc {
+
+        font-size: 65% !important;
+
+    }
+}
+
+#banner-tracking {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 6%;
+    width: 60%;
+    @include flex-config('row', 'space-evenly', 'center');
+
+    .banner-ball {
+        height: calc( 100px / 7 );
+        width: calc( 100px / 7 );
+        border-radius: 100%;
+        background-color: rgba(white, .35);
+        &.selected-banner-ball {
+            background-color: rgba(white, .85);
+        }    
+    }
+
 }

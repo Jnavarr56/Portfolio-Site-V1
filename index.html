@@ -78,6 +78,7 @@
   <!-----------/Language-Selector Container------------------->
   <!--------------------------Home---------------------------->
   <section id="home" class="container-fluid">
+    <div id="background-home" class="landing-fade-in"></div>
     <div id="logo-container">
       <div class="home-logo landing-fade-in" data-link="https://codepen.io/collection/DQvVZN/"></div>
       <div class="home-logo landing-fade-in" data-link="https://github.com/Jnavarr56"></div>
@@ -105,7 +106,6 @@
         </div>
       </div>
     </div>
-    <div id="background-home" class="landing-fade-in"></div>
   </section>
   <!-------------------------/Home---------------------------->
   <!--About + Resume Link-->
@@ -267,8 +267,8 @@
   <!--Work-->
   <section id="work" class="container-fluid">
     <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="work" data-eng="Portfolio" data-sp="Portfolio"">Portfolio</h1>
-    <div id="work-row-selector"></div>
-    <div id="desktop-tile-grid" class="row word" data-scroll>
+    <div id="work-row-selector" class="desktop-work-hide"></div>
+    <div id="desktop-tile-grid" class="row word desktop-work-hide" data-scroll>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #1</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
@@ -380,8 +380,115 @@
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
         <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
         <div class="inner"></div>
-      </div>
+      </div>  
     </div>
+
+    <div id="banner-gallery" class="gallery-module">
+        <div id="banner-tracking"></div>
+        <div class="gallery-moduleWrapper">
+          <div id="arrows-direction"><span class="mobile-shift-arrow" id="left-work">&lsaquo;</span> <span class="mobile-shift-arrow" id="right-work">&rsaquo;</span></div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #1</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #2</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #3</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #4</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #5</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #6</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #7</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+            <h1 class="mobile-tile-header">Project #8</h1>
+            <h5 class="mobile-tile-header">Coming Soon</h5>
+            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+          </div>
+          <div class="gallery-moduleSlide">
+              <h1 class="mobile-tile-header">Project #9</h1>
+              <h5 class="mobile-tile-header">Coming Soon</h5>
+              <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+              <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+              <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+            </div>
+          <div class="gallery-moduleSlide">
+              <h1 class="mobile-tile-header">Project #10</h1>
+              <h5 class="mobile-tile-header">Coming Soon</h5>
+              <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+              <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+              <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+            </div>
+            <div class="gallery-moduleSlide">
+                <h1 class="mobile-tile-header">Project #11</h1>
+                <h5 class="mobile-tile-header">Coming Soon</h5>
+                <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+                <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+                <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+              </div>
+              <div class="gallery-moduleSlide">
+                  <h1 class="mobile-tile-header">Project #12</h1>
+                  <h5 class="mobile-tile-header">Coming Soon</h5>
+                  <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+                  <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+                  <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+                </div>
+                <div class="gallery-moduleSlide">
+                    <h1 class="mobile-tile-header">Project #13</h1>
+                    <h5 class="mobile-tile-header">Coming Soon</h5>
+                    <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+                    <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+                    <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+                  </div>
+                  <div class="gallery-moduleSlide">
+                      <h1 class="mobile-tile-header">Project #14</h1>
+                      <h5 class="mobile-tile-header">Coming Soon</h5>
+                      <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+                      <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+                      <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+                    </div>
+
+        </div>
+      </div>
+
 
     
   </section>

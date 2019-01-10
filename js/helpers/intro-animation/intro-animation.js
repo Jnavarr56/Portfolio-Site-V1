@@ -139,7 +139,7 @@ const configureParticleAnim = options => {
 
           window.pJSDom[0].pJS.particles.move.speed = 0;
 
-          particlesJS('background-home', test);
+          //particlesJS('background-home', test);
           
           setTimeout(() => {
             
@@ -160,9 +160,9 @@ const configureParticleAnim = options => {
 
             }, options.removeLoaderDelay);
 
-            enableScrolling(0);
+            //enableScrolling(0);
 
-            //background.initializr();  
+            background.initializr();  
 
           }, options.switchToHomeDelay);
           

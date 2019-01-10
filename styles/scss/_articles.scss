@@ -23,7 +23,7 @@
                 }
             }
             &[data-scroll] {
-                transition: all .5s ease;
+                transition: all .75s ease;
                 transform: scale(.50, .50);
                 filter: blur(10px);
                 opacity: 0;

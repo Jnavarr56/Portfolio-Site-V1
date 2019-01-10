@@ -194,7 +194,7 @@ const setFallingTitles = () => {
         
     window.ScrollingMain = ScrollOut({
         targets: '.word',
-        threshold: .9
+        threshold: .25
     });
     
     $('#splitting-clones').remove();

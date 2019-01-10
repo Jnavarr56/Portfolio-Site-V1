@@ -8,15 +8,16 @@ background.initializr = function (justone) {
   //option
   $this.id = "background_css3";
   $this.style = {bubbles_color:"#FF0000",stroke_width:0, stroke_color :"black"};
+  $this.bubbles_number = 20;
 
   if ($(window).innerWidth() >= 768) {
-    $this.bubbles_number = 50;
+    //$this.bubbles_number = 50;
   }
   else if ($(window).innerWidth() >= 450) {
-    $this.bubbles_number = 30;
+    //$this.bubbles_number = 30;
   }
   else {
-    $this.bubbles_number = 5;
+    //$this.bubbles_number = 5;
   }
 
   console.log($this.bubbles_number);
@@ -42,8 +43,8 @@ background.initializr = function (justone) {
 
   $this.ww = $(window).width();
   $this.wh = $(window).height();
-  $this.width = $this.object.width($this.ww);
-  $this.height = $this.object.height($this.wh);
+  $this.width = $this.object.width('100%'); 
+  $this.height = $this.object.height('100%');
   
   $("head").prepend("<style>.shape_background {transform-origin:center; width:80px; height:80px; background: "+ $this.style.bubbles_color + "; position: absolute}</style>");
 
@@ -86,7 +87,7 @@ background.generate_bubbles = function() {
 
     } 
 
-    let rn_size = $this.rn(.8,1.2);
+    let rn_size = $this.rn(1.2,1.8);
 
     bolla.css({"transform":"scale("+rn_size+") rotate("+$this.rn(-360,360)+"deg)", top:$this.wh+100, left:$this.rn(-60, $this.ww+60)});        
 
