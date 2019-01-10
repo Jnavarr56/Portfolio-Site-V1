@@ -306,6 +306,11 @@ $(document).ready(function() {
 
             });
 
+            $('.banner-ball').removeClass('selected-banner-ball');
+
+            $('.banner-ball').eq(workMobileShiftClasses[mobileShiftCount].match(/[0-9]+/)[0]).addClass('selected-banner-ball');
+
+            
             $('.gallery-moduleSlide').addClass(workMobileShiftClasses[mobileShiftCount]);
 
             console.log(mobileShiftCount);
@@ -353,9 +358,27 @@ $(document).ready(function() {
     $('#right-work').click();
     $('#left-work').click();
 
-    $('.gallery-moduleSlide').bind('touchstart', function(cE) {
+    $('.gallery-moduleSlide').swipe( {
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+          if (direction === "left") {
+            $('#right-work').click();
+          }
+          else if (direction === "right") {
+            $('#left-work').click();
+          }
+        },
+        threshold:0,
+        fingers:'all'
+      });
 
-        console.log(canSlide);
+    ///$('.gallery-moduleSlide').on("swiperight", function() {
+        //$('#right-work').click();
+   // });
+
+
+    /*
+
+    $('.gallery-moduleSlide').bind('touchstart', function(cE) {
 
         if (!canSlide) {
 
@@ -366,7 +389,7 @@ $(document).ready(function() {
 
         $(this).bind('touchend', function(uE) {
             
-            if (uE.changedTouches[0].clientX < startDown) {
+            if (uE.changedTouches[0].clientX - startDown < -30) {
 
                 //$("#right-work").click();
 
@@ -378,7 +401,7 @@ $(document).ready(function() {
 
             }
 
-            else if (uE.changedTouches[0].clientX > startDown) {
+            else if (uE.changedTouches[0].clientX - startDown > 30) {
 
                 //$("#left-work").click();
 
@@ -420,6 +443,8 @@ $(document).ready(function() {
     });
 
     $('.banner-ball').eq(0).addClass('selected-banner-ball');
+
+    */
 
 
     
