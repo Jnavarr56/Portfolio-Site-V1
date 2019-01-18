@@ -1114,8 +1114,8 @@ button {
   #skills table {
     width: 80%;
     margin-left: 2%;
-    -webkit-transform: scale(0.5, 0.5);
-            transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.85, 0.85);
+            transform: scale(0.85, 0.85);
     -webkit-filter: blur(10px);
             filter: blur(10px);
     opacity: 0;
@@ -1158,8 +1158,8 @@ button {
   top: 12%;
   width: 84%;
   padding-top: 10px;
-  -webkit-transform: scale(0.5, 0.5);
-          transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.85, 0.85);
+          transform: scale(0.85, 0.85);
   -webkit-filter: blur(10px);
           filter: blur(10px);
   opacity: 0; }
@@ -1234,6 +1234,10 @@ button {
   -webkit-filter: blur(0px);
           filter: blur(0px);
   opacity: 1; }
+/* line 121, ../scss/_skills.scss */
+#mobile-table [data-scroll="out"] {
+  -webkit-transform: scale(0.85, 0.85);
+          transform: scale(0.85, 0.85); }
 
 @media (max-width: 1265px) {
   /* line 130, ../scss/_skills.scss */
@@ -1321,8 +1325,8 @@ button {
       font-size: 145%;
       font-weight: bolder;
       padding: 0;
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
+      -webkit-transform: scale(0.85, 0.85);
+              transform: scale(0.85, 0.85);
       -webkit-filter: blur(10px);
               filter: blur(10px);
       opacity: 0; }
@@ -1415,8 +1419,8 @@ button {
     #work .row:nth-of-type(1)[data-scroll] {
       -webkit-transition: all 0.5s ease-out 0.25s;
       transition: all 0.5s ease-out 0.25s;
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
+      -webkit-transform: scale(0.85, 0.85);
+              transform: scale(0.85, 0.85);
       -webkit-filter: blur(10px);
               filter: blur(10px);
       opacity: 0; }
@@ -1536,8 +1540,8 @@ button {
   #work-row-selector[data-scroll] {
     -webkit-transition: all 0.5s ease-out 0.25s;
     transition: all 0.5s ease-out 0.25s;
-    -webkit-transform: scale(0.5, 0.5);
-            transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.85, 0.85);
+            transform: scale(0.85, 0.85);
     -webkit-filter: blur(10px);
             filter: blur(10px);
     opacity: 0; }
@@ -1608,8 +1612,8 @@ button {
   #desktop-tile-grid[data-scroll] {
     -webkit-transition: all 0.5s ease-out 0.25s;
     transition: all 0.5s ease-out 0.25s;
-    -webkit-transform: scale(0.5, 0.5);
-            transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.85, 0.85);
+            transform: scale(0.85, 0.85);
     -webkit-filter: blur(10px);
             filter: blur(10px);
     opacity: 0; }
@@ -1620,6 +1624,10 @@ button {
     -webkit-filter: blur(0px);
             filter: blur(0px);
     opacity: 1; }
+  /* line 168, ../scss/_work.scss */
+  #desktop-tile-grid[data-scroll="out"] {
+    -webkit-transform: scale(0.85, 0.85);
+            transform: scale(0.85, 0.85); }
 
 /* line 174, ../scss/_work.scss */
 #test {
@@ -1984,8 +1992,8 @@ button {
             align-items: "center"; }
     /* line 5, ../scss/_contact.scss */
     #contact .row ul {
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
+      -webkit-transform: scale(0.85, 0.85);
+              transform: scale(0.85, 0.85);
       -webkit-filter: blur(10px);
               filter: blur(10px);
       opacity: 0; }
@@ -2011,8 +2019,8 @@ button {
       #contact .row ul[data-scroll] {
         -webkit-transition: all 0.5s ease-out 0.25s;
         transition: all 0.5s ease-out 0.25s;
-        -webkit-transform: scale(0.5, 0.5);
-                transform: scale(0.5, 0.5);
+        -webkit-transform: scale(0.85, 0.85);
+                transform: scale(0.85, 0.85);
         -webkit-filter: blur(10px);
                 filter: blur(10px);
         opacity: 0; }
@@ -2023,6 +2031,10 @@ button {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
         opacity: 1; }
+      /* line 38, ../scss/_contact.scss */
+      #contact .row ul[data-scroll="out"] {
+        -webkit-transform: scale(0.85, 0.85);
+                transform: scale(0.85, 0.85); }
 
 @media (max-width: 767px) {
   /* line 48, ../scss/_contact.scss */
@@ -2065,8 +2077,8 @@ button {
     width: 100%; }
     /* line 6, ../scss/_articles.scss */
     #articles .row ol {
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
+      -webkit-transform: scale(0.85, 0.85);
+              transform: scale(0.85, 0.85);
       -webkit-filter: blur(10px);
               filter: blur(10px);
       opacity: 0;
@@ -2089,8 +2101,8 @@ button {
       #articles .row ol[data-scroll] {
         -webkit-transition: all 0.5s ease-out 0.25s;
         transition: all 0.5s ease-out 0.25s;
-        -webkit-transform: scale(0.5, 0.5);
-                transform: scale(0.5, 0.5);
+        -webkit-transform: scale(0.85, 0.85);
+                transform: scale(0.85, 0.85);
         -webkit-filter: blur(10px);
                 filter: blur(10px);
         opacity: 0; }
@@ -2101,6 +2113,10 @@ button {
         -webkit-filter: blur(0px);
                 filter: blur(0px);
         opacity: 1; }
+      /* line 36, ../scss/_articles.scss */
+      #articles .row ol[data-scroll="out"] {
+        -webkit-transform: scale(0.85, 0.85);
+                transform: scale(0.85, 0.85); }
 
 @media (max-width: 767px) {
   /* line 46, ../scss/_articles.scss */

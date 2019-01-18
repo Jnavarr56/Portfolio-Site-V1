@@ -140,6 +140,32 @@ const enableDesktopTileSelector = () => {
 
     });
 
+    upArrow.hover(
+        function() {
+            
+            $(this).removeClass('fa-arrow-up').addClass('fa-arrow-circle-up');
+
+        }, 
+        function() {
+
+            $(this).removeClass('fa-arrow-circle-up').addClass('fa-arrow-up');
+
+        }
+    );
+
+    downArrow.hover(
+        function() {
+
+            $(this).removeClass('fa-arrow-down').addClass('fa-arrow-circle-down');
+
+        }, 
+        function() {
+
+            $(this).removeClass('fa-arrow-circle-down').addClass('fa-arrow-down');
+
+        }
+    );
+
     console.log(upArrow);
     console.log(downArrow);
 

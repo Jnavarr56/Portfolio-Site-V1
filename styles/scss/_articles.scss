@@ -4,7 +4,7 @@
         @include flex-config('center', 'center', 'center');
         width: 100%;
         ol {
-            transform: scale(.50, .50);
+            transform: scale(.85, .85);
             filter: blur(10px);
             opacity: 0;
             list-style-type: decimal;
@@ -24,7 +24,7 @@
             }
             &[data-scroll] {
                 transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
-                transform: scale(.50, .50);
+                transform: scale(.85, .85);
                 filter: blur(10px);
                 opacity: 0;
             }
@@ -34,7 +34,7 @@
                 opacity: 1;
             }
             &[data-scroll="out"] {
-                //transform: scale(.75, .75);
+                transform: scale(.85, .85);
                 //filter: blur(10px);
                 //opacity: 0;     
             }
