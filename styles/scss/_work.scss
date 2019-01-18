@@ -10,7 +10,7 @@ $delay: $speed/3;
         overflow: hidden;
         width: 80%;
         &[data-scroll] {
-            transition: all .75s ease;
+            transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
             transform: scale(.50, .50);
             filter: blur(10px);
             opacity: 0;
@@ -51,11 +51,11 @@ $delay: $speed/3;
             opacity: 0;
             animation: appearTileEls .1s linear .1s; 
             color: red; 
-            height: 60px;
-            width: 60px;
+            height: 40px;
+            width: 40px;
         }
         .desktop-tile-header-desc { 
-            //display: none; 
+            display: none; 
             opacity: 0;
             animation: appearTileEls .3s linear .3s; 
             color: red; 
@@ -80,19 +80,37 @@ $delay: $speed/3;
     .desktop-tile-header { 
         display: none !important;
     }
-    .desktop-tile-header-github { /*display: initial !important;*/  opacity: 1 !important;}
-    .desktop-tile-header-desc { /*display: initial !important;*/  opacity: 1 !important;}
+    .desktop-tile-header-github { display: initial !important;  opacity: 1 !important;}
+    .desktop-tile-header-desc { display: initial !important;  opacity: 1 !important;}
 }
 #work-row-selector {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 6%;
-    z-index: 2000;
-    height: 150px;
-    width: 75px;
+    z-index: 1;
+    height: 20%;
+    width: 10%;
+    &[data-scroll] {
+        transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
+        transform: scale(.50, .50);
+        filter: blur(10px);
+        opacity: 0;
+    }
+    &[data-scroll="in"] {
+        transform: scale(1, 1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+    &[data-scroll="out"] {
+        //transform: scale(.75, .75);
+        //filter: blur(10px);
+        //opacity: 0;     
+    }
     i {
         color: white;
+        font-size: 150%;
+        cursor: pointer;
     }
     @include flex-config('column', 'space-around', 'center');
     .selector-bubble-desktop {
@@ -120,7 +138,12 @@ $delay: $speed/3;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(white, .90);
+    background-color: rgba(white, 1);
+}
+.hover-work-tile {
+    .inner {
+        background-color: rgba(white, .95);
+    }
 }
 .inner, .desktop-tile {
     //border-radius: 6rem !important;
@@ -130,6 +153,23 @@ $delay: $speed/3;
     height: 60%;
     width: 70%;
     overflow: hidden;
+
+    &[data-scroll] {
+        transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
+        transform: scale(.50, .50);
+        filter: blur(10px);
+        opacity: 0;
+    }
+    &[data-scroll="in"] {
+        transform: scale(1, 1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+    &[data-scroll="out"] {
+        //transform: scale(.75, .75);
+        //filter: blur(10px);
+        //opacity: 0;     
+    }
 }
 #test {
     display: none;

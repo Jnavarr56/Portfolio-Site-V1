@@ -9,7 +9,7 @@ $primary-desktop-nav-cubic-transition: 0.55s $primary-desktop-nav-ease-in-out-cu
 
 $desktop-bar-length: 28px;
 $desktop-bar-thickness: 4px;
-$desktop-nav-item-delay: 0.05s;
+$desktop-nav-item-delay: 0.075s;
 $desktop-nav-width: 3.75rem;
 
 .desktop-nav {
@@ -103,7 +103,7 @@ $desktop-nav-width: 3.75rem;
                 transform: translateY(0);
                 transition: {
                     property: transform, opacity, color;
-                    duration: 0.25s, 0.25s, 0.15s;
+                    duration: 0.35s, 0.35s, 0.35s;
                     timing-function: $primary-desktop-nav-ease-in-out-cubic, ease-in-out, ease-in-out;            
                 }
             }

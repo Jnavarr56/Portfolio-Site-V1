@@ -7,7 +7,7 @@
             filter: blur(10px);
             opacity: 0;
             .contact-list-item {
-                font-size: 300%;
+                font-size: 200%;
                 margin: 20px 0;
                 list-style-type: none;
                 font-weight: bolder;
@@ -25,7 +25,7 @@
                 }
             }
             &[data-scroll] {
-                transition: all .75s ease;
+                transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
                 transform: scale(.50, .50);
                 filter: blur(10px);
                 opacity: 0;
@@ -46,7 +46,7 @@
 }
 @media (max-width: 767px) {
     .contact-list-item {
-        font-size: 200% !important;
+        font-size: 150% !important;
     }
 }
 @media (max-width: 420px) {

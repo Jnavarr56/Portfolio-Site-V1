@@ -18,7 +18,7 @@
             }
         }
         [data-scroll] {
-            transition: all .5s ease;
+            transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
         }
         [data-scroll="in"] {
             transform: scale(1, 1);

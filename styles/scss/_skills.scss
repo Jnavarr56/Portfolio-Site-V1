@@ -32,7 +32,7 @@
         background-color: rgba(red, .10);
     }
     [data-scroll] {
-        transition: all .75s ease;
+        transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
     }
     [data-scroll="in"] {
         transform: scale(1, 1);
@@ -111,7 +111,7 @@
 }
 #mobile-table {
     [data-scroll] {
-        transition: all .5s linear 0s;
+        transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
     }
     [data-scroll="in"] {
         transform: scale(1, 1);

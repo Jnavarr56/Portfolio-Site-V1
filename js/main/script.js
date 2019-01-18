@@ -19,7 +19,7 @@ $(document).ready(function() {
         {   
             elID: 'about-bio',
             english: `
-            Data junkie turned developer with a passion for problem solving.
+            *.
             ${HTMLMap.chars('break')(2)}
             I'm a 23 year old NYC based bilingual Full-Stack developer with an Economics degree
             currently looking for junior/entry level roles in development or QA. I began with
@@ -32,7 +32,7 @@ $(document).ready(function() {
             ${HTMLMap.chars('break')(2)}
             You can download my resume <a href="resume.pdf" download>here</a>. 
             ${HTMLMap.chars('break')(2)}
-            This site runs entirely on Bootstrap/jQuery.`,
+            This site runs mostly on Bootstrap and jQuery.`,
             spanish: `
             Soy un adicto a los datos que se convirtió en un desarrollador con una pasión por resolver problemas.
             ${HTMLMap.chars('break')(2)}
@@ -134,7 +134,7 @@ $(document).ready(function() {
         scrollToOptions: {
             toggleID: 'desktop-nav-trigger',
             navItemsClass: 'desktop-nav-item-click',
-            delay: 1000,
+            delay: 750,
             scrollSpeed: 500
         }
     });

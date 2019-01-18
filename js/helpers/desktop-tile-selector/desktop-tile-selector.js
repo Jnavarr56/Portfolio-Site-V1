@@ -1,6 +1,6 @@
 const enableDesktopTileSelector = () => {
 
-    let upArrow = $('<i class="fas fa-arrow-circle-up"></i>');
+    let upArrow = $('<i class="fas fa-arrow-up"></i>');
 
     upArrow.click(function() {
 
@@ -63,7 +63,7 @@ const enableDesktopTileSelector = () => {
 
     }
 
-    let downArrow = $('<i class="fas fa-arrow-circle-down"></i>');
+    let downArrow = $('<i class="fas fa-arrow-down"></i>');
 
     downArrow.click(function() {
 
@@ -139,5 +139,8 @@ const enableDesktopTileSelector = () => {
         );
 
     });
+
+    console.log(upArrow);
+    console.log(downArrow);
 
 }
