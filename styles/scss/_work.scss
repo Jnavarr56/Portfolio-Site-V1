@@ -1,8 +1,3 @@
-$size: 60vw;
-$speed: .3s;
-$ease1: cubic-bezier(0, .5, 1, 1);
-$ease2: cubic-bezier(.5, 0, 1, 1);
-$delay: $speed/3;
 #work {
     @include flex-config('row', 'center', 'center');
     .row:nth-of-type(1) {
@@ -20,69 +15,42 @@ $delay: $speed/3;
             filter: blur(0px);
             opacity: 1;
         }
-        &[data-scroll="out"] {
-            //transform: scale(.75, .75);
-            //filter: blur(10px);
-            //opacity: 0;     
-        }
     }
     .column {
         background-color: white;
         border: solid red 7px;
         height: 50%;
         position: relative;
-        @include flex-config('column', 'center', 'center');
-        transition: all .6s;
-        transform-style: preserve-3d;
-        background-image: url("https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif"); 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        background-size: cover; 
-        .desktop-tile-header {
-            font-family: 'Raleway', sans-serif;
-            font-weight: bolder;
-            color: rgba(red, 1);
-            z-index: 10;
-            font-size: 150%;
-            transition: .2s linear .1s;  
-        }
-        .desktop-tile-header-github { 
-            //display: none;
-            opacity: 0;
-            animation: appearTileEls .1s linear .1s; 
-            color: red; 
-            height: 40px;
-            width: 40px;
-        }
-        .desktop-tile-header-desc { 
-            display: none; 
-            opacity: 0;
-            animation: appearTileEls .3s linear .3s; 
-            color: red; 
-            font-family: 'Raleway', sans-serif;
-        }
-        .desktop-tile-header-desc, .desktop-tile-header-github {
-            z-index: 1000;
-            transform: rotateY(-180deg);
-        }
-        .desktop-tile-header:nth-child(1) {
-            font-size: 250%;
-        }
-        .desktop-tile-header:nth-child(2) {
-            font-size: 175%;
-        }
+        perspective: 1200px;
+        transition: transform .8s ease-in-out, top .25s;
+    }
+
+      
+      
+}
+#desktop-tile-grid {
+    @include flex-config('row', 'center', 'center');
+    height: 60%;
+    width: 70%;
+    overflow: hidden;
+
+    &[data-scroll] {
+        transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
+        transform: scale(.85, .85);
+        filter: blur(10px);
+        opacity: 0;
+    }
+    &[data-scroll="in"] {
+        transform: scale(1, 1);
+        filter: blur(0px);
+        opacity: 1;
     }
 }
-.hover-work-tile {
-    background-image: none; 
-    background-color: rgba(white, 1);
-    transform: rotateY(180deg);
-    .desktop-tile-header { 
-        display: none !important;
-    }
-    .desktop-tile-header-github { display: initial !important;  opacity: 1 !important;}
-    .desktop-tile-header-desc { display: initial !important;  opacity: 1 !important;}
-}
+
+
+
+
+  
 #work-row-selector {
     position: absolute;
     top: 50%;
@@ -102,11 +70,6 @@ $delay: $speed/3;
         filter: blur(0px);
         opacity: 1;
     }
-    &[data-scroll="out"] {
-        //transform: scale(.75, .75);
-        //filter: blur(10px);
-        //opacity: 0;     
-    }
     i {
         color: white;
         font-size: 150%;
@@ -125,55 +88,9 @@ $delay: $speed/3;
 
 }
 
-.desktop-tile {
-    float: left;
-    perspective: 1200px;
-    overflow: hidden;
-    border-radius: 2.5rem;
-}
-.inner {
-    height: 150%;
-    width: 150%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(white, 1);
-}
-.hover-work-tile {
-    .inner {
-        background-color: rgba(white, .95);
-    }
-}
-.inner, .desktop-tile {
-    //border-radius: 6rem !important;
-}
-#desktop-tile-grid {
-    @include flex-config('row', 'center', 'center');
-    height: 60%;
-    width: 70%;
-    overflow: hidden;
 
-    &[data-scroll] {
-        transition: all $section-fade-in-speed $section-fade-in-timing $section-fade-in-delay;
-        transform: scale(.85, .85);
-        filter: blur(10px);
-        opacity: 0;
-    }
-    &[data-scroll="in"] {
-        transform: scale(1, 1);
-        filter: blur(0px);
-        opacity: 1;
-    }
-    &[data-scroll="out"] {
-        transform: scale(.85, .85);
-        //filter: blur(10px);
-        //opacity: 0;     
-    }
-}
-#test {
-    display: none;
-}
+
+
 @for $num from 0 through 20 {
     .desktop-tile-shift-#{$num} {
         top: -#{$num * 50}#{"%"} !important;
@@ -183,12 +100,12 @@ $delay: $speed/3;
     }        
 }
 
-@keyframes appearTileEls {
-    100% { opacity: 1; }
-}
-@keyframes disappearTileEls {
-    100% { display: none; }
-}
+//=====================================================
+//=====================================================
+//=====================================================
+//=====================================================
+//=====================================================
+
 
 #banner-gallery {
     display: none;

@@ -92,54 +92,6 @@ const enableDesktopTileSelector = () => {
 
     $('.selector-bubble-desktop').eq(0).click();
 
-    $('.desktop-tile').each(function() {
-
-        $(this).hover(
-
-            function(e) {
-
-                $('.desktop-tile').removeClass('hover-work-tile');
-
-                console.log(`MOUSEIN ${e.pageX} ${e.pageY}`);
-                
-                globalTilePos = {
-
-                    xi: $(this).offset().left,
-                    yi: $(this).offset().top,
-                    xE: e.pageX,
-                    yE: e.pageY
-
-                }
-
-                $(this).addClass('hover-work-tile');
-
-            }, 
-            function(e) {
-
-                console.log(`MOUSEOUT ${e.pageX} ${e.pageY}`);
-                console.log(`X LIMS ${globalTilePos.xi} ${globalTilePos.xi + $(this).width()}`)
-                console.log(`Y LIMS ${globalTilePos.yi} ${globalTilePos.yi + $(this).height()}`)
-
-                if (e.pageX === globalTilePos.xE && e.pageY === globalTilePos.yE) {
-
-                    return;
-
-                }
-
-
-                if (
-                    (e.pageX < globalTilePos.xi || e.pageX > globalTilePos.xi + $(this).width()) ||
-                    (e.pageY < globalTilePos.yi || e.pageY > globalTilePos.yi + $(this).height())) {
-
-                    $(this).removeClass('hover-work-tile');
-
-                }
-
-            }
-        );
-
-    });
-
     upArrow.hover(
         function() {
             

@@ -1395,7 +1395,7 @@ button {
   /* line 91, ../scss/_about.scss */
   .about-content {
     font-size: 65% !important; } }
-/* line 6, ../scss/_work.scss */
+/* line 1, ../scss/_work.scss */
 #work {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1410,12 +1410,12 @@ button {
   -webkit-box-align: "center";
       -ms-flex-align: "center";
           align-items: "center"; }
-  /* line 8, ../scss/_work.scss */
+  /* line 3, ../scss/_work.scss */
   #work .row:nth-of-type(1) {
     height: 60%;
     overflow: hidden;
     width: 80%; }
-    /* line 12, ../scss/_work.scss */
+    /* line 7, ../scss/_work.scss */
     #work .row:nth-of-type(1)[data-scroll] {
       -webkit-transition: all 0.5s ease-out 0.25s;
       transition: all 0.5s ease-out 0.25s;
@@ -1424,96 +1424,62 @@ button {
       -webkit-filter: blur(10px);
               filter: blur(10px);
       opacity: 0; }
-    /* line 18, ../scss/_work.scss */
+    /* line 13, ../scss/_work.scss */
     #work .row:nth-of-type(1)[data-scroll="in"] {
       -webkit-transform: scale(1, 1);
               transform: scale(1, 1);
       -webkit-filter: blur(0px);
               filter: blur(0px);
       opacity: 1; }
-  /* line 29, ../scss/_work.scss */
+  /* line 19, ../scss/_work.scss */
   #work .column {
     background-color: white;
     border: solid red 7px;
     height: 50%;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: "column";
-            flex-direction: "column";
-    -webkit-box-pack: "center";
-        -ms-flex-pack: "center";
-            justify-content: "center";
-    -webkit-box-align: "center";
-        -ms-flex-align: "center";
-            align-items: "center";
-    -webkit-transition: all .6s;
-    transition: all .6s;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    background-image: url("https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    /* line 41, ../scss/_work.scss */
-    #work .column .desktop-tile-header {
-      font-family: 'Raleway', sans-serif;
-      font-weight: bolder;
-      color: red;
-      z-index: 10;
-      font-size: 150%;
-      -webkit-transition: .2s linear .1s;
-      transition: .2s linear .1s; }
-    /* line 49, ../scss/_work.scss */
-    #work .column .desktop-tile-header-github {
-      opacity: 0;
-      -webkit-animation: appearTileEls .1s linear .1s;
-              animation: appearTileEls .1s linear .1s;
-      color: red;
-      height: 40px;
-      width: 40px; }
-    /* line 57, ../scss/_work.scss */
-    #work .column .desktop-tile-header-desc {
-      display: none;
-      opacity: 0;
-      -webkit-animation: appearTileEls .3s linear .3s;
-              animation: appearTileEls .3s linear .3s;
-      color: red;
-      font-family: 'Raleway', sans-serif; }
-    /* line 64, ../scss/_work.scss */
-    #work .column .desktop-tile-header-desc, #work .column .desktop-tile-header-github {
-      z-index: 1000;
-      -webkit-transform: rotateY(-180deg);
-              transform: rotateY(-180deg); }
-    /* line 68, ../scss/_work.scss */
-    #work .column .desktop-tile-header:nth-child(1) {
-      font-size: 250%; }
-    /* line 71, ../scss/_work.scss */
-    #work .column .desktop-tile-header:nth-child(2) {
-      font-size: 175%; }
+    -webkit-perspective: 1200px;
+            perspective: 1200px;
+    -webkit-transition: top .25s, -webkit-transform .8s ease-in-out;
+    transition: top .25s, -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out, top .25s;
+    transition: transform .8s ease-in-out, top .25s, -webkit-transform .8s ease-in-out; }
 
-/* line 76, ../scss/_work.scss */
-.hover-work-tile {
-  background-image: none;
-  background-color: white;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg); }
-  /* line 80, ../scss/_work.scss */
-  .hover-work-tile .desktop-tile-header {
-    display: none !important; }
-  /* line 83, ../scss/_work.scss */
-  .hover-work-tile .desktop-tile-header-github {
-    display: initial !important;
-    opacity: 1 !important; }
-  /* line 84, ../scss/_work.scss */
-  .hover-work-tile .desktop-tile-header-desc {
-    display: initial !important;
-    opacity: 1 !important; }
+/* line 31, ../scss/_work.scss */
+#desktop-tile-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "row";
+          flex-direction: "row";
+  -webkit-box-pack: "center";
+      -ms-flex-pack: "center";
+          justify-content: "center";
+  -webkit-box-align: "center";
+      -ms-flex-align: "center";
+          align-items: "center";
+  height: 60%;
+  width: 70%;
+  overflow: hidden; }
+  /* line 37, ../scss/_work.scss */
+  #desktop-tile-grid[data-scroll] {
+    -webkit-transition: all 0.5s ease-out 0.25s;
+    transition: all 0.5s ease-out 0.25s;
+    -webkit-transform: scale(0.85, 0.85);
+            transform: scale(0.85, 0.85);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    opacity: 0; }
+  /* line 43, ../scss/_work.scss */
+  #desktop-tile-grid[data-scroll="in"] {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1; }
 
-/* line 86, ../scss/_work.scss */
+/* line 54, ../scss/_work.scss */
 #work-row-selector {
   position: absolute;
   top: 50%;
@@ -1536,7 +1502,7 @@ button {
   -webkit-box-align: "center";
       -ms-flex-align: "center";
           align-items: "center"; }
-  /* line 94, ../scss/_work.scss */
+  /* line 62, ../scss/_work.scss */
   #work-row-selector[data-scroll] {
     -webkit-transition: all 0.5s ease-out 0.25s;
     transition: all 0.5s ease-out 0.25s;
@@ -1545,276 +1511,197 @@ button {
     -webkit-filter: blur(10px);
             filter: blur(10px);
     opacity: 0; }
-  /* line 100, ../scss/_work.scss */
+  /* line 68, ../scss/_work.scss */
   #work-row-selector[data-scroll="in"] {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     -webkit-filter: blur(0px);
             filter: blur(0px);
     opacity: 1; }
-  /* line 110, ../scss/_work.scss */
+  /* line 73, ../scss/_work.scss */
   #work-row-selector i {
     color: white;
     font-size: 150%;
     cursor: pointer; }
-  /* line 116, ../scss/_work.scss */
+  /* line 79, ../scss/_work.scss */
   #work-row-selector .selector-bubble-desktop {
     height: calc( 100px / 7 );
     width: calc( 100px / 7 );
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.35); }
-    /* line 121, ../scss/_work.scss */
+    /* line 84, ../scss/_work.scss */
     #work-row-selector .selector-bubble-desktop.selected-bubble-desktop {
       background-color: rgba(255, 255, 255, 0.85); }
 
-/* line 128, ../scss/_work.scss */
-.desktop-tile {
-  float: left;
-  -webkit-perspective: 1200px;
-          perspective: 1200px;
-  overflow: hidden;
-  border-radius: 2.5rem; }
-
-/* line 134, ../scss/_work.scss */
-.inner {
-  height: 150%;
-  width: 150%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: white; }
-
-/* line 144, ../scss/_work.scss */
-.hover-work-tile .inner {
-  background-color: rgba(255, 255, 255, 0.95); }
-
-/* line 151, ../scss/_work.scss */
-#desktop-tile-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: "row";
-          flex-direction: "row";
-  -webkit-box-pack: "center";
-      -ms-flex-pack: "center";
-          justify-content: "center";
-  -webkit-box-align: "center";
-      -ms-flex-align: "center";
-          align-items: "center";
-  height: 60%;
-  width: 70%;
-  overflow: hidden; }
-  /* line 157, ../scss/_work.scss */
-  #desktop-tile-grid[data-scroll] {
-    -webkit-transition: all 0.5s ease-out 0.25s;
-    transition: all 0.5s ease-out 0.25s;
-    -webkit-transform: scale(0.85, 0.85);
-            transform: scale(0.85, 0.85);
-    -webkit-filter: blur(10px);
-            filter: blur(10px);
-    opacity: 0; }
-  /* line 163, ../scss/_work.scss */
-  #desktop-tile-grid[data-scroll="in"] {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1; }
-  /* line 168, ../scss/_work.scss */
-  #desktop-tile-grid[data-scroll="out"] {
-    -webkit-transform: scale(0.85, 0.85);
-            transform: scale(0.85, 0.85); }
-
-/* line 174, ../scss/_work.scss */
-#test {
-  display: none; }
-
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-0 {
   top: -0% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-0 {
   left: -0% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-1 {
   top: -50% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-1 {
   left: -100% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-2 {
   top: -100% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-2 {
   left: -200% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-3 {
   top: -150% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-3 {
   left: -300% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-4 {
   top: -200% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-4 {
   left: -400% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-5 {
   top: -250% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-5 {
   left: -500% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-6 {
   top: -300% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-6 {
   left: -600% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-7 {
   top: -350% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-7 {
   left: -700% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-8 {
   top: -400% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-8 {
   left: -800% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-9 {
   top: -450% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-9 {
   left: -900% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-10 {
   top: -500% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-10 {
   left: -1000% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-11 {
   top: -550% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-11 {
   left: -1100% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-12 {
   top: -600% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-12 {
   left: -1200% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-13 {
   top: -650% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-13 {
   left: -1300% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-14 {
   top: -700% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-14 {
   left: -1400% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-15 {
   top: -750% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-15 {
   left: -1500% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-16 {
   top: -800% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-16 {
   left: -1600% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-17 {
   top: -850% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-17 {
   left: -1700% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-18 {
   top: -900% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-18 {
   left: -1800% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-19 {
   top: -950% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-19 {
   left: -1900% !important; }
 
-/* line 178, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .desktop-tile-shift-20 {
   top: -1000% !important; }
 
-/* line 181, ../scss/_work.scss */
+/* line 98, ../scss/_work.scss */
 .mobile-tile-shift-20 {
   left: -2000% !important; }
 
-@-webkit-keyframes appearTileEls {
-  100% {
-    opacity: 1; } }
-
-@keyframes appearTileEls {
-  100% {
-    opacity: 1; } }
-@-webkit-keyframes disappearTileEls {
-  100% {
-    display: none; } }
-@keyframes disappearTileEls {
-  100% {
-    display: none; } }
-/* line 193, ../scss/_work.scss */
+/* line 110, ../scss/_work.scss */
 #banner-gallery {
   display: none;
   position: absolute;
@@ -1826,10 +1713,10 @@ button {
   width: 100%; }
 
 @media (max-width: 900px) {
-  /* line 203, ../scss/_work.scss */
+  /* line 120, ../scss/_work.scss */
   #banner-gallery {
     display: initial; } }
-/* line 208, ../scss/_work.scss */
+/* line 125, ../scss/_work.scss */
 .gallery-moduleWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1847,7 +1734,7 @@ button {
   height: 100%;
   width: 100%;
   overflow: hidden; }
-  /* line 210, ../scss/_work.scss */
+  /* line 127, ../scss/_work.scss */
   .gallery-moduleWrapper #arrows-direction {
     position: absolute;
     top: 50%;
@@ -1872,7 +1759,7 @@ button {
     color: red;
     font-size: 60px;
     opacity: 0; }
-  /* line 229, ../scss/_work.scss */
+  /* line 146, ../scss/_work.scss */
   .gallery-moduleWrapper .gallery-moduleSlide {
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
@@ -1897,38 +1784,38 @@ button {
     -webkit-box-align: "center";
         -ms-flex-align: "center";
             align-items: "center"; }
-    /* line 240, ../scss/_work.scss */
+    /* line 157, ../scss/_work.scss */
     .gallery-moduleWrapper .gallery-moduleSlide .mobile-tile-header, .gallery-moduleWrapper .gallery-moduleSlide .mobile-header-desc {
       z-index: 400;
       color: red;
       font-family: 'Raleway', sans-serif;
       font-size: 125%; }
-    /* line 247, ../scss/_work.scss */
+    /* line 164, ../scss/_work.scss */
     .gallery-moduleWrapper .gallery-moduleSlide img {
       height: 40px;
       width: 40px; }
-    /* line 252, ../scss/_work.scss */
+    /* line 169, ../scss/_work.scss */
     .gallery-moduleWrapper .gallery-moduleSlide .inner {
       position: absolute;
       z-index: 1; }
 
 @media (max-width: 900px) {
-  /* line 260, ../scss/_work.scss */
+  /* line 177, ../scss/_work.scss */
   #work-row-selector, #desktop-tile-grid {
     display: none !important; } }
 @media (max-width: 536px) {
-  /* line 266, ../scss/_work.scss */
+  /* line 183, ../scss/_work.scss */
   .mobile-tile-header-desc, .mobile-header-desc {
     font-size: 100% !important; } }
 @media (max-width: 462px) {
-  /* line 273, ../scss/_work.scss */
+  /* line 190, ../scss/_work.scss */
   .mobile-tile-header-desc, .mobile-header-desc {
     font-size: 75% !important; } }
 @media (max-width: 350px) {
-  /* line 281, ../scss/_work.scss */
+  /* line 198, ../scss/_work.scss */
   .mobile-tile-header-desc, .mobile-header-desc {
     font-size: 65% !important; } }
-/* line 288, ../scss/_work.scss */
+/* line 205, ../scss/_work.scss */
 #banner-tracking {
   position: absolute;
   top: -5%;
@@ -1950,13 +1837,13 @@ button {
   -webkit-box-align: "center";
       -ms-flex-align: "center";
           align-items: "center"; }
-  /* line 297, ../scss/_work.scss */
+  /* line 214, ../scss/_work.scss */
   #banner-tracking .banner-ball {
     height: calc( 100px / 7 );
     width: calc( 100px / 7 );
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.35); }
-    /* line 302, ../scss/_work.scss */
+    /* line 219, ../scss/_work.scss */
     #banner-tracking .banner-ball.selected-banner-ball {
       background-color: rgba(255, 255, 255, 0.85); }
 
