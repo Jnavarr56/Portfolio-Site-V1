@@ -19,7 +19,7 @@ $(document).ready(function() {
         {   
             elID: 'about-bio',
             english: `
-            *.
+            Master of Science in Comp Sci student looking for first developer internship.
             ${HTMLMap.chars('break')(2)}
             I'm a 23 year old NYC based bilingual Full-Stack developer with an Economics degree
             currently looking for junior/entry level roles in development or QA. I began with
