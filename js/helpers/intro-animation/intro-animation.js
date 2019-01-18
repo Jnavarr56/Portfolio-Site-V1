@@ -1,10 +1,10 @@
 let test = {
   "particles": {
     "number": {
-      "value": 40,
+      "value":100,
       "density": {
         "enable": true,
-        "value_area": 1273
+        "value_area": 2000
       }
     },
     "color": {
@@ -48,7 +48,7 @@ let test = {
     },
     "line_linked": {
       "enable": true,
-      "distance": 150,
+      "distance": 80,
       "color": "#ff0000",
       "opacity": 1,
       //OPACITY HOME;

@@ -29,12 +29,14 @@ $loader-border-radius: 0%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: $loading-count-up-color;
-	font-size: 300%;
+	font-size: 600%;
 	//background-color: rgba(white, .85);
 	border-radius: 100%;
 	font-family: 'Raleway', sans-serif;
 	padding: 0;
 	margin: 0;
+	background-color: rgba(255,255, 255, .75);
+    border-radius: 10px;
 }
 .fade-out-loader {
 	animation: FadeOutLoader $loading-fade-time ease-in-out 0s forwards;
