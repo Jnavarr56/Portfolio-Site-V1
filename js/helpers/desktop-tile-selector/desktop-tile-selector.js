@@ -1,3 +1,5 @@
+var nippleBaby;
+
 const enableDesktopTileSelector = () => {
 
     let upArrow = $('<i class="fas fa-arrow-up"></i>');
@@ -13,8 +15,6 @@ const enableDesktopTileSelector = () => {
                     let indexToClick = $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) === $('.selector-bubble-desktop').length - 1 ? 0 : $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) + 1;
 
                     //Number(e[e.length - 1])
-
-                    console.log(indexToClick);
 
                     $('.selector-bubble-desktop').eq(indexToClick).click();
 
@@ -77,7 +77,7 @@ const enableDesktopTileSelector = () => {
                     //Number(e[e.length - 1])
                     let indexToClick = $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) === 0 ? $('.selector-bubble-desktop').length - 1 : $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) - 1;
 
-                    console.log(indexToClick);
+
 
                     $('.selector-bubble-desktop').eq(indexToClick).click();
 
@@ -98,9 +98,11 @@ const enableDesktopTileSelector = () => {
 
             function(e) {
 
-                $('.desktop-tile').removeClass('hover-work-tile');
+                $('.desktop-tile').removeClass('hover-work-tile hover-work-tile-inner');
 
-                console.log(`MOUSEIN ${e.pageX} ${e.pageY}`);
+                //console.log(`MOUSEIN ${e.pageX} ${e.pageY}`);
+
+                nippleBaby = new Date().getTime();
                 
                 globalTilePos = {
 
@@ -113,27 +115,31 @@ const enableDesktopTileSelector = () => {
 
                 $(this).addClass('hover-work-tile');
 
+                setTimeout(()=> {
+
+                    //$(this).addClass('hover-work-tile-inner');
+
+                }, 150);
+
             }, 
             function(e) {
 
-                console.log(`MOUSEOUT ${e.pageX} ${e.pageY}`);
-                console.log(`X LIMS ${globalTilePos.xi} ${globalTilePos.xi + $(this).width()}`)
-                console.log(`Y LIMS ${globalTilePos.yi} ${globalTilePos.yi + $(this).height()}`)
+                //console.log(`MOUSEOUT ${e.pageX} ${e.pageY}`);
+                //console.log(`X LIMS ${globalTilePos.xi} ${globalTilePos.xi + $(this).width()}`)
+                //console.log(`Y LIMS ${globalTilePos.yi} ${globalTilePos.yi + $(this).height()}`)
 
                 if (e.pageX === globalTilePos.xE && e.pageY === globalTilePos.yE) {
 
-                    return;
+                    //return;
 
                 }
-
-
-                if (
+                /*
                     (e.pageX < globalTilePos.xi || e.pageX > globalTilePos.xi + $(this).width()) ||
-                    (e.pageY < globalTilePos.yi || e.pageY > globalTilePos.yi + $(this).height())) {
+                    (e.pageY < globalTilePos.yi || e.pageY > globalTilePos.yi + $(this).height()) */
 
-                    $(this).removeClass('hover-work-tile');
+                $(this).removeClass('hover-work-tile');
 
-                }
+                //$(this).removeClass('hover-work-tile-inner');
 
             }
         );
@@ -166,7 +172,5 @@ const enableDesktopTileSelector = () => {
         }
     );
 
-    console.log(upArrow);
-    console.log(downArrow);
 
 }

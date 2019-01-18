@@ -44,26 +44,26 @@ $delay: $speed/3;
             color: rgba(red, 1);
             z-index: 10;
             font-size: 150%;
-            transition: .2s linear .1s;  
+            transition: .2s linear .150s;  
         }
         .desktop-tile-header-github { 
             //display: none;
             opacity: 0;
-            animation: appearTileEls .1s linear .1s; 
             color: red; 
             height: 40px;
             width: 40px;
+            transition: .2s linear .150s;  
         }
         .desktop-tile-header-desc { 
-            display: none; 
+            //display: none; 
             opacity: 0;
-            animation: appearTileEls .3s linear .3s; 
             color: red; 
             font-family: 'Raleway', sans-serif;
+            transition: .2s linear .150s;  
         }
         .desktop-tile-header-desc, .desktop-tile-header-github {
             z-index: 1000;
-            transform: rotateY(-180deg);
+            transform: rotateX(-180deg);
         }
         .desktop-tile-header:nth-child(1) {
             font-size: 250%;
@@ -76,13 +76,21 @@ $delay: $speed/3;
 .hover-work-tile {
     background-image: none; 
     background-color: rgba(white, 1);
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
     .desktop-tile-header { 
         display: none !important;
     }
-    .desktop-tile-header-github { display: initial !important;  opacity: 1 !important;}
-    .desktop-tile-header-desc { display: initial !important;  opacity: 1 !important;}
+    .desktop-tile-header-github {  opacity: 1 !important;}
+    .desktop-tile-header-desc { opacity: 1 !important;}
 }
+
+.column.hover-work-tile {
+    .desktop-tile-header, .desktop-tile-header-github, .desktop-tile-header-desc { 
+        transition: .2s linear 0s !important;  
+    }   
+}
+
+
 #work-row-selector {
     position: absolute;
     top: 50%;
@@ -129,7 +137,7 @@ $delay: $speed/3;
     float: left;
     perspective: 1200px;
     overflow: hidden;
-    border-radius: 2.5rem;
+    
 }
 .inner {
     height: 150%;
@@ -181,13 +189,6 @@ $delay: $speed/3;
     .mobile-tile-shift-#{$num} {
         left: -#{$num * 100}#{"%"} !important;
     }        
-}
-
-@keyframes appearTileEls {
-    100% { opacity: 1; }
-}
-@keyframes disappearTileEls {
-    100% { display: none; }
 }
 
 #banner-gallery {
@@ -304,4 +305,28 @@ $delay: $speed/3;
         }    
     }
 
+}
+
+.grid-fader {
+    height: 4.5%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    //z-index: 4000;
+
+}
+
+.grid-fader-top {
+    top: 0;
+    z-index: 500;
+    background: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(255,0,0,1) 75%);
+}
+
+.grid-fader-bottom {
+    bottom: 0;
+    background: linear-gradient(0deg,  rgba(255,0,0,1) 0%, rgba(255,0,0,0) 75%);
+}
+
+.grid-fader-show {
+    opacity: 1;
 }
