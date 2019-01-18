@@ -12,6 +12,7 @@
 //@koala-prepend './desktop-tile-selector/desktop-tile-selector.js'
 //@koala-prepend './mobile-table-interactive/mobile-table-interactive.js'
 //@koala-prepend './resize-find-section/resize-find-section.js'
+//@koala-prepend './mobile-tile-selector/mobile-tile-selector.js'
 
 
 // INCLUDE ALL HELPERS IN THE 'js/helpers' DIRECTORY JS FILES ABOVE

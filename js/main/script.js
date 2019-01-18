@@ -1,4 +1,5 @@
 //@koala-prepend '../helpers/helpers.js'
+
 var globalTilePos, canSlide = true, mobileShiftCount = 0;
 
 if (window.location.href.match("#")) {
@@ -7,15 +8,7 @@ if (window.location.href.match("#")) {
 
 }
 
-
-window.onbeforeunload = function () {
-
-    window.scrollTo(0, 0);
-
-}
-
-
-
+window.onbeforeunload = () => window.scrollTo(0, 0);
 
 $(document).ready(function() {
 
@@ -196,259 +189,35 @@ $(document).ready(function() {
 
     });
 
+    // Behaviors related to window resizing go here------------------------|
+    $(window).resize(function() {
+
+        //Make sure to close a menu if already open when resizing menu.
+        ensureMenuClosure();
+
+        //Automatically scroll to closest section on resize
+        resizeFindSection();
+
+    });
+
     // Set section title falling animation.
     setFallingTitles();
 
     //Set logo hover.
     enableLogoHover('home-logo');
 
-
-    $(window).resize(function() {
-
-        ensureMenuClosure();
-
-        
-        resizeFindSection();
-
-    });
-
-        
-
+    //Male Mobile Table Turn into Slide open menu;
     enableMobileTableInteractive();
 
+    //Enable desktop portfolio section functionality.
     enableDesktopTileSelector();
 
-    $('.desktop-tile').each(function() {
 
-        $(this).hover(
+    //Enable mobile tile selector
+    enableMobileTileSelector();
 
-            function(e) {
 
-                $('.desktop-tile').removeClass('hover-work-tile');
-
-                console.log(`MOUSEIN ${e.pageX} ${e.pageY}`);
-                
-                globalTilePos = {
-
-                    xi: $(this).offset().left,
-                    yi: $(this).offset().top,
-                    xE: e.pageX,
-                    yE: e.pageY
-
-                }
-
-                $(this).addClass('hover-work-tile');
-
-            }, 
-            function(e) {
-
-                console.log(`MOUSEOUT ${e.pageX} ${e.pageY}`);
-                console.log(`X LIMS ${globalTilePos.xi} ${globalTilePos.xi + $(this).width()}`)
-                console.log(`Y LIMS ${globalTilePos.yi} ${globalTilePos.yi + $(this).height()}`)
-
-                if (e.pageX === globalTilePos.xE && e.pageY === globalTilePos.yE) {
-
-                    return;
-
-                }
-
-
-                if (
-                    (e.pageX < globalTilePos.xi || e.pageX > globalTilePos.xi + $(this).width()) ||
-                    (e.pageY < globalTilePos.yi || e.pageY > globalTilePos.yi + $(this).height())) {
-
-                    $(this).removeClass('hover-work-tile');
-
-                }
-
-            }
-        );
-
-    });
-
-    let workMobileShiftClasses = [];
-
-    while (workMobileShiftClasses.length < $('.gallery-moduleSlide').length) {
-
-        workMobileShiftClasses.push(`mobile-tile-shift-${mobileShiftCount}`);
-
-        mobileShiftCount ++;
-
-    }
-
-    mobileShiftCount = 0;
-
-    console.log(workMobileShiftClasses);
-
-    $(".mobile-shift-arrow").each(function() {
-
-        $(this).click(function() {
-
-            if ($(this).attr('id') === "left-work") {
-
-                mobileShiftCount = mobileShiftCount === 0 ? $('.gallery-moduleSlide').length - 1 : mobileShiftCount - 1;
-
-            }
-            else {
-
-                mobileShiftCount = mobileShiftCount === $('.gallery-moduleSlide').length - 1 ? 0 : mobileShiftCount + 1;
-
-            }
-
-            $('.gallery-moduleSlide').each(function() {
-
-                $(this)[0].className.split(' ').forEach(e => {
-
-                    if (e.includes('mobile-tile-shift-')) {
-
-                        $(this).removeClass(e);
-
-                    }
-
-                });
-
-            });
-
-            $('.banner-ball').removeClass('selected-banner-ball');
-
-            $('.banner-ball').eq(workMobileShiftClasses[mobileShiftCount].match(/[0-9]+/)[0]).addClass('selected-banner-ball');
-
-            
-            $('.gallery-moduleSlide').addClass(workMobileShiftClasses[mobileShiftCount]);
-
-            console.log(mobileShiftCount);
-
-        });
-
-    });
-
-    for (let i = 0; i < Math.ceil($('.gallery-moduleSlide').length); i++) {
-
-        let bubble = $('<div class="banner-ball"></div>');
-
-        bubble.click(function() {
-
-            $('.gallery-moduleSlide').each(function(x) {
-
-                $(this)[0].className.split(' ').forEach(e => {
-
-                    if (e.includes('mobile-tile-shift-')) {
-
-                        $(this).removeClass(e);
-
-                    }
-
-                });
-
-            });
-
-            $('.banner-ball').removeClass('selected-banner-ball');
-
-            bubble.addClass('selected-banner-ball');
-
-            $('.gallery-moduleSlide').each(function() {
-
-                $(this).addClass(`mobile-tile-shift-${i}`);
-
-            });
-
-        });
-
-        $('#banner-tracking').append(bubble);
-
-    }
-
-    $('#right-work').click();
-    $('#left-work').click();
-
-    $('.gallery-moduleSlide').swipe( {
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          if (direction === "left") {
-            $('#right-work').click();
-          }
-          else if (direction === "right") {
-            $('#left-work').click();
-          }
-        },
-        threshold:0,
-        fingers:'all'
-      });
-
-    ///$('.gallery-moduleSlide').on("swiperight", function() {
-        //$('#right-work').click();
-   // });
-
-
-    /*
-
-    $('.gallery-moduleSlide').bind('touchstart', function(cE) {
-
-        if (!canSlide) {
-
-            return;
-        }
-
-        let startDown = cE.changedTouches[0].clientX;
-
-        $(this).bind('touchend', function(uE) {
-            
-            if (uE.changedTouches[0].clientX - startDown < -30) {
-
-                //$("#right-work").click();
-
-                mobileShiftCount = mobileShiftCount === $('.gallery-moduleSlide').length - 1 ? 0 : mobileShiftCount + 1;
-
-                canSlide = false;
-
-                setTimeout(()=> canSlide = true, 600);
-
-            }
-
-            else if (uE.changedTouches[0].clientX - startDown > 30) {
-
-                //$("#left-work").click();
-
-                mobileShiftCount = mobileShiftCount === 0 ? $('.gallery-moduleSlide').length - 1 : mobileShiftCount - 1;
-
-                canSlide = false;
-
-                setTimeout(()=> canSlide = true, 600);
-            }
-
-            else {
-
-                return;
-
-            }
-
-            $('.gallery-moduleSlide').each(function() {
-
-                $(this)[0].className.split(' ').forEach(e => {
-
-                    if (e.includes('mobile-tile-shift-')) {
-
-                        $(this).removeClass(e);
-
-                    }
-
-                });
-
-            });
-
-            $('.gallery-moduleSlide').addClass(workMobileShiftClasses[mobileShiftCount]);
-
-            $('.banner-ball').removeClass('selected-banner-ball');
-
-            $('.banner-ball').eq(workMobileShiftClasses[mobileShiftCount].match(/[0-9]+/)[0]).addClass('selected-banner-ball');
-     
-        });
-
-    });
-
-    $('.banner-ball').eq(0).addClass('selected-banner-ball');
-
-    */
-
+   
 
     
 

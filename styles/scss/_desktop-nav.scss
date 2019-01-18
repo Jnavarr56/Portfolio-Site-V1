@@ -19,7 +19,7 @@ $desktop-nav-width: 3.75rem;
     bottom: 0;
     width: $desktop-nav-width;
     background-color: black;
-    transition: 1s $primary-desktop-nav-ease-in-out-cubic;
+    transition: .5s $primary-desktop-nav-ease-in-out-cubic;
     will-change: width;
     z-index: 99;
     *,
@@ -103,7 +103,7 @@ $desktop-nav-width: 3.75rem;
                 transform: translateY(0);
                 transition: {
                     property: transform, opacity, color;
-                    duration: 0.55s, 0.55s, 0.3s;
+                    duration: 0.25s, 0.25s, 0.15s;
                     timing-function: $primary-desktop-nav-ease-in-out-cubic, ease-in-out, ease-in-out;            
                 }
             }
