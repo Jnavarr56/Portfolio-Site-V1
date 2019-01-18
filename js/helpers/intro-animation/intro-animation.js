@@ -1,23 +1,23 @@
 let test = {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 40,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 1273
       }
     },
     "color": {
       "value": "#ff0000"
     },
     "shape": {
-      "type": "edge",
+      "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#000"
+        "color": "#000000"
       },
       "polygon": {
-        "nb_sides": 3
+        "nb_sides": 5
       },
       "image": {
         "src": "img/github.svg",
@@ -26,8 +26,9 @@ let test = {
       }
     },
     "opacity": {
-      "value": 0.3,
-      "random": true,
+      "value": 1,
+      //OPACITY HOME;
+      "random": false,
       "anim": {
         "enable": false,
         "speed": 1,
@@ -36,27 +37,28 @@ let test = {
       }
     },
     "size": {
-      "value": 114.42640803667955,
-      "random": false,
+      "value": 3,
+      "random": true,
       "anim": {
-        "enable": true,
-        "speed": 10,
-        "size_min": 40,
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
         "sync": false
       }
     },
     "line_linked": {
-      "enable": false,
-      "distance": 200,
-      "color": "#ffffff",
+      "enable": true,
+      "distance": 150,
+      "color": "#ff0000",
       "opacity": 1,
-      "width": 2
+      //OPACITY HOME;
+      "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 8,
+      "speed": 6,
       "direction": "none",
-      "random": true,
+      "random": false,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
@@ -72,7 +74,7 @@ let test = {
     "events": {
       "onhover": {
         "enable": false,
-        "mode": "grab"
+        "mode": "repulse"
       },
       "onclick": {
         "enable": false,
@@ -107,7 +109,7 @@ let test = {
     }
   },
   "retina_detect": false
-};
+}
 // 1) Enables scrolling after a set delay in milliseconds.
 const enableScrolling = delay => setTimeout(() => $('html').css('overflow', 'scroll'), delay);
 
@@ -139,7 +141,9 @@ const configureParticleAnim = options => {
 
           window.pJSDom[0].pJS.particles.move.speed = 0;
 
+          
           particlesJS('background-home', test);
+          
           
           setTimeout(() => {
             

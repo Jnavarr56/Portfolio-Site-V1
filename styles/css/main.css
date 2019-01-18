@@ -802,7 +802,7 @@ button {
     width: 300px;
     height: 300px; } }
 /* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-/* line 12, ../scss/_home.scss */
+/* line 21, ../scss/_home.scss */
 #home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -817,7 +817,7 @@ button {
   -webkit-box-align: "center";
       -ms-flex-align: "center";
           align-items: "center"; }
-  /* line 14, ../scss/_home.scss */
+  /* line 23, ../scss/_home.scss */
   #home .row {
     height: auto;
     width: 100%;
@@ -834,7 +834,7 @@ button {
     -webkit-box-align: "center";
         -ms-flex-align: "center";
             align-items: "center"; }
-  /* line 20, ../scss/_home.scss */
+  /* line 29, ../scss/_home.scss */
   #home .column {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -849,41 +849,45 @@ button {
     -webkit-box-align: "center";
         -ms-flex-align: "center";
             align-items: "center"; }
-  /* line 23, ../scss/_home.scss */
+  /* line 32, ../scss/_home.scss */
   #home button {
     z-index: 1000; }
 
-/* line 28, ../scss/_home.scss */
+/* line 37, ../scss/_home.scss */
 #home-primary-text {
-  color: red;
+  color: black;
   font-family: "Raleway", sans-serif;
   font-size: 700%;
-  margin: 0; }
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px; }
 
-/* line 35, ../scss/_home.scss */
+/* line 45, ../scss/_home.scss */
 #home-sub-text {
   color: "Raleway", sans-serif;
   font-family: "Raleway", sans-serif;
   letter-spacing: 5px;
   font-size: 250%;
   word-break: break-word;
-  margin-top: 2%; }
+  margin-top: 2%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px; }
 
-/* line 45, ../scss/_home.scss */
+/* line 56, ../scss/_home.scss */
 .landing-fade-in {
   opacity: 0;
   -webkit-filter: blur(0px);
           filter: blur(0px); }
 
-/* line 49, ../scss/_home.scss */
+/* line 60, ../scss/_home.scss */
 .home-sub-text-spanish-br, .home-sub-text-spanish-br2, .home-primary-text-br, .home-sub-text-br {
   display: none; }
 
-/* line 52, ../scss/_home.scss */
+/* line 63, ../scss/_home.scss */
 .hide-second-row {
   display: none !important; }
 
-/* line 55, ../scss/_home.scss */
+/* line 66, ../scss/_home.scss */
 .home-text-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -902,59 +906,59 @@ button {
           transform: scale(0.9, 0.9); }
 
 @media (max-width: 1579.98px) {
-  /* line 62, ../scss/_home.scss */
+  /* line 73, ../scss/_home.scss */
   .home-sub-text-spanish-br {
     display: initial; }
 
-  /* line 65, ../scss/_home.scss */
+  /* line 76, ../scss/_home.scss */
   .home-text-wrapper {
     margin-left: 5%; } }
 @media (max-width: 1231px) {
-  /* line 70, ../scss/_home.scss */
+  /* line 81, ../scss/_home.scss */
   .home-primary-text-br {
     display: initial; }
 
-  /* line 73, ../scss/_home.scss */
+  /* line 84, ../scss/_home.scss */
   .home-sub-text-spanish-br2 {
     display: initial; }
 
-  /* line 76, ../scss/_home.scss */
+  /* line 87, ../scss/_home.scss */
   .home-text-wrapper {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
 
-  /* line 79, ../scss/_home.scss */
+  /* line 90, ../scss/_home.scss */
   #home-primary-text {
     font-size: 600%; } }
 @media (max-width: 900px) {
-  /* line 84, ../scss/_home.scss */
+  /* line 95, ../scss/_home.scss */
   #home-primary-text {
     font-size: 500%; }
 
-  /* line 87, ../scss/_home.scss */
+  /* line 98, ../scss/_home.scss */
   #home-sub-text {
     font-size: 200%; }
 
-  /* line 90, ../scss/_home.scss */
+  /* line 101, ../scss/_home.scss */
   .home-text-wrapper {
     margin-left: 0;
     position: relative;
     bottom: 50px; } }
 @media (max-width: 430px) {
-  /* line 97, ../scss/_home.scss */
+  /* line 108, ../scss/_home.scss */
   #home-primary-text {
     font-size: 400%; }
 
-  /* line 100, ../scss/_home.scss */
+  /* line 111, ../scss/_home.scss */
   #home-sub-text {
     font-size: 150%; }
 
-  /* line 103, ../scss/_home.scss */
+  /* line 114, ../scss/_home.scss */
   .home-sub-text-br {
     display: initial; } }
-/* line 115, ../scss/_home.scss */
-#background-home {
+/* line 126, ../scss/_home.scss */
+.particles {
   width: 100%;
   height: 100%;
   position: absolute;
