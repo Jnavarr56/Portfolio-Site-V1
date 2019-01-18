@@ -207,8 +207,8 @@ $(document).ready(function() {
 
         ensureMenuClosure();
 
-        window.scrollTo(0, 0);
-
+        
+        resizeFindSection();
 
     });
 
