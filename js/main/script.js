@@ -140,7 +140,7 @@ $(document).ready(function() {
     });
 
     // Retrieve Github data to display in desktop menu.
-    getGithubData('jnavarr56', 'latest-commit', true);
+    getGithubData('jnavarr56', 'latest-commit', false);
     
     // Behaviors related to scrolling go here------------------------|
     $(window).scroll(function() {
