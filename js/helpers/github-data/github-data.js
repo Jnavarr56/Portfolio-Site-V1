@@ -96,7 +96,7 @@ const getGithubData = (username, displayID, test) => {
 
         (data) => {
     
-            mostRecentRepo = data.sort(sortAscend('created_at'))[0];
+            mostRecentRepo = data.sort(sortAscend('updated_at'))[0];
             
             $.get(mostRecentRepo.commits_url.replace('{/sha}', ''), (data) => {
 
