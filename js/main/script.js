@@ -68,6 +68,19 @@ $(document).ready(function() {
             GITHUB API:${HTMLMap.chars('break')(2)}latest commit:${HTMLMap.chars('break')(2)}could not obtain github data<span class="blinking-cursor-red">|</span>
         </h1>`
     );
+
+    createModal(
+        {
+            keyword: 'ifbuddy',
+            triggerID: 'ifbuddy-modal-trigger',
+            parseChildrenEl: false,
+            parseEl: null,
+        },
+        `<h1 
+            id="ifbuddy-content" 
+            class="" 
+        </h1>`
+    );
     //-----------------/MODALS------------------------------------
 
 
