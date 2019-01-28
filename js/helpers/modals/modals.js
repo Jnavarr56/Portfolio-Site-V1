@@ -24,7 +24,9 @@ const createModal = (options, content) => {
 
     $('body').append(modal);
 
-    $('#' + options.triggerID).click(() => {
+    $('#' + options.triggerID).click((e) => {
+
+        e.preventDefault();
 
         $(`.${options.keyword}-modal-overlay, .${options.keyword}-modal`).addClass('active');
 

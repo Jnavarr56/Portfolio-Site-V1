@@ -215,6 +215,11 @@ $delay: $speed/3;
     }
 }
 
+.mobile-tile-header-desc {
+    font-family: 'Raleway', sans-serif;
+    padding: 0 !important;
+}
+
 .gallery-moduleWrapper {
     @include flex-config('row', 'flex-start', 'center');
     #arrows-direction {

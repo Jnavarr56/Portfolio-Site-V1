@@ -81,6 +81,10 @@ $(document).ready(function() {
             Your browser does not support the video tag.
          </video>`
     );
+    $('#mobileIFBuddyVideoTrigger').click((e)=> {
+        e.preventDefault();
+        $('#ifbuddy-modal-trigger').click()
+    });
     //-----------------/MODALS------------------------------------
 
 
