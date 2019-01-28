@@ -76,10 +76,10 @@ $(document).ready(function() {
             parseChildrenEl: false,
             parseEl: null,
         },
-        `<h1 
-            id="ifbuddy-content" 
-            class="" 
-        </h1>`
+        `<video width="100%" controls>
+            <source src="styles/images/site-shots/IFBuddyVideo.mov" type="video/mp4">
+            Your browser does not support the video tag.
+         </video>`
     );
     //-----------------/MODALS------------------------------------
 

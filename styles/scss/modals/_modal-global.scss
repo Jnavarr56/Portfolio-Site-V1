@@ -119,6 +119,7 @@ button {
         .close-modal {
         transform: translateY(10px);
         opacity: 1;
+        z-index: 10000;
         }
     }
 }
