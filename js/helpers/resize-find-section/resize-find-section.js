@@ -2,8 +2,6 @@ const resizeFindSection = () => {
 
     $('section').each(function() {
 
-        console.log('tit');
-
         if  (
                 (
                     $(this).offset().top - $(window).scrollTop() >= 0

@@ -63,9 +63,9 @@ $(document).ready(function() {
         `<h1 
             id="latest-commit" 
             class="has-alt-text" 
-            data-eng="GITHUB API:${HTMLMap.chars('break')(2)}latest commit:${HTMLMap.chars('break')(2)}could not obtain github data" 
+            data-eng="GITHUB API:${HTMLMap.chars('break')(2)}latest commit:${HTMLMap.chars('break')(2)}API rate limited, try again later." 
             data-sp="GITHUB API:${HTMLMap.chars('break')(2)}commit más nuevo:${HTMLMap.chars('break')(2)}no se pudo conseguir gitbhub datos">
-            GITHUB API:${HTMLMap.chars('break')(2)}latest commit:${HTMLMap.chars('break')(2)}could not obtain github data<span class="blinking-cursor-red">|</span>
+            GITHUB API:${HTMLMap.chars('break')(2)}latest commit:${HTMLMap.chars('break')(2)}API rate limited, try again later<span class="blinking-cursor-red">|</span>
         </h1>`
     );
 
@@ -81,9 +81,13 @@ $(document).ready(function() {
             Your browser does not support the video tag.
          </video>`
     );
+
+
     $('#mobileIFBuddyVideoTrigger').click((e)=> {
+        
         e.preventDefault();
-        $('#ifbuddy-modal-trigger').click()
+
+        $('#ifbuddy-modal-trigger').click();
     });
     //-----------------/MODALS------------------------------------
 
