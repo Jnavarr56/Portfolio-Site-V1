@@ -83,7 +83,7 @@ $(document).ready(function() {
     );
 
 
-    $('#mobileIFBuddyVideoTrigger').click((e)=> {
+    $('#mobileIFBuddyVideoTrigger').on('click', (e)=> {
         
         e.preventDefault();
 
