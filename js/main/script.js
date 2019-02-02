@@ -74,7 +74,8 @@ $(document).ready(function() {
 
         $(this).on('touchstart', function() {
 
-            window.location = $(this).attr('href');
+            window.open(window.location = $(this).attr('href'), '_blank');
+
             
         });
 
@@ -201,8 +202,11 @@ $(document).ready(function() {
         
 
         if ($(this).scrollTop() === $('#work').offset().top) {
+
             $('#swipe-icon').addClass('indicate-swipe-anim');
+
             setTimeout(()=> {$('#swipe-icon').removeClass('indicate-swipe-anim');}, 2020);
+
         }
                 
             
@@ -237,11 +241,6 @@ $(document).ready(function() {
 
     //Enable mobile tile selector
     enableMobileTileSelector();
-
-
-   
-
-    
 
 });
 
