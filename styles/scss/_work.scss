@@ -224,9 +224,9 @@ $delay: $speed/3;
     @include flex-config('row', 'flex-start', 'center');
     #arrows-direction {
         position: absolute;
-        top: 50%;
+        top: 10%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
         
         width: 75%;
         @include flex-config('row', 'space-between', 'center');
@@ -234,7 +234,7 @@ $delay: $speed/3;
         color: red;
         font-size: 60px;
 
-        opacity: 0;
+        opacity: 1;
         
     }
     height: 100%;
@@ -343,4 +343,33 @@ $delay: $speed/3;
 
 .grid-fader-show {
     opacity: 1;
+}
+
+
+.visit-app-link {
+    color: blue;
+}
+
+#swipe-icon {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    width: 20%;
+}
+.indicate-swipe-anim {
+    opacity: 1;
+    animation: IndicateSwipe 2s ease 0s 1;
+}
+
+@keyframes IndicateSwipe {
+    0% { left: 0; }
+    25% { left: 80%; }
+    30% { left: 80%; }
+    55% { left: 0; }
+    60% { left: 0; }
+    85% { left: 80%; opacity: 1; }
+    100% { left: 80%; opacity: 0;}
+}
+.mobile-shift-arrow {
+    opacity: 0;
 }

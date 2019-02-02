@@ -69,27 +69,6 @@ $(document).ready(function() {
         </h1>`
     );
 
-    createModal(
-        {
-            keyword: 'ifbuddy',
-            triggerID: 'ifbuddy-modal-trigger',
-            parseChildrenEl: false,
-            parseEl: null,
-        },
-        `<video width="100%" controls>
-            <source src="styles/images/site-shots/IFBuddyVideo.mov" type="video/mp4">
-            Your browser does not support the video tag.
-         </video>`
-    );
-
-
-    $('#mobileIFBuddyVideoTrigger').on('touchstart', function(e) {
-        
-        e.preventDefault();
-
-        $('#ifbuddy-modal-trigger').click();
-
-    });
 
     $('.visit-app-link').each(function() {
 
@@ -218,6 +197,17 @@ $(document).ready(function() {
             $('#main-skills-table').attr('data-scroll', $('#mobile-table').attr('data-scroll'));
 
         }
+
+        
+
+        if ($(this).scrollTop() === $('#work').offset().top) {
+            $('#swipe-icon').addClass('indicate-swipe-anim');
+            setTimeout(()=> {$('#swipe-icon').removeClass('indicate-swipe-anim');}, 2020);
+        }
+                
+            
+
+
 
     });
 

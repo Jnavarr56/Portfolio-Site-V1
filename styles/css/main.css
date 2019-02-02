@@ -1851,10 +1851,10 @@ button {
   /* line 225, ../scss/_work.scss */
   .gallery-moduleWrapper #arrows-direction {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1872,7 +1872,7 @@ button {
     z-index: 4000;
     color: red;
     font-size: 60px;
-    opacity: 0; }
+    opacity: 1; }
   /* line 244, ../scss/_work.scss */
   .gallery-moduleWrapper .gallery-moduleSlide {
     -webkit-transition: all .6s ease;
@@ -1984,6 +1984,62 @@ button {
 /* line 344, ../scss/_work.scss */
 .grid-fader-show {
   opacity: 1; }
+
+/* line 349, ../scss/_work.scss */
+.visit-app-link {
+  color: blue; }
+
+/* line 353, ../scss/_work.scss */
+#swipe-icon {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  width: 20%; }
+
+/* line 359, ../scss/_work.scss */
+.indicate-swipe-anim {
+  opacity: 1;
+  -webkit-animation: IndicateSwipe 2s ease 0s 1;
+          animation: IndicateSwipe 2s ease 0s 1; }
+
+@-webkit-keyframes IndicateSwipe {
+  0% {
+    left: 0; }
+  25% {
+    left: 80%; }
+  30% {
+    left: 80%; }
+  55% {
+    left: 0; }
+  60% {
+    left: 0; }
+  85% {
+    left: 80%;
+    opacity: 1; }
+  100% {
+    left: 80%;
+    opacity: 0; } }
+
+@keyframes IndicateSwipe {
+  0% {
+    left: 0; }
+  25% {
+    left: 80%; }
+  30% {
+    left: 80%; }
+  55% {
+    left: 0; }
+  60% {
+    left: 0; }
+  85% {
+    left: 80%;
+    opacity: 1; }
+  100% {
+    left: 80%;
+    opacity: 0; } }
+/* line 373, ../scss/_work.scss */
+.mobile-shift-arrow {
+  opacity: 0; }
 
 /* line 1, ../scss/_contact.scss */
 #contact {
