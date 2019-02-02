@@ -83,11 +83,22 @@ $(document).ready(function() {
     );
 
 
-    $('#mobileIFBuddyVideoTrigger').on('mousedown', (e)=> {
+    $('#mobileIFBuddyVideoTrigger').on('touchstart', function(e) {
         
         e.preventDefault();
 
         $('#ifbuddy-modal-trigger').click();
+
+    });
+
+    $('.visit-app-link').each(function() {
+
+        $(this).on('touchstart', function() {
+
+            window.location = $(this).attr('href');
+            
+        });
+
     });
     //-----------------/MODALS------------------------------------
 
