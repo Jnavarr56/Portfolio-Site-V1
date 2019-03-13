@@ -21,7 +21,6 @@
   <script src='https://unpkg.com/scroll-out/dist/scroll-out.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js'></script>
   
-  
   <link rel="stylesheet" href="styles/main.min.css">
   <script src="js/script.min.js"></script>
 
@@ -35,17 +34,17 @@
     <a href="#" id="desktop-nav-trigger" class="desktop-nav-trigger">
       <div id="desktop-bars" class="desktop-bars"></div>
     </a>
-      <div class="desktop-nav-content">
-        <nav class="desktop-nav-list">
-          <ul>
-            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Home" data-sp="Inicio" href="#home">Home</a></li>
-            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="About" data-sp="Sobre Mi" href="#about">About</a></li>
-            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Skills" data-sp="Habilidades" href="#skills">Skills</a></li>
-            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Portfolio" data-sp="Portfolio" href="#work">Portfolio</a></li>
-            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Articles" data-sp="Artículos" href="#articles">Articles</a></li>
-            <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Contact" data-sp="Contactame" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    <div class="desktop-nav-content">
+      <nav class="desktop-nav-list">
+        <ul>
+          <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Home" data-sp="Inicio" href="#home">Home</a></li>
+          <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="About" data-sp="Sobre Mi" href="#about">About</a></li>
+          <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Skills" data-sp="Habilidades" href="#skills">Skills</a></li>
+          <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Portfolio" data-sp="Portfolio" href="#work">Portfolio</a></li>
+          <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Articles" data-sp="Artículos" href="#articles">Articles</a></li>
+          <li class="desktop-nav-item"><a class="has-alt-text desktop-nav-item-click" data-eng="Contact" data-sp="Contactame" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>    
   </div>
   <!---------------------/Desktop Nav------------------------->
@@ -111,24 +110,21 @@
   <!--About + Resume Link-->
   <section id="about" class="container-fluid">
     <h1 
-    class="has-alt-text section-header text text--enter" 
-    data-scroll="out" 
-    data-splitting="" 
-    data-header-id="about" 
-    data-eng="About" 
-    data-sp="Sobre Mi">
-    About
-  </h1> 
-  <div class="row">
-    <div class="column col-12 col-md-8">
-      <p id="about-bio" class="has-alt-text about-content word" data-scroll></p>
+      class="has-alt-text section-header text text--enter" 
+      data-scroll="out" 
+      data-splitting="" 
+      data-header-id="about" 
+      data-eng="About" 
+      data-sp="Sobre Mi">
+      About
+    </h1> 
+    <div class="row">
+      <div class="column col-12 col-md-8">
+        <p id="about-bio" class="has-alt-text about-content word" data-scroll></p>
+      </div>
     </div>
-  </div>
-</section>
-  
+  </section>
   <!--/About + Resume Link-->
-  
-  
   <!--Skills-->
   <section id="skills" class="container-fluid">
     <h1 
@@ -146,130 +142,138 @@
           <th scope="col">Build Tools</th>
           <th scope="col" class="has-alt-text" data-eng="Databases" data-sp="Base de Datos">Databases</th>
           <th scope="col" class="has-alt-text" data-sp="Bibliotecas/Framework" data-eng="Libraries/Frameworks">Libraries/Frameworks</th>
-          
           <th scope="col" class="has-alt-text" data-sp="Lenguajes" data-eng="Languages">Languages</th>
           <th scope="col">General</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="cloud-row">Amazon Web Services</td>
+          <td class="cloud-row">Amazon Web Services (S3)</td>
           <td class="buildtools-row">npm</td>
           <td class="databases-row">PostgreSQL</td>
-          <td class="frameworks-row">React</td>
-          <td class="languages-row">Ruby</td>
+          <td class="frameworks-row">React.js</td>
+          <td class="languages-row">JavaScript (ES5, ES6+)</td>
           <td class="general">AJAX</td>
         </tr>
         <tr>
           <td class="cloud-row">Google Cloud</td>
-            <td class="buildtools-row">rbenv</td>
-            <td class="databases-row"></td>
-            <td class="frameworks-row">Redux</td>
-            <td class="languages-row">JavaScript (ES6)</td>
-            <td class="general">REST API Design</td>
-          </tr>
-          <tr>
-            <td class="cloud-row">Firebase</td>
-            <td class="buildtools-row">Webpack</td>
-            <td class="databases-row"></td>
-            <td class="frameworks-row">Node.JS</td>
-            <td class="languages-row">HTML5</td>
-            <td class="general">MVC</td>
-          </tr>
-          <tr>
-              <td class="cloud-row">Heroku</td>
-            <td class="buildtools-row">Rake</td>
-            <td class="databases-row"></td>
-            <td class="frameworks-row">Express.JS</td>
-            <td class="languages-row">CSS3</td>
-            <td class="general">OOP</td>
-          </tr>
-          <tr>
-            <td class="cloud-row">Digital Ocean</td>
-            <td class="buildtools-row">Git</td>
-            <td class="databases-row"></td>
-            <td class="frameworks-row">Ruby on Rails</td>
-            <td class="languages-row">SQL</td>
-            <td class="general">Unit Testing</td>
-          </tr>
-          <tr>
-            <td class="cloud-row"></td>
-            <td class="buildtools-row"></td>
-            <td class="databases-row"></td>
-            <td class="frameworks-row">jQuery</td>
-            <td class="languages-row">Java</td>
-            <td class="general">Spanish</td>          
-          </tr>
-          <tr>
-            <td class="cloud-row"></td>
-            <td class="buildtools-row"></td>
-            <td class="databases-row"></td>
-            <td class="frameworks-row">Bootstrap</td>
-            <td class="languages-row"></td>
-            <td class="general">Mobile Responsive Design</td>          
-          </tr>
+          <td class="buildtools-row">Yarn</td>
+          <td class="databases-row">MongoDB</td>
+          <td class="frameworks-row">Redux</td>
+          <td class="languages-row">GraphQL</td>
+          <td class="general">REST API Design</td>
+        </tr>
+        <tr>
+          <td class="cloud-row">Firebase</td>
+          <td class="buildtools-row">Webpack</td>
+          <td class="databases-row"></td>
+          <td class="frameworks-row">Node.js</td>
+          <td class="languages-row">Ruby</td>
+          <td class="general">MVC Design</td>
+        </tr>
+        <tr>
+          <td class="cloud-row">Heroku</td>
+          <td class="buildtools-row">Git</td>
+          <td class="databases-row"></td>
+          <td class="frameworks-row">Express.js</td>
+          <td class="languages-row">Java</td>
+          <td class="general">Object Oriented Design</td>
+        </tr>
+        <tr>
+          <td class="cloud-row">Digital Ocean</td>
+          <td class="buildtools-row">Koala</td>
+          <td class="databases-row"></td>
+          <td class="frameworks-row">Apollo Client</td>
+          <td class="languages-row">SQL</td>
+          <td class="general">Unit Testing</td>
+        </tr>
+        <tr>
+          <td class="cloud-row"></td>
+          <td class="buildtools-row"></td>
+          <td class="databases-row"></td>
+          <td class="frameworks-row">Ruby on Rails</td>
+          <td class="languages-row">HTML5</td>
+          <td class="general">Mobile Responsive Design</td>          
+        </tr>
+        <tr>
+          <td class="cloud-row"></td>
+          <td class="buildtools-row"></td>
+          <td class="databases-row"></td>
+          <td class="frameworks-row">jQuery</td>
+          <td class="languages-row">CSS3</td>
+          <td class="general">Technical Writing</td>          
+        </tr>
+        <tr>
+          <td class="cloud-row"></td>
+          <td class="buildtools-row"></td>
+          <td class="databases-row"></td>
+          <td class="frameworks-row">Bootstrap</td>
+          <td class="languages-row">SASS/SCSS</td>
+          <td class="general">Spanish Language</td>          
+        </tr>
       </tbody>
     </table>
     <div id="mobile-table" class="word" data-scroll>
-        <h1 class="mobile-table-content has-alt-text" data-eng="Cloud <span>&#9654;</span>" data-sp="Nube <span>&#9654;</span>">Cloud <span>&#9654;</span></h1>
-        <ul>
-          <li>Amazon Web Services</li>
-          <li>Google Cloud</li>
-          <li>Firebase</li>
-          <li>Heroku</li>
-          <li>Digital Ocean</li>
-        </ul>
-        <h1 class="mobile-table-content">Build Tools <span>&#9654;</span></h1>
-        <ul>
-          <li>Git</li>
-          <li>npm</li>
-          <li>rbenv</li>
-          <li>Webpack</li>
-          <li>Rake</li>
-        </ul>
-        <h1 class="mobile-table-content has-alt-text" data-eng="Databases <span>&#9654;</span>" data-sp="Base de Datos <span>&#9654;</span>">Databases <span>&#9654;</span></h1>
-        <ul>
-          <li>PostgreSQL</li>
-        </ul>
-        <h1 class="mobile-table-content has-alt-text" data-sp="Biblioteca/Framework <span>&#9654;</span>" data-eng="Libraries/Frameworks <span>&#9654;</span>">Libraries/Frameworks <span>&#9654;</span></h1>
-        <ul>
-          <li>React</li>
-          <li>Redux</li>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>Ruby on Rails</li>
-          <li>jQuery</li>
-          <li>Bootstrap</li>
-        </ul>
-        <h1 class="mobile-table-content has-alt-text" data-sp="Lenguajes <span>&#9654;</span>" data-eng="Languages <span>&#9654;</span>">Languages <span>&#9654;</span></h1>
-        <ul>
-          <li>Ruby</li>
-          <li>JavaScript, ES6</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>SQL</li>
-          <li>Java</li>
-        </ul>
-        <h1 class="mobile-table-content">General <span>&#9654;</span></h1>
-        <ul>
-          <li>AJAX</li>
-          <li>REST API Design</li>
-          <li>MVC</li>
-          <li>OOP</li>
-          <li>Unit Testing</li>
-          <li>Spanish</li>
-          <li>Mobile Responsive Design</li>
-        </ul>
+      <h1 class="mobile-table-content has-alt-text" data-eng="Cloud <span>&#9654;</span>" data-sp="Nube <span>&#9654;</span>">Cloud <span>&#9654;</span></h1>
+      <ul>
+        <li>Amazon Web Services</li>
+        <li>Google Cloud</li>
+        <li>Firebase</li>
+        <li>Heroku</li>
+        <li>Digital Ocean</li>
+      </ul>
+      <h1 class="mobile-table-content">Build Tools <span>&#9654;</span></h1>
+      <ul>
+        <li>Git</li>
+        <li>npm</li>
+        <li>Yarn</li>
+        <li>Webpack</li>
+        <li>Koala</li>
+      </ul>
+      <h1 class="mobile-table-content has-alt-text" data-eng="Databases <span>&#9654;</span>" data-sp="Base de Datos <span>&#9654;</span>">Databases <span>&#9654;</span></h1>
+      <ul>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+      </ul>
+      <h1 class="mobile-table-content has-alt-text" data-sp="Biblioteca/Framework <span>&#9654;</span>" data-eng="Libraries/Frameworks <span>&#9654;</span>">Libraries/Frameworks <span>&#9654;</span></h1>
+      <ul>
+        <li>React.js</li>
+        <li>Redux</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>Apollo Client</li>
+        <li>Ruby on Rails</li>
+        <li>jQuery</li>
+        <li>Bootstrap</li>
+      </ul>
+      <h1 class="mobile-table-content has-alt-text" data-sp="Lenguajes <span>&#9654;</span>" data-eng="Languages <span>&#9654;</span>">Languages <span>&#9654;</span></h1>
+      <ul>
+        <li>JavaScript (ES6, ES6+)</li>
+        <li>GraphQL</li>
+        <li>Ruby</li>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>SASS/SCSS</li>
+      </ul>
+      <h1 class="mobile-table-content">General <span>&#9654;</span></h1>
+      <ul>
+        <li>AJAX</li>
+        <li>REST API Design</li>
+        <li>MVC Design</li>
+        <li>Object Oriented Design</li>
+        <li>Mobile Responsive Design</li>
+        <li>Unit Testing</li>
+        <li>Spanish Language</li>
+        <li>Technical Writing</li>
+      </ul>
     </div>
   </section>
   <!--/Skills-->
-
-
-
   <!--Work-->
   <section id="work" class="container-fluid">
-    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="work" data-eng="Portfolio" data-sp="Portfolio"">Portfolio</h1>
-    
+    <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="work" data-eng="Portfolio" data-sp="Portfolio"">Portfolio</h1>    
     <div id="work-row-selector" class="desktop-work-hide"></div>
     <div id="desktop-tile-grid" class="row word desktop-work-hide" data-scroll>
       <div class="grid-fader grid-fader-top"></div>
@@ -279,7 +283,6 @@
         <h5 class="desktop-tile-header-desc text-center">A simple web app to help you with your Intermittent Fasting goals.</h5>
         <a href="https://ifbuddy.herokuapp.com/" class="desktop-tile-header-desc visit-app-link" target="_blank">Visit App</a>
         <a href="https://github.com/Jnavarr56/IFBuddy"><img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"></a>
-        
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header text-center">CommuteCompare</h1>
@@ -287,7 +290,13 @@
         <h5 class="desktop-tile-header-desc text-center">A web app that automatically caculates NYC public transit commutes to your favorite places from potential apartments.</h5>
         <a href="https://commutecompare.herokuapp.com" class="desktop-tile-header-desc visit-app-link" target="_blank">Visit App</a>
         <a href="https://github.com/Jnavarr56/CommuteCompare"><img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"></a>
-        
+      </div>
+      <div class="desktop-tile column col-4">
+        <h1 class="desktop-tile-header text-center">GifizeMe</h1>
+        <h5 class="desktop-tile-header text-center">React, PostgreSQL, AWS, Facebook OAuth, Bootstrap, Ruby on Rails<br></h5>
+        <h5 class="desktop-tile-header-desc text-center">A web app that allows you to record gifs of yourself, catalog them, and send them via FB messenger.</h5>
+        <a href="https://gifizeme.herokuapp.com/" class="desktop-tile-header-desc visit-app-link" target="_blank">Visit App</a>
+        <a href="https://github.com/Jnavarr56/GifizeMe"><img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"></a>
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #3</h1>
@@ -295,7 +304,6 @@
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
         <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #4</h1>
@@ -303,63 +311,55 @@
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
         <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #5</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">  
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #6</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">   
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #7</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">    
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #8</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">    
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #9</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">   
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #10</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">   
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #11</h1>
         <h5 class="desktop-tile-header">Coming Soon</h5>
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
+        <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">  
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #12</h1>
@@ -367,7 +367,6 @@
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
         <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #13</h1>
@@ -375,7 +374,6 @@
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
         <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
       </div>
       <div class="desktop-tile column col-4">
         <h1 class="desktop-tile-header">Project #14</h1>
@@ -383,128 +381,119 @@
         <h5 class="desktop-tile-header-desc">A one sentence description of the app</h5>
         <p class="desktop-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
         <img class="desktop-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-        
       </div>
       <div class="grid-fader grid-fader-bottom"></div>  
     </div>
-
     <div id="banner-gallery" class="gallery-module" data-scroll>
-        <div id="banner-tracking"></div>
-        <div class="gallery-moduleWrapper">
-          <div id="arrows-direction">
-              <img id="swipe-icon" src="styles/images/swipe-icon3.png">
-              <span class="mobile-shift-arrow" id="left-work">&lsaquo;</span>
-              <span class="mobile-shift-arrow" id="right-work">&rsaquo;</span>
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header">IFBuddy</h1>
-            <h5 class="mobile-tile-header text-center">Ruby on Rails, PostgreSQL, AWS, Facebook + Google OAuth, Bootstrap, jQuery</h5>
-            <h5 class="mobile-tile-header-desc text-center">A simple web app to help you with your Intermittent Fasting goals.</h5>
-            <a href="https://ifbuddy.herokuapp.com/"  class="visit-app-link mobile-tile-header-desc text-center">Visit App</a></p>
-            <a href="https://github.com/Jnavarr56/IFBuddy" class="visit-app-link mobile-tile-header-desc text-center" ><img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"/></a>
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header text-center">Commute Compare</h1>
-            <h5 class="mobile-tile-header text-center">React, PostgreSQL, AWS, Google Maps API, Facebook + Google OAuth, Bootstrap, Ruby on Rails</h5>
-            <h5 class="mobile-tile-header-desc text-center">A web app for that automatically caculates NYC public transit commputes to your favorite places from potential apartments.</h5>
-            <a href="https://commutecompare.herokuapp.com"  class="visit-app-link mobile-tile-header-desc text-center">Visit App</a></p>
-            <a href="https://github.com/Jnavarr56/CommuteCompare" class="visit-app-link mobile-tile-header-desc text-center"><img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"></a>
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header">Project #3</h1>
-            <h5 class="mobile-tile-header">Coming Soon</h5>
-            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header">Project #4</h1>
-            <h5 class="mobile-tile-header">Coming Soon</h5>
-            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header">Project #5</h1>
-            <h5 class="mobile-tile-header">Coming Soon</h5>
-            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header">Project #6</h1>
-            <h5 class="mobile-tile-header">Coming Soon</h5>
-            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header">Project #7</h1>
-            <h5 class="mobile-tile-header">Coming Soon</h5>
-            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-          </div>
-          <div class="gallery-moduleSlide">
-            <h1 class="mobile-tile-header">Project #8</h1>
-            <h5 class="mobile-tile-header">Coming Soon</h5>
-            <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-            <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-            <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-          </div>
-          <div class="gallery-moduleSlide">
-              <h1 class="mobile-tile-header">Project #9</h1>
-              <h5 class="mobile-tile-header">Coming Soon</h5>
-              <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-              <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-              <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-            </div>
-          <div class="gallery-moduleSlide">
-              <h1 class="mobile-tile-header">Project #10</h1>
-              <h5 class="mobile-tile-header">Coming Soon</h5>
-              <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-              <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-              <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-            </div>
-            <div class="gallery-moduleSlide">
-                <h1 class="mobile-tile-header">Project #11</h1>
-                <h5 class="mobile-tile-header">Coming Soon</h5>
-                <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-                <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-                <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-              </div>
-              <div class="gallery-moduleSlide">
-                  <h1 class="mobile-tile-header">Project #12</h1>
-                  <h5 class="mobile-tile-header">Coming Soon</h5>
-                  <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-                  <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-                  <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-                </div>
-                <div class="gallery-moduleSlide">
-                    <h1 class="mobile-tile-header">Project #13</h1>
-                    <h5 class="mobile-tile-header">Coming Soon</h5>
-                    <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-                    <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-                    <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-                  </div>
-                  <div class="gallery-moduleSlide">
-                      <h1 class="mobile-tile-header">Project #14</h1>
-                      <h5 class="mobile-tile-header">Coming Soon</h5>
-                      <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
-                      <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
-                      <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
-                    </div>
-
+      <div id="banner-tracking"></div>
+      <div class="gallery-moduleWrapper">
+        <div id="arrows-direction">
+          <img id="swipe-icon" src="styles/images/swipe-icon3.png">
+          <span class="mobile-shift-arrow" id="left-work">&lsaquo;</span>
+          <span class="mobile-shift-arrow" id="right-work">&rsaquo;</span>
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">IFBuddy</h1>
+          <h5 class="mobile-tile-header text-center">Ruby on Rails, PostgreSQL, AWS, Facebook + Google OAuth, Bootstrap, jQuery</h5>
+          <h5 class="mobile-tile-header-desc text-center">A simple web app to help you with your Intermittent Fasting goals.</h5>
+          <a href="https://ifbuddy.herokuapp.com/"  class="visit-app-link mobile-tile-header-desc text-center">Visit App</a></p>
+          <a href="https://github.com/Jnavarr56/IFBuddy" class="visit-app-link mobile-tile-header-desc text-center" ><img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"/></a>
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header text-center">Commute Compare</h1>
+          <h5 class="mobile-tile-header text-center">React, PostgreSQL, AWS, Google Maps API, Facebook + Google OAuth, Bootstrap, Ruby on Rails</h5>
+          <h5 class="mobile-tile-header-desc text-center">A web app for that automatically caculates NYC public transit commputes to your favorite places from potential apartments.</h5>
+          <a href="https://commutecompare.herokuapp.com"  class="visit-app-link mobile-tile-header-desc text-center">Visit App</a></p>
+          <a href="https://github.com/Jnavarr56/CommuteCompare" class="visit-app-link mobile-tile-header-desc text-center"><img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"></a>
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header text-center">GifizeMe</h1>
+          <h5 class="mobile-tile-header text-center">React, PostgreSQL, AWS, Facebook OAuth, Bootstrap, Ruby on Rails</h5>
+          <h5 class="mobile-tile-header-desc text-center">A web app that allows you to record gifs of yourself, catalog them, and send them via FB messenger.</h5>
+          <p class="mobile-tile-header-desc"><a href="https://gifizeme.herokuapp.com/" target="_blank">Visit App</a></p>
+          <a href="https://github.com/Jnavarr56/GifizeMe" class="visit-app-link mobile-tile-header-desc text-center"><img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png"></a>
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #4</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #5</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #6</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #7</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #8</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #9</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #10</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #11</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #12</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #13</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
+        </div>
+        <div class="gallery-moduleSlide">
+          <h1 class="mobile-tile-header">Project #14</h1>
+          <h5 class="mobile-tile-header">Coming Soon</h5>
+          <h5 class="mobile-tile-header-desc">A one sentence description of the app</h5>
+          <p class="mobile-tile-header-desc"><a href="#" target="_blank">Visit App</a></p>
+          <img class="mobile-tile-header-github" src="./styles/images/home-logos/black/githublogo.png">
         </div>
       </div>
-
-
-
-    
+    </div>
   </section>
   <!--/Work-->
-
-
   <!--Articles-->
   <section id="articles" class="container-fluid">
     <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="articles" data-eng="Articles" data-sp="Artículos">Articles</h1>
@@ -517,12 +506,10 @@
     </div>
   </section>
   <!--/Articles-->
-  
   <!--Contact-->
   <section id="contact" class="container-fluid">
     <h1 class="has-alt-text section-header text text--enter" data-scroll="out" data-splitting="" data-header-id="contact" data-eng="Contact" data-sp="Contactame">Contact</h1>
     <div class="row">
-      
       <ul class="word" data-scroll>
         <li class="contact-list-item"><a href="https://github.com/Jnavarr56">Github</a></li>
         <li class="contact-list-item"><a href="https://codepen.io/collection/DQvVZN/">CodePen</a></li>
@@ -545,11 +532,5 @@
     </div>
   </section>
   <!--/Contact-->
-  
   <div id="splitting-clones"></div>
-
-  
-  
-  
-  
   </html>

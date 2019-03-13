@@ -33,8 +33,8 @@ const enableMobileTableInteractive = () => {
             else {
 
                 $(this).removeClass('open-mobile-table');
-                
-                $(this).addClass(`non-select-mobile-table-${$(this).index() < currentlyClicked.index() ? 'above' : 'below'}`);
+
+                $(this).addClass(`non-select-mobile-table-${$(this).index() < currentlyClicked.index() ? 'below' : 'above'}`);
 
             }
 

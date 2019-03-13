@@ -19,11 +19,11 @@ $(document).ready(function() {
         {   
             elID: 'about-bio',
             english: `
-            Master of Science in Comp Sci student looking for first developer internship.
+            Master of Science in Comp Sci student + Bootcamp grad currently looking for first developer role.
             ${HTMLMap.chars('break')(2)}
             I'm a 23 year old NYC based bilingual Full-Stack developer with an Economics degree
-            currently looking for junior/entry level roles in development or QA. I began with
-            Bootstrap/Rails but I'm expanding to work with React.JS/Redux and Node.JS. I'm highly 
+            currently looking for junior/entry level roles in software development or QA. I began with
+            Bootstrap/Ruby on Rails but have transitioned to React.js/Redux and Node.js/Express. I'm highly 
             adaptable and never shy away from a challenge or unfamiliar technology. Take a look a
             around here for more info and some of my featured work.
             ${HTMLMap.chars('break')(2)}
