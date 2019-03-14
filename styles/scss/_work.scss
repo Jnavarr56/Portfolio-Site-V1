@@ -37,6 +37,7 @@ $delay: $speed/3;
         background-position: center; 
         background-repeat: no-repeat; 
         background-size: cover; 
+        justify-content: center !important;
         .desktop-tile-header {
             font-family: 'Raleway', sans-serif;
             font-weight: bolder;
@@ -58,20 +59,25 @@ $delay: $speed/3;
             opacity: 0;
             color: red; 
             font-family: 'Raleway', sans-serif;
-            transition: .2s linear .150s;  
+            transition: .2s linear .150s;
+            font-size: 100%;  
+        }
+        .desktop-tile-header-desc-divider { 
+            //display: none; 
+            opacity: 0;
+            transition: .2s linear .150s;
         }
         .desktop-tile-header-desc, .desktop-tile-header-github {
             z-index: 1000;
             transform: rotateX(-180deg);
         }
         .desktop-tile-header:nth-child(1) {
-            font-size: 250%;
-
+            font-size: 185%;
             position: absolute;
             top: 10%;
         }
         .desktop-tile-header:nth-child(2) {
-            font-size: 140%;
+            font-size: 115%;
 
             position: absolute;
             top: 35%;
@@ -85,12 +91,13 @@ $delay: $speed/3;
     background-image: none; 
     background-color: rgba(white, 1);
     transform: rotateX(180deg);
-    justify-content: center !important;
+    justify-content: space-around;
     .desktop-tile-header { 
         display: none !important;
     }
     .desktop-tile-header-github {  opacity: 1 !important;}
     .desktop-tile-header-desc { opacity: 1 !important;}
+    .desktop-tile-header-desc-divider { opacity: 1 !important;}
 }
 
 .column.hover-work-tile {
@@ -347,7 +354,7 @@ $delay: $speed/3;
 
 
 .visit-app-link {
-    color: blue;
+    //color: blue !important;
 }
 
 #swipe-icon {
@@ -373,3 +380,12 @@ $delay: $speed/3;
 .mobile-shift-arrow {
     opacity: 0;
 }
+
+.desktop-links-holder {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+        margin: 25px 0;
+    }
+}   
