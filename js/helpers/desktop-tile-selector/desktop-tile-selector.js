@@ -6,23 +6,12 @@ const enableDesktopTileSelector = () => {
 
     upArrow.click(function() {
 
-        $('.desktop-tile').each(function(x) {
+        $('.selector-bubble-desktop').eq(
 
-            $(this)[0].className.split(' ').forEach(e => {
+            !$('.selector-bubble-desktop').index($('.selected-bubble-desktop')) ? $('.selector-bubble-desktop').length - 1 : $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) - 1
+            
+        ).click();
 
-                if (e.includes('desktop-tile-shift-')) {
-
-                    let indexToClick = $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) === $('.selector-bubble-desktop').length - 1 ? 0 : $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) + 1;
-
-                    //Number(e[e.length - 1])
-
-                    $('.selector-bubble-desktop').eq(indexToClick).click();
-
-                }
-
-            });
-
-        });
     });
 
     $('#work-row-selector').append(upArrow);
@@ -67,25 +56,12 @@ const enableDesktopTileSelector = () => {
 
     downArrow.click(function() {
 
-        $('.desktop-tile').each(function(x) {
+        $('.selector-bubble-desktop').eq(
 
-            $(this)[0].className.split(' ').forEach(e => {
+            $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) === $('.selector-bubble-desktop').length - 1 ? 0 : $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) + 1
+            
+        ).click();
 
-                if (e.includes('desktop-tile-shift-')) {
-
-                    
-                    //Number(e[e.length - 1])
-                    let indexToClick = $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) === 0 ? $('.selector-bubble-desktop').length - 1 : $('.selector-bubble-desktop').index($('.selected-bubble-desktop')) - 1;
-
-
-
-                    $('.selector-bubble-desktop').eq(indexToClick).click();
-
-                }
-
-            });
-
-        });
     });
 
     $('#work-row-selector').append(downArrow);
