@@ -148,5 +148,19 @@ const enableDesktopTileSelector = () => {
         }
     );
 
+    $('.desktop-tile-header-github').hover(
 
+        function() {
+
+            $(this).attr('src', './styles/images/home-logos/red/githublogo.png'); 
+
+        },
+        function() {
+
+            $(this).attr('src', './styles/images/home-logos/black/githublogo.png'); 
+        }
+
+    );
+    
 }
+
